@@ -1,8 +1,9 @@
-[gd_scene load_steps=2 format=3 uid="uid://dwccuewx80x7x"]
+[gd_scene format=3 uid="uid://dwccuewx80x7x"]
 
-[ext_resource type="Script" path="res://addons/gameAssetImporter/scenes/makeUI/option_list.gd" id="1_l2vvo"]
+[ext_resource type="Script" uid="uid://dv55ss1cyfry8" path="res://addons/gameAssetImporter/scenes/makeUI/option_list.gd" id="1_l2vvo"]
 
-[node name="optionList" type="PopupMenu"]
+[node name="optionList" type="PopupMenu" unique_id=1482021808]
+oversampling_override = 1.0
 visible = true
 unfocusable = true
 script = ExtResource("1_l2vvo")

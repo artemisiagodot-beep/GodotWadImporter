@@ -1,8 +1,8 @@
-[gd_scene load_steps=2 format=3 uid="uid://c81bryirwx2p2"]
+[gd_scene format=3 uid="uid://c81bryirwx2p2"]
 
-[ext_resource type="Script" path="res://addons/godotWad/scenes/player/scenes/weaponManager/weaponIcon.gd" id="1_fi271"]
+[ext_resource type="Script" uid="uid://jbpya24u7que" path="res://addons/godotWad/scenes/player/scenes/weaponManager/weaponIcon.gd" id="1_fi271"]
 
-[node name="WeaponIcon" type="MarginContainer"]
+[node name="WeaponIcon" type="MarginContainer" unique_id=1696925328]
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
@@ -11,26 +11,26 @@ grow_vertical = 2
 focus_mode = 1
 script = ExtResource("1_fi271")
 
-[node name="Panel" type="Panel" parent="."]
+[node name="Panel" type="Panel" parent="." unique_id=117001505]
 layout_mode = 2
 
-[node name="MarginContainer" type="MarginContainer" parent="."]
+[node name="MarginContainer" type="MarginContainer" parent="." unique_id=1598564785]
 layout_mode = 2
 theme_override_constants/margin_left = 8
 theme_override_constants/margin_top = 8
 theme_override_constants/margin_right = 8
 theme_override_constants/margin_bottom = 8
 
-[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer"]
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer" unique_id=606526157]
 layout_mode = 2
 
-[node name="TextureRect" type="TextureRect" parent="MarginContainer/VBoxContainer"]
+[node name="TextureRect" type="TextureRect" parent="MarginContainer/VBoxContainer" unique_id=643773256]
 unique_name_in_owner = true
 layout_mode = 2
 size_flags_vertical = 3
 stretch_mode = 5
 
-[node name="Label" type="Label" parent="MarginContainer/VBoxContainer"]
+[node name="Label" type="Label" parent="MarginContainer/VBoxContainer" unique_id=1773144874]
 unique_name_in_owner = true
 layout_mode = 2
 text = "Weapon"

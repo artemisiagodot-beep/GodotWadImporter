@@ -1,48 +1,48 @@
-[gd_scene load_steps=9 format=3 uid="uid://bcpqqvj8ar2jt"]
+[gd_scene format=3 uid="uid://bcpqqvj8ar2jt"]
 
-[ext_resource type="Script" path="res://addons/godotWad/scenes/guns/stateGuns/stateGun.gd" id="1_tmvns"]
+[ext_resource type="Script" uid="uid://bfgvrax730n43" path="res://addons/godotWad/scenes/guns/stateGuns/stateGun.gd" id="1_tmvns"]
 [ext_resource type="Texture2D" uid="uid://cqmtl7lxyc7tb" path="res://addons/godotWad/sprites/bulletImpact.png" id="2_6vtuu"]
 [ext_resource type="PackedScene" uid="uid://br07pau6iijsu" path="res://addons/godotWad/scenes/quad3Dsprite.tscn" id="3_a40uq"]
-[ext_resource type="Script" path="res://addons/godotWad/scenes/guns/template/gunSounds.gd" id="4_lgsru"]
-[ext_resource type="Script" path="res://addons/godotWad/scenes/guns/stateGuns/stateGunGenerator.gd" id="5_nb4n6"]
+[ext_resource type="Script" uid="uid://buepsp5ocapmc" path="res://addons/godotWad/scenes/guns/template/gunSounds.gd" id="4_lgsru"]
+[ext_resource type="Script" uid="uid://ca0gyyhdn55yb" path="res://addons/godotWad/scenes/guns/stateGuns/stateGunGenerator.gd" id="5_nb4n6"]
 
-[sub_resource type="QuadMesh" id="QuadMesh_6lui4"]
+[sub_resource type="QuadMesh" id="QuadMesh_ekcpf"]
 
-[sub_resource type="QuadMesh" id="QuadMesh_usl84"]
+[sub_resource type="QuadMesh" id="QuadMesh_cc2pl"]
 
 [sub_resource type="SphereShape3D" id="SphereShape3D_s7brj"]
 radius = 20.0
 
-[node name="stateGun" type="Node3D"]
+[node name="stateGun" type="Node3D" unique_id=1661992915]
 script = ExtResource("1_tmvns")
 bulletImpactTexture = ExtResource("2_6vtuu")
 holsterY = null
 worldSpriteName = null
 shootStateID = 1
 
-[node name="AnimatedSprite3D" parent="." instance=ExtResource("3_a40uq")]
-mesh = SubResource("QuadMesh_6lui4")
+[node name="AnimatedSprite3D" parent="." unique_id=1623663330 instance=ExtResource("3_a40uq")]
+mesh = SubResource("QuadMesh_ekcpf")
 
-[node name="muzzleFlash" parent="." instance=ExtResource("3_a40uq")]
+[node name="muzzleFlash" parent="." unique_id=2145329871 instance=ExtResource("3_a40uq")]
 visible = false
-mesh = SubResource("QuadMesh_usl84")
+mesh = SubResource("QuadMesh_cc2pl")
 
-[node name="shootCast" type="RayCast3D" parent="."]
+[node name="shootCast" type="RayCast3D" parent="." unique_id=1040258515]
 
-[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="."]
+[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="." unique_id=1983984752]
 script = ExtResource("4_lgsru")
 
-[node name="Generator" type="Node" parent="."]
+[node name="Generator" type="Node" parent="." unique_id=1027332455]
 script = ExtResource("5_nb4n6")
 spriteList = Array[String](["PISGA0", "PISGB0", "PISGC0"])
 fireSounds = Array[String](["DSPISTOL"])
 entityDepends = PackedStringArray()
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=364149787]
 callback_mode_process = 0
 callback_mode_method = 1
 
-[node name="soundAlert" type="Area3D" parent="."]
+[node name="soundAlert" type="Area3D" parent="." unique_id=963204696]
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="soundAlert"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="soundAlert" unique_id=94042787]
 shape = SubResource("SphereShape3D_s7brj")

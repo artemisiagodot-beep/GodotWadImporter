@@ -1,8 +1,8 @@
-[gd_scene load_steps=2 format=3 uid="uid://bk0n3rsc0qs6t"]
+[gd_scene format=3 uid="uid://bk0n3rsc0qs6t"]
 
-[ext_resource type="Script" path="res://addons/gameAssetImporter/network/networkManager.gd" id="1_io5u2"]
+[ext_resource type="Script" uid="uid://c2gkwip7f6jbh" path="res://addons/gameAssetImporter/network/networkManager.gd" id="1_io5u2"]
 
-[node name="NetworkManager" type="Control"]
+[node name="NetworkManager" type="Control" unique_id=1533304137]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0

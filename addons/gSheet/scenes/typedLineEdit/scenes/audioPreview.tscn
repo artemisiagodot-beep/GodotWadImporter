@@ -1,34 +1,39 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene format=3 uid="uid://dpnje41620qel"]
 
-[ext_resource path="res://addons/gSheet/scenes/spreadsheet/assets/icon_play.svg" type="Texture2D" id=1]
-[ext_resource path="res://addons/gSheet/scenes/typedLineEdit/scenes/audioPreview.gd" type="Script" id=2]
-[ext_resource path="res://addons/gSheet/scenes/typedLineEdit/scenes/icon_pause.png" type="Texture2D" id=4]
+[ext_resource type="Texture2D" uid="uid://dii6uqhtkgr23" path="res://addons/gSheet/scenes/spreadsheet/assets/icon_play.svg" id="1"]
+[ext_resource type="Script" uid="uid://dihgrh4ymxumu" path="res://addons/gSheet/scenes/typedLineEdit/scenes/audioPreview.gd" id="2"]
+[ext_resource type="Texture2D" uid="uid://3rw0a3f7rni0" path="res://addons/gSheet/scenes/typedLineEdit/scenes/icon_pause.png" id="4"]
 
-[node name="Control" type="Control"]
+[node name="Control" type="Control" unique_id=154949833]
+layout_mode = 3
+anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 offset_right = -909.0
 offset_bottom = -580.0
+grow_horizontal = 2
+grow_vertical = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
-script = ExtResource( 2 )
+script = ExtResource("2")
 
-[node name="TextureButton" type="TextureButton" parent="."]
+[node name="TextureButton" type="TextureButton" parent="." unique_id=1810996439]
+custom_minimum_size = Vector2(16, 16)
+layout_mode = 0
 offset_bottom = 20.0
-custom_minimum_size = Vector2( 16, 16 )
 size_flags_horizontal = 0
 size_flags_vertical = 4
 toggle_mode = true
-texture_normal = ExtResource( 1 )
-texture_pressed = ExtResource( 4 )
-expand = true
+texture_normal = ExtResource("1")
+texture_pressed = ExtResource("4")
 
-[node name="LineEdit" type="Label" parent="."]
+[node name="LineEdit" type="Label" parent="." unique_id=315101846]
+layout_mode = 0
 offset_left = 16.0
 offset_top = 3.0
 offset_right = 115.0
 offset_bottom = 17.0
 size_flags_horizontal = 4
-theme_override_colors/font_color = Color( 0, 0, 0, 1 )
+theme_override_colors/font_color = Color(0, 0, 0, 1)
 
-[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=941890681]

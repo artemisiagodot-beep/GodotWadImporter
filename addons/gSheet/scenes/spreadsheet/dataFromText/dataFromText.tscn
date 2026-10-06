@@ -1,13 +1,14 @@
-[gd_scene load_steps=2 format=3 uid="uid://bveyyu6jeengh"]
+[gd_scene format=3 uid="uid://bveyyu6jeengh"]
 
-[ext_resource type="Script" path="res://addons/gSheet/scenes/spreadsheet/full/DataFromText.gd" id="1_6acvh"]
+[ext_resource type="Script" uid="uid://df178grrk0ntv" path="res://addons/gSheet/scenes/spreadsheet/full/DataFromText.gd" id="1_6acvh"]
 
-[node name="DataFromText" type="ConfirmationDialog"]
+[node name="DataFromText" type="ConfirmationDialog" unique_id=1547421573]
+oversampling_override = 1.0
 position = Vector2i(0, 36)
 visible = true
 script = ExtResource("1_6acvh")
 
-[node name="TextEdit" type="TextEdit" parent="."]
+[node name="TextEdit" type="TextEdit" parent="." unique_id=254692008]
 offset_left = 8.0
 offset_top = 8.0
 offset_right = 192.0

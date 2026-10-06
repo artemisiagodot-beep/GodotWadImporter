@@ -1,8 +1,8 @@
-[gd_scene load_steps=5 format=3 uid="uid://bpw2hsa5dlhqs"]
+[gd_scene format=3 uid="uid://bpw2hsa5dlhqs"]
 
-[ext_resource type="Script" path="res://addons/godotWad/scenes/quad3Dsprite.gd" id="1"]
+[ext_resource type="Script" uid="uid://syndefdia72y" path="res://addons/godotWad/scenes/quad3Dsprite.gd" id="1"]
 
-[sub_resource type="Shader" id="Shader_vhq30"]
+[sub_resource type="Shader" id="Shader_jk58a"]
 code = "shader_type spatial;
 render_mode blend_mix;
 
@@ -45,17 +45,18 @@ void fragment() {
 }
 "
 
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_kunrr"]
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_e01fv"]
 render_priority = 0
-shader = SubResource("Shader_vhq30")
+shader = SubResource("Shader_jk58a")
 shader_parameter/albedo = Color(1, 1, 1, 1)
-shader_parameter/point_size = null
+shader_parameter/point_size = 0.0
 shader_parameter/fov = 90.0
 
-[sub_resource type="QuadMesh" id="QuadMesh_4mgxp"]
-material = SubResource("ShaderMaterial_kunrr")
+[sub_resource type="QuadMesh" id="QuadMesh_510au"]
+material = SubResource("ShaderMaterial_e01fv")
 size = Vector2(1.271, 1.767)
 
-[node name="quad3Dsprite" type="MeshInstance3D"]
-mesh = SubResource("QuadMesh_4mgxp")
+[node name="quad3Dsprite" type="MeshInstance3D" unique_id=1163558227]
+custom_aabb = AABB(0, 0, 0, 5, 5, 0)
+mesh = SubResource("QuadMesh_510au")
 script = ExtResource("1")

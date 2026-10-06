@@ -1,8 +1,8 @@
-[gd_scene load_steps=2 format=3 uid="uid://cffknv4d5tc1v"]
+[gd_scene format=3 uid="uid://cffknv4d5tc1v"]
 
-[ext_resource type="Script" path="res://addons/gameAssetImporter/scenes/richList/richList.gd" id="1_sa25g"]
+[ext_resource type="Script" uid="uid://cvyrqh63kt7y5" path="res://addons/gameAssetImporter/scenes/richList/richList.gd" id="1_sa25g"]
 
-[node name="RichList" type="PanelContainer"]
+[node name="RichList" type="PanelContainer" unique_id=835165467]
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
@@ -17,7 +17,7 @@ hoverColor = Color(0.407843, 0, 0, 1)
 separatorColor = Color(0, 0, 0, 1)
 borderColor = Color(0.729412, 0.423529, 0.423529, 1)
 
-[node name="MarginContainer" type="MarginContainer" parent="."]
+[node name="MarginContainer" type="MarginContainer" parent="." unique_id=1142908878]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
@@ -26,7 +26,7 @@ theme_override_constants/margin_top = 5
 theme_override_constants/margin_right = 5
 theme_override_constants/margin_bottom = 5
 
-[node name="list" type="VBoxContainer" parent="MarginContainer"]
+[node name="list" type="VBoxContainer" parent="MarginContainer" unique_id=2011166061]
 unique_name_in_owner = true
 layout_mode = 2
 size_flags_horizontal = 3

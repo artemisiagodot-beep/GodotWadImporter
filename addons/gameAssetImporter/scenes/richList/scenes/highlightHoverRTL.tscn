@@ -1,8 +1,8 @@
-[gd_scene load_steps=2 format=3 uid="uid://sufgmcwetli6"]
+[gd_scene format=3 uid="uid://sufgmcwetli6"]
 
-[ext_resource type="Script" path="res://addons/gameAssetImporter/scenes/richList/hoverHighlight.gd" id="1_7jmx0"]
+[ext_resource type="Script" uid="uid://mpgo7rqtmc06" path="res://addons/gameAssetImporter/scenes/richList/hoverHighlight.gd" id="1_7jmx0"]
 
-[node name="HighlightHoverRtl" type="RichTextLabel"]
+[node name="HighlightHoverRtl" type="RichTextLabel" unique_id=979621278]
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0

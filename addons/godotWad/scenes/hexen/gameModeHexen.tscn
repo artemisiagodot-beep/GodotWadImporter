@@ -1,12 +1,12 @@
-[gd_scene load_steps=2 format=3 uid="uid://b0wgldpq6xt4"]
+[gd_scene format=3 uid="uid://b0wgldpq6xt4"]
 
 [ext_resource type="PackedScene" uid="uid://c6twtortk7i2r" path="res://addons/godotWad/scenes/gameModes/main/mainMode_template.tscn" id="1_xper8"]
 
-[node name="mainMode_template2" instance=ExtResource("1_xper8")]
+[node name="mainMode_template2" unique_id=1143074491 instance=ExtResource("1_xper8")]
 intermissionMusic = ""
 characterEntity = "Fighter"
 
-[node name="Generator" parent="." index="0"]
+[node name="Generator" parent="." index="0" unique_id=1985597810]
 dependantChildren = Array[String](["res://addons/godotWad/scenes/hexen/main_menuHexen.tscn"])
 scoreScreenImg = null
 killsImageStr = ""
@@ -17,7 +17,7 @@ timeImageStr = ""
 parImageStr = ""
 secretImageStr = ""
 
-[node name="WadLoader" parent="." index="1"]
+[node name="WadLoader" parent="." index="1" unique_id=156301848]
 fontCharsHexen = {
 33: ["FONTA01", Vector2i(0, 0)],
 34: ["FONTA02", Vector2i(0, 0)],

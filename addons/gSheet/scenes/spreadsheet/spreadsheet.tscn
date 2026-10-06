@@ -1,9 +1,9 @@
-[gd_scene load_steps=3 format=3 uid="uid://bgurwybr4dki2"]
+[gd_scene format=3 uid="uid://bgurwybr4dki2"]
 
-[ext_resource type="Script" path="res://addons/gSheet/scenes/spreadsheet/mainScript.gd" id="1"]
+[ext_resource type="Script" uid="uid://71v5ijlsqik3" path="res://addons/gSheet/scenes/spreadsheet/mainScript.gd" id="1"]
 [ext_resource type="Resource" uid="uid://k628f5uggtje" path="res://addons/gSheet/scenes/spreadsheet/resource/dark.tres" id="2"]
 
-[node name="SpreadSheet" type="Control"]
+[node name="SpreadSheet" type="Control" unique_id=487947086]
 clip_contents = true
 layout_mode = 3
 anchors_preset = 15
@@ -14,7 +14,7 @@ grow_vertical = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
 
-[node name="Control" type="VBoxContainer" parent="."]
+[node name="Control" type="VBoxContainer" parent="." unique_id=21869048]
 clip_contents = true
 layout_mode = 1
 anchors_preset = 15
@@ -27,7 +27,7 @@ script = ExtResource("1")
 sheetStyle = ExtResource("2")
 initialColumns = 20
 
-[node name="ScrollContainer" type="ScrollContainer" parent="Control"]
+[node name="ScrollContainer" type="ScrollContainer" parent="Control" unique_id=268573318]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3

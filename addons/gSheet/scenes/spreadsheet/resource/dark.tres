@@ -1,6 +1,6 @@
-[gd_resource type="Resource" script_class="spreadSheetStyle" load_steps=2 format=3 uid="uid://k628f5uggtje"]
+[gd_resource type="Resource" script_class="spreadSheetStyle" format=3 uid="uid://k628f5uggtje"]
 
-[ext_resource type="Script" path="res://addons/gSheet/scenes/spreadsheet/resource/spreadSheetStyle.gd" id="1"]
+[ext_resource type="Script" uid="uid://bpm5nbywcltbi" path="res://addons/gSheet/scenes/spreadsheet/resource/spreadSheetStyle.gd" id="1"]
 
 [resource]
 script = ExtResource("1")
@@ -11,8 +11,3 @@ headingBorderColor = Color(0.0784314, 0.0980392, 0.14902, 1)
 fontColor = Color(0.886275, 0.886275, 0.886275, 1)
 cursorColor = Color(1, 1, 1, 1)
 optionButtonHoverFontColor = Color(0.470588, 0.470588, 0.470588, 1)
-borderThickness = 1
-marginLeft = 7
-marginRight = 7
-marginTop = 3
-marginBottom = 3

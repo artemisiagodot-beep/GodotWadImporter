@@ -1,13 +1,14 @@
 [gd_scene format=3 uid="uid://bkvyrdmfwovxb"]
 
-[node name="mapProgresss" type="Control"]
+[node name="mapProgresss" type="Control" unique_id=1771247444]
 layout_mode = 3
 anchor_right = 0.22168
 anchor_bottom = 0.295
 
-[node name="Window" type="Window" parent="."]
+[node name="Window" type="Window" parent="." unique_id=902161219]
+oversampling_override = 1.0
 
-[node name="ItemList" type="ItemList" parent="Window"]
+[node name="ItemList" type="ItemList" parent="Window" unique_id=206749053]
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0

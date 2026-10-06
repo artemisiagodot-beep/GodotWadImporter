@@ -1,30 +1,28 @@
-[gd_scene load_steps=5 format=3 uid="uid://c08y73axi8jvb"]
+[gd_scene format=3 uid="uid://c08y73axi8jvb"]
 
-[ext_resource type="Script" path="res://addons/godotWad/src/thingScripts/collectable.gd" id="1"]
-[ext_resource type="Script" path="res://addons/godotWad/scenes/dropper.gd" id="2_m4erd"]
+[ext_resource type="Script" uid="uid://bt63q1rlf22ft" path="res://addons/godotWad/src/thingScripts/collectable.gd" id="1"]
+[ext_resource type="Script" uid="uid://b0r014ildhrg4" path="res://addons/godotWad/scenes/dropper.gd" id="2_m4erd"]
 
 [sub_resource type="BoxShape3D" id="2"]
 size = Vector3(2, 0.940716, 1.1485)
 
 [sub_resource type="QuadMesh" id="QuadMesh_bmnlw"]
 
-[node name="collectible" type="Node3D"]
+[node name="collectible" type="Node3D" unique_id=2128992484]
 process_priority = -1
 script = ExtResource("1")
-oscillationHeight = null
-oscillationSpeed = null
 
-[node name="Area3D" type="Area3D" parent="."]
+[node name="Area3D" type="Area3D" parent="." unique_id=2025653959]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.349, 0)
 monitorable = false
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D" unique_id=576000727]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.175, 0)
 shape = SubResource("2")
 
-[node name="groundCast" type="RayCast3D" parent="."]
+[node name="groundCast" type="RayCast3D" parent="." unique_id=866767619]
 enabled = false
 script = ExtResource("2_m4erd")
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=69264531]
 mesh = SubResource("QuadMesh_bmnlw")

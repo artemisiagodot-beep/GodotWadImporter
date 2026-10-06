@@ -1,10 +1,10 @@
-[gd_scene load_steps=4 format=3 uid="uid://c2ghunf5b5s4q"]
+[gd_scene format=3 uid="uid://c2ghunf5b5s4q"]
 
-[ext_resource type="Script" path="res://addons/godotWad/scenes/player/head.gd" id="2"]
+[ext_resource type="Script" uid="uid://ntwnqsliin0y" path="res://addons/godotWad/scenes/player/head.gd" id="2"]
 [ext_resource type="Texture2D" uid="uid://cl15uxs12aiar" path="res://addons/godotWad/scenes/guns/icon.png" id="4"]
 [ext_resource type="PackedScene" uid="uid://doas350f5b056" path="res://addons/godotWad/scenes/player/scenes/resizableText/resizableText.tscn" id="4_qpf8c"]
 
-[node name="HUD2" type="Control"]
+[node name="HUD2" type="Control" unique_id=915854615]
 layout_mode = 3
 anchor_left = 0.012
 anchor_top = 0.86
@@ -16,7 +16,7 @@ offset_right = 0.151855
 size_flags_horizontal = 3
 size_flags_vertical = 3
 
-[node name="v" type="HBoxContainer" parent="."]
+[node name="v" type="HBoxContainer" parent="." unique_id=889617903]
 layout_mode = 1
 anchors_preset = -1
 anchor_left = 0.0263672
@@ -29,97 +29,101 @@ offset_right = -24.3412
 offset_bottom = 2.31171
 theme_override_constants/separation = 21
 
-[node name="head" type="TextureRect" parent="v"]
+[node name="head" type="TextureRect" parent="v" unique_id=1907508269]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
 expand_mode = 1
 script = ExtResource("2")
 
-[node name="h" type="VBoxContainer" parent="v"]
+[node name="h" type="VBoxContainer" parent="v" unique_id=1062716069]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
 size_flags_stretch_ratio = 1.29
 
-[node name="armor" parent="v/h" instance=ExtResource("4_qpf8c")]
+[node name="armor" parent="v/h" unique_id=569417873 instance=ExtResource("4_qpf8c")]
 layout_mode = 2
 size_flags_vertical = 3
 scaleFactor = Vector2(1, 2)
 
-[node name="Label" parent="v/h/armor" index="0"]
+[node name="Label" parent="v/h/armor" index="0" unique_id=1850155219]
 offset_top = 2.0
 offset_right = 39.0
 offset_bottom = 26.0
+grow_horizontal = 1
+grow_vertical = 1
 scale = Vector2(2.74359, 4.75)
 text = "100"
 horizontal_alignment = 2
 
-[node name="hp" parent="v/h" instance=ExtResource("4_qpf8c")]
+[node name="hp" parent="v/h" unique_id=317628253 instance=ExtResource("4_qpf8c")]
 layout_mode = 2
 size_flags_vertical = 3
 scaleFactor = Vector2(1, 2)
 
-[node name="Label" parent="v/h/hp" index="0"]
+[node name="Label" parent="v/h/hp" index="0" unique_id=1850155219]
 offset_top = 2.0
 offset_right = 39.0
 offset_bottom = 26.0
+grow_horizontal = 1
+grow_vertical = 1
 scale = Vector2(2.74359, 4.75)
 text = "100"
 horizontal_alignment = 2
 
-[node name="VBoxContainer" type="VBoxContainer" parent="v"]
+[node name="VBoxContainer" type="VBoxContainer" parent="v" unique_id=1760583251]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
 
-[node name="Control" type="Control" parent="v/VBoxContainer"]
+[node name="Control" type="Control" parent="v/VBoxContainer" unique_id=961236174]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
 
-[node name="keys" type="GridContainer" parent="v/VBoxContainer"]
+[node name="keys" type="GridContainer" parent="v/VBoxContainer" unique_id=1898822577]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
 columns = 3
 
-[node name="skullB" type="TextureRect" parent="v/VBoxContainer/keys"]
+[node name="skullB" type="TextureRect" parent="v/VBoxContainer/keys" unique_id=2132705134]
 custom_minimum_size = Vector2(0, 18)
 layout_mode = 2
 size_flags_horizontal = 3
 expand_mode = 1
 
-[node name="skullY" type="TextureRect" parent="v/VBoxContainer/keys"]
+[node name="skullY" type="TextureRect" parent="v/VBoxContainer/keys" unique_id=969846470]
 layout_mode = 2
 size_flags_horizontal = 3
 expand_mode = 1
 
-[node name="skullR" type="TextureRect" parent="v/VBoxContainer/keys"]
+[node name="skullR" type="TextureRect" parent="v/VBoxContainer/keys" unique_id=1736583586]
 layout_mode = 2
 size_flags_horizontal = 3
 expand_mode = 1
 
-[node name="keyB" type="TextureRect" parent="v/VBoxContainer/keys"]
+[node name="keyB" type="TextureRect" parent="v/VBoxContainer/keys" unique_id=970487564]
 custom_minimum_size = Vector2(0, 20)
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
 expand_mode = 1
 
-[node name="keyY" type="TextureRect" parent="v/VBoxContainer/keys"]
+[node name="keyY" type="TextureRect" parent="v/VBoxContainer/keys" unique_id=1540743365]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
 expand_mode = 1
 
-[node name="keyR" type="TextureRect" parent="v/VBoxContainer/keys"]
+[node name="keyR" type="TextureRect" parent="v/VBoxContainer/keys" unique_id=1409213858]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
 expand_mode = 1
 
-[node name="HBoxContainer" type="HBoxContainer" parent="."]
+[node name="HBoxContainer" type="HBoxContainer" parent="." unique_id=1142056804]
 layout_mode = 1
 anchors_preset = -1
 anchor_left = 0.781096
@@ -134,7 +138,7 @@ size_flags_vertical = 3
 theme_override_constants/separation = -11
 metadata/_edit_use_anchors_ = true
 
-[node name="weaponIcon" type="TextureRect" parent="HBoxContainer"]
+[node name="weaponIcon" type="TextureRect" parent="HBoxContainer" unique_id=1601234884]
 layout_mode = 2
 size_flags_horizontal = 3
 texture = ExtResource("4")
@@ -142,33 +146,35 @@ expand_mode = 1
 stretch_mode = 5
 flip_h = true
 
-[node name="VBoxContainer" type="VBoxContainer" parent="HBoxContainer"]
+[node name="VBoxContainer" type="VBoxContainer" parent="HBoxContainer" unique_id=1114923620]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
 size_flags_stretch_ratio = 0.65
 
-[node name="Control" type="Control" parent="HBoxContainer/VBoxContainer"]
+[node name="Control" type="Control" parent="HBoxContainer/VBoxContainer" unique_id=999666770]
 visible = false
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
 
-[node name="ammo" parent="HBoxContainer/VBoxContainer" instance=ExtResource("4_qpf8c")]
+[node name="ammo" parent="HBoxContainer/VBoxContainer" unique_id=506717378 instance=ExtResource("4_qpf8c")]
 layout_mode = 2
 size_flags_vertical = 3
 scaleFactor = Vector2(1, 2)
 
-[node name="Label" parent="HBoxContainer/VBoxContainer/ammo" index="0"]
+[node name="Label" parent="HBoxContainer/VBoxContainer/ammo" index="0" unique_id=1850155219]
 offset_top = -2.0
 offset_right = 39.0
 offset_bottom = 22.0
+grow_horizontal = 1
+grow_vertical = 1
 scale = Vector2(2.33333, 4.75)
 text = "100"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="Control2" type="Control" parent="HBoxContainer/VBoxContainer"]
+[node name="Control2" type="Control" parent="HBoxContainer/VBoxContainer" unique_id=1911871963]
 visible = false
 layout_mode = 2
 size_flags_vertical = 3

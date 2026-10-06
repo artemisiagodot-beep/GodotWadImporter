@@ -1,11 +1,12 @@
-[gd_scene load_steps=3 format=3 uid="uid://bntotgdubho7d"]
+[gd_scene format=3 uid="uid://bntotgdubho7d"]
 
-[ext_resource type="Script" path="res://addons/godotWad/scenes/ui/progressBar/progressBar.gd" id="1"]
+[ext_resource type="Script" uid="uid://cy78qwpjp0bwv" path="res://addons/godotWad/scenes/ui/progressBar/progressBar.gd" id="1"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_xn2ke"]
 bg_color = Color(0.25098, 0.266667, 0.298039, 1)
 
-[node name="progressBar" type="Window"]
+[node name="progressBar" type="Window" unique_id=261780814]
+oversampling_override = 1.0
 title = "Importing Files"
 position = Vector2i(-341, -249)
 size = Vector2i(685, 500)
@@ -13,7 +14,7 @@ transient = true
 always_on_top = true
 script = ExtResource("1")
 
-[node name="Panel" type="Panel" parent="."]
+[node name="Panel" type="Panel" parent="." unique_id=2034463079]
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
@@ -21,7 +22,7 @@ grow_horizontal = 2
 grow_vertical = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_xn2ke")
 
-[node name="VBoxContainer" type="VBoxContainer" parent="."]
+[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=1126163230]
 anchors_preset = -1
 anchor_left = 0.145508
 anchor_top = 0.145
@@ -30,33 +31,33 @@ anchor_bottom = 0.735
 size_flags_horizontal = 3
 size_flags_vertical = 3
 
-[node name="Label" type="Label" parent="VBoxContainer"]
+[node name="Label" type="Label" parent="VBoxContainer" unique_id=760797998]
 layout_mode = 2
 text = "waiting..."
 
-[node name="ProgressBar" type="ProgressBar" parent="VBoxContainer"]
+[node name="ProgressBar" type="ProgressBar" parent="VBoxContainer" unique_id=1429751680]
 custom_minimum_size = Vector2(0, 20)
 layout_mode = 2
 size_flags_horizontal = 3
 
-[node name="Label2" type="Label" parent="VBoxContainer"]
+[node name="Label2" type="Label" parent="VBoxContainer" unique_id=1357823104]
 layout_mode = 2
 
-[node name="ItemList" type="ItemList" parent="VBoxContainer"]
+[node name="ItemList" type="ItemList" parent="VBoxContainer" unique_id=935431005]
 layout_mode = 2
 size_flags_vertical = 3
 
-[node name="HSplitContainer" type="HSplitContainer" parent="VBoxContainer"]
+[node name="HSplitContainer" type="HSplitContainer" parent="VBoxContainer" unique_id=1141672797]
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
 
-[node name="Label" type="Label" parent="VBoxContainer/HSplitContainer"]
+[node name="Label" type="Label" parent="VBoxContainer/HSplitContainer" unique_id=2041701756]
 modulate = Color(1, 1, 1, 0.352941)
 layout_mode = 2
 text = "time elapsed:"
 
-[node name="Label2" type="Label" parent="VBoxContainer/HSplitContainer"]
+[node name="Label2" type="Label" parent="VBoxContainer/HSplitContainer" unique_id=1613192742]
 modulate = Color(1, 1, 1, 0.27451)
 layout_mode = 2
 

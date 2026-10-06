@@ -1,21 +1,21 @@
-[gd_scene load_steps=10 format=3 uid="uid://cy5lvq7dxe1ft"]
+[gd_scene format=3 uid="uid://cy5lvq7dxe1ft"]
 
 [ext_resource type="Texture2D" uid="uid://cl15uxs12aiar" path="res://addons/godotWad/scenes/guns/icon.png" id="1"]
-[ext_resource type="Script" path="res://addons/godotWad/scenes/gameModes/main/title/mainMenu_template.gd" id="2"]
-[ext_resource type="Script" path="res://addons/godotWad/scenes/gameModes/main/title/Generator.gd" id="3"]
+[ext_resource type="Script" uid="uid://b3et5mr13bm1d" path="res://addons/godotWad/scenes/gameModes/main/title/mainMenu_template.gd" id="2"]
+[ext_resource type="Script" uid="uid://dgl4qbmjp4fiu" path="res://addons/godotWad/scenes/gameModes/main/title/Generator.gd" id="3"]
 [ext_resource type="PackedScene" uid="uid://doas350f5b056" path="res://addons/godotWad/scenes/player/scenes/resizableText/resizableText.tscn" id="3_6q6af"]
-[ext_resource type="Shader" path="res://addons/godotWad/shaders/melt.gdshader" id="4_cs0ry"]
-[ext_resource type="Script" path="res://addons/godotWad/scenes/gameModes/main/title/TextureRect.gd" id="4_hgbsj"]
+[ext_resource type="Shader" uid="uid://cdj3bvanxl08f" path="res://addons/godotWad/shaders/melt.gdshader" id="4_cs0ry"]
+[ext_resource type="Script" uid="uid://c26ntopt2c2ct" path="res://addons/godotWad/scenes/gameModes/main/title/TextureRect.gd" id="4_hgbsj"]
 [ext_resource type="PackedScene" uid="uid://dyr0nmjpo3o8x" path="res://addons/godotWad/scenes/gameModes/main/saveLoadMenu/saveLoadUI.tscn" id="6_ifq6d"]
 [ext_resource type="PackedScene" uid="uid://bo2tojwq3nvf0" path="res://addons/godotWad/scenes/gameModes/main/options/options_template.tscn" id="7_fa4xi"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_qg8hx"]
 shader = ExtResource("4_cs0ry")
 shader_parameter/timer = 0.0
-shader_parameter/y_offsets = null
+shader_parameter/y_offsets = PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0)
 shader_parameter/melting = false
 
-[node name="mainMenu" type="Control"]
+[node name="mainMenu" type="Control" unique_id=1053585104]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -24,14 +24,14 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("2")
 
-[node name="TextureRect" type="TextureRect" parent="."]
+[node name="TextureRect" type="TextureRect" parent="." unique_id=1108313615]
 layout_mode = 0
 anchor_right = 1.0
 anchor_bottom = 1.0
 texture = ExtResource("1")
 expand_mode = 1
 
-[node name="v" type="VBoxContainer" parent="."]
+[node name="v" type="VBoxContainer" parent="." unique_id=1935120765]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -49,7 +49,7 @@ size_flags_vertical = 3
 theme_override_constants/separation = 16
 metadata/_edit_use_anchors_ = true
 
-[node name="retry" parent="v" instance=ExtResource("3_6q6af")]
+[node name="retry" parent="v" unique_id=1004799350 instance=ExtResource("3_6q6af")]
 visible = false
 custom_minimum_size = Vector2(180, 60)
 layout_mode = 2
@@ -57,11 +57,15 @@ size_flags_horizontal = 4
 focus_mode = 2
 scaleFactor = Vector2(1, 1.2)
 
-[node name="Label" parent="v/retry" index="0"]
+[node name="Label" parent="v/retry" index="0" unique_id=1850155219]
+offset_top = 0.0
+offset_bottom = 26.0
+grow_horizontal = 1
+grow_vertical = 1
 scale = Vector2(2.95082, 2.76923)
 text = "Retry"
 
-[node name="newGame" type="TextureButton" parent="v"]
+[node name="newGame" type="TextureButton" parent="v" unique_id=152138701]
 custom_minimum_size = Vector2(300, 40)
 layout_mode = 2
 size_flags_horizontal = 3
@@ -69,7 +73,7 @@ size_flags_vertical = 3
 texture_normal = ExtResource("1")
 stretch_mode = 5
 
-[node name="options" type="TextureButton" parent="v"]
+[node name="options" type="TextureButton" parent="v" unique_id=346987332]
 custom_minimum_size = Vector2(300, 40)
 layout_mode = 2
 size_flags_horizontal = 3
@@ -77,19 +81,19 @@ size_flags_vertical = 3
 texture_normal = ExtResource("1")
 stretch_mode = 5
 
-[node name="saveGame" type="TextureButton" parent="v"]
+[node name="saveGame" type="TextureButton" parent="v" unique_id=1274257678]
 custom_minimum_size = Vector2(300, 40)
 layout_mode = 2
 size_flags_vertical = 3
 stretch_mode = 5
 
-[node name="loadGame" type="TextureButton" parent="v"]
+[node name="loadGame" type="TextureButton" parent="v" unique_id=482981799]
 custom_minimum_size = Vector2(300, 40)
 layout_mode = 2
 size_flags_vertical = 3
 stretch_mode = 5
 
-[node name="quit" type="TextureButton" parent="v"]
+[node name="quit" type="TextureButton" parent="v" unique_id=938902735]
 custom_minimum_size = Vector2(300, 40)
 layout_mode = 2
 size_flags_horizontal = 3
@@ -97,10 +101,10 @@ size_flags_vertical = 3
 texture_normal = ExtResource("1")
 stretch_mode = 5
 
-[node name="Generator" type="Node" parent="."]
+[node name="Generator" type="Node" parent="." unique_id=362936455]
 script = ExtResource("3")
 
-[node name="target" type="TextureRect" parent="."]
+[node name="target" type="TextureRect" parent="." unique_id=706359975]
 layout_mode = 0
 anchor_left = 0.022
 anchor_top = 0.037
@@ -112,11 +116,11 @@ offset_right = 23.472
 offset_bottom = 22.8
 expand_mode = 1
 
-[node name="move" type="AudioStreamPlayer" parent="."]
+[node name="move" type="AudioStreamPlayer" parent="." unique_id=1039957637]
 
-[node name="select" type="AudioStreamPlayer" parent="."]
+[node name="select" type="AudioStreamPlayer" parent="." unique_id=39015476]
 
-[node name="meltRect" type="ColorRect" parent="."]
+[node name="meltRect" type="ColorRect" parent="." unique_id=1244464614]
 material = SubResource("ShaderMaterial_qg8hx")
 layout_mode = 1
 anchors_preset = 15
@@ -126,11 +130,11 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("4_hgbsj")
 
-[node name="SaveLoadUi" parent="." instance=ExtResource("6_ifq6d")]
+[node name="SaveLoadUi" parent="." unique_id=46575874 instance=ExtResource("6_ifq6d")]
 visible = false
 layout_mode = 1
 
-[node name="options" parent="." instance=ExtResource("7_fa4xi")]
+[node name="options" parent="." unique_id=16902643 instance=ExtResource("7_fa4xi")]
 layout_mode = 1
 
 [connection signal="visibility_changed" from="." to="." method="_on_visibility_changed"]

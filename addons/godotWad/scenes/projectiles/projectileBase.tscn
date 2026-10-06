@@ -1,8 +1,8 @@
-[gd_scene load_steps=6 format=3 uid="uid://bkejiildygt63"]
+[gd_scene format=3 uid="uid://bkejiildygt63"]
 
-[ext_resource type="Script" path="res://addons/godotWad/scenes/projectiles/projectile2d.gd" id="1"]
-[ext_resource type="Script" path="res://addons/godotWad/scenes/projectiles/projectileGenerator.gd" id="2"]
-[ext_resource type="Script" path="res://addons/godotWad/scenes/projectiles/projectilesounds.gd" id="3"]
+[ext_resource type="Script" uid="uid://bv1hie4uloftv" path="res://addons/godotWad/scenes/projectiles/projectile2d.gd" id="1"]
+[ext_resource type="Script" uid="uid://jdyyixyw4aio" path="res://addons/godotWad/scenes/projectiles/projectileGenerator.gd" id="2"]
+[ext_resource type="Script" uid="uid://yq5eiw0pa82w" path="res://addons/godotWad/scenes/projectiles/projectilesounds.gd" id="3"]
 
 [sub_resource type="SphereShape3D" id="1"]
 radius = 0.157316
@@ -10,33 +10,33 @@ radius = 0.157316
 [sub_resource type="SphereShape3D" id="3"]
 radius = 0.31947
 
-[node name="projectileBase" type="CharacterBody3D"]
+[node name="projectileBase" type="CharacterBody3D" unique_id=1355778495]
 collision_layer = 0
 collision_mask = 3
 script = ExtResource("1")
 velo = 11.0
 splashRadius = 4
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1070916759]
 shape = SubResource("1")
 
-[node name="AnimatedSprite3D" type="AnimatedSprite3D" parent="."]
+[node name="AnimatedSprite3D" type="AnimatedSprite3D" parent="." unique_id=1548627495]
 pixel_size = 500.0
 billboard = 2
 
-[node name="Area3D" type="Area3D" parent="."]
+[node name="Area3D" type="Area3D" parent="." unique_id=1911472848]
 collision_layer = 3
 collision_mask = 3
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D" unique_id=2069133277]
 shape = SubResource("3")
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1907555283]
 
-[node name="Generator" type="Node" parent="."]
+[node name="Generator" type="Node" parent="." unique_id=226752601]
 script = ExtResource("2")
 spawnSound = "DSRLAUNC"
 sizeIncrease = 0
 
-[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="."]
+[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="." unique_id=1819517325]
 script = ExtResource("3")

@@ -1,4 +1,4 @@
-[gd_resource type="Theme" load_steps=16 format=3 uid="uid://dyf67c0ud50ts"]
+[gd_resource type="Theme" format=3 uid="uid://dyf67c0ud50ts"]
 
 [ext_resource type="Texture2D" uid="uid://dxg33k4oskw0b" path="res://addons/object-inspector/icons/file.svg" id="1_65vh4"]
 [ext_resource type="Texture2D" uid="uid://d3bmql3kjdw7b" path="res://addons/object-inspector/icons/maximize.svg" id="1_hfaeu"]

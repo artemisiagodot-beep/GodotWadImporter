@@ -1,12 +1,12 @@
-[gd_scene load_steps=2 format=3 uid="uid://bwkxm3xt6pfqw"]
+[gd_scene format=3 uid="uid://bwkxm3xt6pfqw"]
 
 [ext_resource type="PackedScene" uid="uid://bkejiildygt63" path="res://addons/godotWad/scenes/projectiles/projectileBase.tscn" id="1"]
 
-[node name="Plasma" instance=ExtResource("1")]
+[node name="Plasma" unique_id=1251367121 instance=ExtResource("1")]
 velo = 875.0
 dmg = 20
 
-[node name="Generator" parent="." index="4"]
+[node name="Generator" parent="." index="4" unique_id=226752601]
 front = ["APLSA0", "PLSSB0"]
 frontLeft = ["APLSA0", "PLSSB0"]
 left = ["APLSA0", "PLSSB0"]

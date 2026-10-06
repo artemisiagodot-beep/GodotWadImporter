@@ -1,52 +1,54 @@
-[gd_scene load_steps=3 format=3 uid="uid://d0akwvcy07xky"]
+[gd_scene format=3 uid="uid://d0akwvcy07xky"]
 
-[ext_resource type="Script" path="res://addons/godotWad/scenes/gameModes/main/options/videoOptions.gd" id="1_85fq1"]
+[ext_resource type="Script" uid="uid://d30jdmbpqh475" path="res://addons/godotWad/scenes/gameModes/main/options/videoOptions.gd" id="1_85fq1"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_1083u"]
 bg_color = Color(0.290196, 0.290196, 0.290196, 0.407843)
 
-[node name="Video" type="VBoxContainer"]
+[node name="Video" type="VBoxContainer" unique_id=332628567]
 script = ExtResource("1_85fq1")
 
-[node name="Video" type="GridContainer" parent="."]
+[node name="Video" type="GridContainer" parent="." unique_id=318009120]
 layout_mode = 2
 theme_override_constants/v_separation = 7
 columns = 2
 
-[node name="displayModeLabel" type="Label" parent="Video"]
+[node name="displayModeLabel" type="Label" parent="Video" unique_id=1410764227]
 layout_mode = 2
 size_flags_horizontal = 3
 text = "Display Mode"
 
-[node name="displayMode" type="OptionButton" parent="Video"]
+[node name="displayMode" type="OptionButton" parent="Video" unique_id=760236440]
 unique_name_in_owner = true
 layout_mode = 2
 size_flags_horizontal = 3
 selected = 1
 item_count = 2
 popup/item_0/text = "Fullscreen"
+popup/item_0/id = 0
 popup/item_1/text = "Windowed"
 popup/item_1/id = 1
 
-[node name="fpsLimitedLabel" type="Label" parent="Video"]
+[node name="fpsLimitedLabel" type="Label" parent="Video" unique_id=1391578272]
 layout_mode = 2
 size_flags_horizontal = 3
 text = "Fps Lmit"
 
-[node name="HBoxContainer2" type="HBoxContainer" parent="Video"]
+[node name="HBoxContainer2" type="HBoxContainer" parent="Video" unique_id=575570031]
 layout_mode = 2
 
-[node name="fpsLimitedLabelOption" type="OptionButton" parent="Video/HBoxContainer2"]
+[node name="fpsLimitedLabelOption" type="OptionButton" parent="Video/HBoxContainer2" unique_id=1780405084]
 unique_name_in_owner = true
 layout_mode = 2
 size_flags_horizontal = 3
 selected = 0
 item_count = 2
 popup/item_0/text = "Disabled"
+popup/item_0/id = 0
 popup/item_1/text = "Enabled"
 popup/item_1/id = 1
 
-[node name="fpsLimitValue" type="SpinBox" parent="Video/HBoxContainer2"]
+[node name="fpsLimitValue" type="SpinBox" parent="Video/HBoxContainer2" unique_id=240829311]
 unique_name_in_owner = true
 visible = false
 layout_mode = 2
@@ -57,30 +59,31 @@ value = 60.0
 allow_greater = true
 alignment = 1
 
-[node name="Label" type="Label" parent="Video"]
+[node name="Label" type="Label" parent="Video" unique_id=1633850443]
 layout_mode = 2
 text = "Scaling Mode"
 
-[node name="scalingModeOptions" type="OptionButton" parent="Video"]
+[node name="scalingModeOptions" type="OptionButton" parent="Video" unique_id=1342754913]
 layout_mode = 2
 selected = 0
 item_count = 3
 popup/item_0/text = "Bilinear (Fastest)"
+popup/item_0/id = 0
 popup/item_1/text = "FSR 1.0 (Fast)"
 popup/item_1/id = 1
 popup/item_2/text = "FSR 2.2 (Slow)"
 popup/item_2/id = 2
 
-[node name="resolutionScaling" type="Label" parent="Video"]
+[node name="resolutionScaling" type="Label" parent="Video" unique_id=1499161128]
 layout_mode = 2
 size_flags_horizontal = 3
 text = "Resolution Scaling"
 
-[node name="HBoxContainer" type="HBoxContainer" parent="Video"]
+[node name="HBoxContainer" type="HBoxContainer" parent="Video" unique_id=1332832619]
 layout_mode = 2
 size_flags_horizontal = 3
 
-[node name="resolucionScalingSlider" type="HSlider" parent="Video/HBoxContainer"]
+[node name="resolucionScalingSlider" type="HSlider" parent="Video/HBoxContainer" unique_id=72125611]
 unique_name_in_owner = true
 layout_mode = 2
 size_flags_horizontal = 3
@@ -90,24 +93,25 @@ max_value = 2.0
 step = 0.01
 value = 1.0
 
-[node name="resolutionLabel" type="LineEdit" parent="Video/HBoxContainer"]
+[node name="resolutionLabel" type="LineEdit" parent="Video/HBoxContainer" unique_id=1853793033]
 unique_name_in_owner = true
 custom_minimum_size = Vector2(24, 0)
 layout_mode = 2
 text = "1"
 alignment = 1
 
-[node name="VSyncLabel" type="Label" parent="Video"]
+[node name="VSyncLabel" type="Label" parent="Video" unique_id=1117184466]
 layout_mode = 2
 size_flags_horizontal = 3
 text = "V-Sync"
 
-[node name="VSync" type="OptionButton" parent="Video"]
+[node name="VSync" type="OptionButton" parent="Video" unique_id=1627426704]
 unique_name_in_owner = true
 layout_mode = 2
 selected = 0
 item_count = 4
 popup/item_0/text = "Disabled"
+popup/item_0/id = 0
 popup/item_1/text = "Enabled"
 popup/item_1/id = 1
 popup/item_2/text = "Adaptive"
@@ -115,16 +119,16 @@ popup/item_2/id = 2
 popup/item_3/text = "Letterbox"
 popup/item_3/id = 3
 
-[node name="FOVlabel" type="Label" parent="Video"]
+[node name="FOVlabel" type="Label" parent="Video" unique_id=1313699793]
 layout_mode = 2
 text = "FOV"
 
-[node name="fovSlider" type="HBoxContainer" parent="Video"]
+[node name="fovSlider" type="HBoxContainer" parent="Video" unique_id=1903958221]
 layout_mode = 2
 size_flags_horizontal = 3
 alignment = 2
 
-[node name="FOVslider" type="HSlider" parent="Video/fovSlider"]
+[node name="FOVslider" type="HSlider" parent="Video/fovSlider" unique_id=1966971798]
 unique_name_in_owner = true
 layout_mode = 2
 size_flags_horizontal = 3
@@ -133,7 +137,7 @@ min_value = 65.0
 max_value = 120.0
 value = 100.0
 
-[node name="FOVlabel" type="Label" parent="Video/fovSlider"]
+[node name="FOVlabel" type="Label" parent="Video/fovSlider" unique_id=273073089]
 unique_name_in_owner = true
 custom_minimum_size = Vector2(24, 0)
 layout_mode = 2
@@ -142,16 +146,16 @@ horizontal_alignment = 1
 vertical_alignment = 1
 metadata/keepColor = true
 
-[node name="mouseSensLabel" type="Label" parent="Video"]
+[node name="mouseSensLabel" type="Label" parent="Video" unique_id=111714996]
 layout_mode = 2
 size_flags_horizontal = 3
 text = "Mouse Sensitivity"
 
-[node name="mouseSensSlider" type="HBoxContainer" parent="Video"]
+[node name="mouseSensSlider" type="HBoxContainer" parent="Video" unique_id=2028509095]
 layout_mode = 2
 size_flags_horizontal = 3
 
-[node name="mouseSensSlider" type="HSlider" parent="Video/mouseSensSlider"]
+[node name="mouseSensSlider" type="HSlider" parent="Video/mouseSensSlider" unique_id=327839420]
 unique_name_in_owner = true
 layout_mode = 2
 size_flags_horizontal = 3
@@ -162,7 +166,7 @@ max_value = 1.8
 step = 0.001
 value = 0.5
 
-[node name="senseSliderLabel" type="LineEdit" parent="Video/mouseSensSlider"]
+[node name="senseSliderLabel" type="LineEdit" parent="Video/mouseSensSlider" unique_id=921314162]
 unique_name_in_owner = true
 layout_mode = 2
 size_flags_stretch_ratio = 0.43
@@ -170,139 +174,144 @@ text = "100"
 alignment = 1
 metadata/keepColor = false
 
-[node name="Button" type="HSeparator" parent="."]
+[node name="Button" type="HSeparator" parent="." unique_id=140626641]
 layout_mode = 2
 theme_override_constants/separation = 28
 
-[node name="GridContainer" type="GridContainer" parent="."]
+[node name="GridContainer" type="GridContainer" parent="." unique_id=1067549201]
 layout_mode = 2
 columns = 2
 
-[node name="Label" type="Label" parent="GridContainer"]
+[node name="Label" type="Label" parent="GridContainer" unique_id=1608909181]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 6
 text = "Texture filtering"
 
-[node name="HBoxContainer3" type="HBoxContainer" parent="GridContainer"]
+[node name="HBoxContainer3" type="HBoxContainer" parent="GridContainer" unique_id=977516454]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
 
-[node name="textureFilteringOption" type="OptionButton" parent="GridContainer/HBoxContainer3"]
+[node name="textureFilteringOption" type="OptionButton" parent="GridContainer/HBoxContainer3" unique_id=202084171]
 unique_name_in_owner = true
 layout_mode = 2
 size_flags_horizontal = 3
 selected = 0
 item_count = 3
 popup/item_0/text = "Nearest"
+popup/item_0/id = 0
 popup/item_1/text = "Linear"
 popup/item_1/id = 1
 popup/item_2/text = "Custom"
 popup/item_2/id = 2
 
-[node name="HBoxContainer2" type="HBoxContainer" parent="GridContainer"]
+[node name="HBoxContainer2" type="HBoxContainer" parent="GridContainer" unique_id=679197957]
 layout_mode = 2
 
-[node name="MipLabel" type="Label" parent="GridContainer/HBoxContainer2"]
+[node name="MipLabel" type="Label" parent="GridContainer/HBoxContainer2" unique_id=557173483]
 z_as_relative = false
 layout_mode = 2
 size_flags_horizontal = 3
 text = "Mipmaps"
 
-[node name="Panel" type="Panel" parent="GridContainer/HBoxContainer2/MipLabel"]
+[node name="Panel" type="Panel" parent="GridContainer/HBoxContainer2/MipLabel" unique_id=1944370664]
 show_behind_parent = true
 layout_mode = 0
 offset_right = 222.0
 offset_bottom = 27.0
 theme_override_styles/panel = SubResource("StyleBoxFlat_1083u")
 
-[node name="mipMaps" type="CheckBox" parent="GridContainer/HBoxContainer2"]
+[node name="mipMaps" type="CheckBox" parent="GridContainer/HBoxContainer2" unique_id=791744876]
 unique_name_in_owner = true
 layout_mode = 2
 size_flags_horizontal = 3
 button_pressed = true
 
-[node name="HBoxContainer" type="HBoxContainer" parent="GridContainer"]
+[node name="HBoxContainer" type="HBoxContainer" parent="GridContainer" unique_id=542532330]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_stretch_ratio = 7.37
 
-[node name="Control" type="Control" parent="GridContainer/HBoxContainer"]
+[node name="Control" type="Control" parent="GridContainer/HBoxContainer" unique_id=1737617040]
 layout_mode = 2
 size_flags_stretch_ratio = 5.25
 
-[node name="ansiotropicLabel" type="Label" parent="GridContainer/HBoxContainer"]
+[node name="ansiotropicLabel" type="Label" parent="GridContainer/HBoxContainer" unique_id=1555091424]
 unique_name_in_owner = true
 layout_mode = 2
 size_flags_horizontal = 3
 text = "Ansiotropic"
 
-[node name="ansiotropic" type="CheckBox" parent="GridContainer/HBoxContainer"]
+[node name="ansiotropic" type="CheckBox" parent="GridContainer/HBoxContainer" unique_id=1916933881]
 unique_name_in_owner = true
 layout_mode = 2
 size_flags_horizontal = 3
 button_pressed = true
 
-[node name="AdvancedFiltering" type="GridContainer" parent="."]
+[node name="AdvancedFiltering" type="GridContainer" parent="." unique_id=392784021]
 unique_name_in_owner = true
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
 columns = 2
 
-[node name="GFilterLabel" type="Label" parent="AdvancedFiltering"]
+[node name="GFilterLabel" type="Label" parent="AdvancedFiltering" unique_id=851389465]
 layout_mode = 2
 size_flags_horizontal = 3
 text = "Geometry Filtering"
 
-[node name="GFilterOption" type="OptionButton" parent="AdvancedFiltering"]
+[node name="GFilterOption" type="OptionButton" parent="AdvancedFiltering" unique_id=583818572]
 unique_name_in_owner = true
 layout_mode = 2
 size_flags_horizontal = 3
 selected = 0
 item_count = 2
 popup/item_0/text = "Nearest"
+popup/item_0/id = 0
 popup/item_1/text = "Linear"
 popup/item_1/id = 1
 
-[node name="SpriteFilterLabel" type="Label" parent="AdvancedFiltering"]
+[node name="SpriteFilterLabel" type="Label" parent="AdvancedFiltering" unique_id=1369865794]
 unique_name_in_owner = true
 layout_mode = 2
 text = "Sprite Filtering"
 
-[node name="SpriteFilterOption" type="OptionButton" parent="AdvancedFiltering"]
+[node name="SpriteFilterOption" type="OptionButton" parent="AdvancedFiltering" unique_id=1007522716]
 unique_name_in_owner = true
 layout_mode = 2
 selected = 0
 item_count = 2
 popup/item_0/text = "Nearest"
+popup/item_0/id = 0
 popup/item_1/text = "Linear"
 popup/item_1/id = 1
 
-[node name="SkyFilterLabel" type="Label" parent="AdvancedFiltering"]
+[node name="SkyFilterLabel" type="Label" parent="AdvancedFiltering" unique_id=238672907]
 layout_mode = 2
 text = "Sky Filtering"
 
-[node name="SkyOption" type="OptionButton" parent="AdvancedFiltering"]
+[node name="SkyOption" type="OptionButton" parent="AdvancedFiltering" unique_id=1066202323]
 unique_name_in_owner = true
 layout_mode = 2
 selected = 0
 item_count = 2
 popup/item_0/text = "Nearest"
+popup/item_0/id = 0
 popup/item_1/text = "Linear"
 popup/item_1/id = 1
 
-[node name="UIFilterLabel" type="Label" parent="AdvancedFiltering"]
+[node name="UIFilterLabel" type="Label" parent="AdvancedFiltering" unique_id=954304862]
 layout_mode = 2
 text = "UI Filtering"
 
-[node name="UIFilterOption" type="OptionButton" parent="AdvancedFiltering"]
+[node name="UIFilterOption" type="OptionButton" parent="AdvancedFiltering" unique_id=1376319908]
 unique_name_in_owner = true
 layout_mode = 2
 selected = 0
 item_count = 2
 popup/item_0/text = "Nearest"
+popup/item_0/id = 0
 popup/item_1/text = "Linear"
 popup/item_1/id = 1
 

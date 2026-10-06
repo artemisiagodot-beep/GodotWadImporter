@@ -1,10 +1,10 @@
-[gd_scene load_steps=3 format=3 uid="uid://br07pau6iijsu"]
+[gd_scene format=3 uid="uid://br07pau6iijsu"]
 
-[ext_resource type="Script" path="res://addons/godotWad/scenes/quad3Dsprite.gd" id="1"]
+[ext_resource type="Script" uid="uid://syndefdia72y" path="res://addons/godotWad/scenes/quad3Dsprite.gd" id="1"]
 
-[sub_resource type="QuadMesh" id="QuadMesh_w78t2"]
+[sub_resource type="QuadMesh" id="QuadMesh_q2svw"]
 
-[node name="quad3Dsprite" type="MeshInstance3D"]
+[node name="quad3Dsprite" type="MeshInstance3D" unique_id=790315059]
 custom_aabb = AABB(0, 0, 0, 5, 5, 0)
-mesh = SubResource("QuadMesh_w78t2")
+mesh = SubResource("QuadMesh_q2svw")
 script = ExtResource("1")

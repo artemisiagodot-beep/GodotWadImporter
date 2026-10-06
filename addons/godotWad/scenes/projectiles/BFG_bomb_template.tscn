@@ -1,12 +1,12 @@
-[gd_scene load_steps=3 format=3 uid="uid://dq3clhc5o41ul"]
+[gd_scene format=3 uid="uid://dq3clhc5o41ul"]
 
 [ext_resource type="PackedScene" uid="uid://bkejiildygt63" path="res://addons/godotWad/scenes/projectiles/projectileBase.tscn" id="1"]
-[ext_resource type="Script" path="res://addons/godotWad/scenes/projectiles/customHitBFG.gd" id="2"]
+[ext_resource type="Script" uid="uid://bb1xr4te6app1" path="res://addons/godotWad/scenes/projectiles/customHitBFG.gd" id="2"]
 
-[node name="BFG_bomb" instance=ExtResource("1")]
+[node name="BFG_bomb" unique_id=984619905 instance=ExtResource("1")]
 velo = 875.0
 
-[node name="Generator" parent="." index="4"]
+[node name="Generator" parent="." index="4" unique_id=226752601]
 front = ["BFS1A0", "BFS1B0"]
 back = []
 backRight = []
@@ -17,5 +17,5 @@ spawnSound = ""
 explosionSound = "DSRXPLOD"
 sizeIncrease = 0.6
 
-[node name="customHit" type="Node" parent="." index="6"]
+[node name="customHit" type="Node" parent="." index="6" unique_id=24257303]
 script = ExtResource("2")

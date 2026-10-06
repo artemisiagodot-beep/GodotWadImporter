@@ -1,6 +1,6 @@
-[gd_resource type="Resource" script_class="gsheet" load_steps=2 format=3 uid="uid://4b8e0v6e2hjf"]
+[gd_resource type="Resource" script_class="gsheet" format=3 uid="uid://4b8e0v6e2hjf"]
 
-[ext_resource type="Script" path="res://addons/gSheet/scenes/gsheet.gd" id="1_24ncc"]
+[ext_resource type="Script" uid="uid://d02lbqko47sau" path="res://addons/gSheet/scenes/gsheet.gd" id="1_24ncc"]
 
 [resource]
 script = ExtResource("1_24ncc")

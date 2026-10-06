@@ -1,14 +1,13 @@
-[gd_scene load_steps=3 format=3 uid="uid://bbuhunjs6wv7h"]
+[gd_scene format=3 uid="uid://bbuhunjs6wv7h"]
 
 [ext_resource type="PackedScene" uid="uid://bkejiildygt63" path="res://addons/godotWad/scenes/projectiles/projectileBase.tscn" id="1"]
-[ext_resource type="Script" path="res://addons/godotWad/scenes/projectiles/cusotmHit.gd" id="2"]
+[ext_resource type="Script" uid="uid://bsohhyphbsapx" path="res://addons/godotWad/scenes/projectiles/cusotmHit.gd" id="2"]
 
-[node name="Missile" instance=ExtResource("1")]
+[node name="Missile" unique_id=709200299 instance=ExtResource("1")]
 velo = 350.0
 dmg = 40
-splashRadius = 4
 
-[node name="Generator" parent="." index="4"]
+[node name="Generator" parent="." index="4" unique_id=226752601]
 front = ["FATBA1", "FATBB1"]
 frontLeft = ["FATBA2A8", "FATBB2B8"]
 left = ["FATBA3A7", "FATBB3B7"]
@@ -21,5 +20,5 @@ explosion = ["FBXPA0", "FBXPB0", "FBXPC0"]
 spawnSound = "DSSKEATK"
 sizeIncrease = 0.2
 
-[node name="cusotmHit" type="Node" parent="." index="6"]
+[node name="cusotmHit" type="Node" parent="." index="6" unique_id=825728734]
 script = ExtResource("2")

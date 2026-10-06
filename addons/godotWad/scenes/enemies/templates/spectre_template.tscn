@@ -1,20 +1,20 @@
-[gd_scene load_steps=4 format=3 uid="uid://dg2dxfdf73vbh"]
+[gd_scene format=3 uid="uid://dg2dxfdf73vbh"]
 
 [ext_resource type="PackedScene" uid="uid://dwyauddt64wce" path="res://addons/godotWad/scenes/enemies/templates/demon_template.tscn" id="1"]
 
-[sub_resource type="QuadMesh" id="QuadMesh_6gyla"]
+[sub_resource type="QuadMesh" id="QuadMesh_177lr"]
 
 [sub_resource type="BoxShape3D" id="1"]
 size = Vector3(40, 58, 40)
 
-[node name="Spectre" instance=ExtResource("1")]
+[node name="Spectre" unique_id=2073881044 instance=ExtResource("1")]
 npcName = "spectre"
 modulate = Color(0, 0, 0, 0.560784)
 
-[node name="AnimatedSprite3D" parent="." index="0"]
-mesh = SubResource("QuadMesh_6gyla")
+[node name="AnimatedSprite3D" parent="visual" parent_id_path=PackedInt32Array(2133409113) index="0" unique_id=1982447299]
+mesh = SubResource("QuadMesh_177lr")
 
-[node name="CollisionShape3D" parent="." index="3"]
+[node name="CollisionShape3D" parent="." index="3" unique_id=1659532864]
 shape = SubResource("1")
 
-[editable path="AnimatedSprite3D"]
+[editable path="visual/AnimatedSprite3D"]

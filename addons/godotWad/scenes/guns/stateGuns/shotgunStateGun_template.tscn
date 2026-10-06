@@ -1,10 +1,10 @@
-[gd_scene load_steps=6 format=3 uid="uid://cvwi0hfgko6pi"]
+[gd_scene format=3 uid="uid://cvwi0hfgko6pi"]
 
 [ext_resource type="PackedScene" uid="uid://bcpqqvj8ar2jt" path="res://addons/godotWad/scenes/guns/stateGuns/stateGunBase.tscn" id="1_6po5f"]
 
-[sub_resource type="QuadMesh" id="QuadMesh_a8w68"]
+[sub_resource type="QuadMesh" id="QuadMesh_1ubpy"]
 
-[sub_resource type="Shader" id="Shader_wywwi"]
+[sub_resource type="Shader" id="Shader_fy00o"]
 code = "shader_type spatial;
 render_mode blend_mix;
 
@@ -47,17 +47,17 @@ void fragment() {
 }
 "
 
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_gbxxk"]
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_lql0b"]
 render_priority = 0
-shader = SubResource("Shader_wywwi")
+shader = SubResource("Shader_fy00o")
 shader_parameter/albedo = Color(1, 1, 1, 1)
-shader_parameter/point_size = null
+shader_parameter/point_size = 0.0
 shader_parameter/fov = 90.0
 
-[sub_resource type="QuadMesh" id="QuadMesh_rbh21"]
-material = SubResource("ShaderMaterial_gbxxk")
+[sub_resource type="QuadMesh" id="QuadMesh_w2fsa"]
+material = SubResource("ShaderMaterial_lql0b")
 
-[node name="shotgun" instance=ExtResource("1_6po5f")]
+[node name="shotgun" unique_id=186570351 instance=ExtResource("1_6po5f")]
 weaponName = "shotgun"
 category = 3
 ammoType = "shell"
@@ -67,17 +67,17 @@ bulletPerShot = 7
 firstShotAccuracy = 0
 stateResPath = "res://addons/godotWad/resources/shotgunStates.tres"
 
-[node name="AnimatedSprite3D" parent="." index="0"]
-mesh = SubResource("QuadMesh_a8w68")
+[node name="AnimatedSprite3D" parent="." index="0" unique_id=1623663330]
+mesh = SubResource("QuadMesh_1ubpy")
 
-[node name="muzzleFlash" parent="." index="1"]
-mesh = SubResource("QuadMesh_rbh21")
+[node name="muzzleFlash" parent="." index="1" unique_id=2145329871]
+mesh = SubResource("QuadMesh_w2fsa")
 
-[node name="Generator" parent="." index="4"]
+[node name="Generator" parent="." index="4" unique_id=1027332455]
 spriteList = Array[String](["SHTGA0", "SHTGB0", "SHTGC0", "SHTGD0"])
 spriteListMuzzleFlash = Array[String](["SHTFA0", "SHTFB0"])
 worldSprite = "SHOTA0"
 fireSounds = Array[String](["DSSHOTGN"])
 
-[node name="AnimationPlayer" parent="." index="5"]
+[node name="AnimationPlayer" parent="." index="5" unique_id=364149787]
 callback_mode_process = 1

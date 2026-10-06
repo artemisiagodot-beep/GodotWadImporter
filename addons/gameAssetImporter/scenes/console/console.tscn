@@ -1,8 +1,8 @@
-[gd_scene load_steps=6 format=3 uid="uid://dku0k1jhjyjpm"]
+[gd_scene format=3 uid="uid://dku0k1jhjyjpm"]
 
-[ext_resource type="Script" path="res://addons/gameAssetImporter/scenes/console/console.gd" id="1_w2nb2"]
-[ext_resource type="Script" path="res://addons/gameAssetImporter/scenes/console/execute.gd" id="2_nu70b"]
-[ext_resource type="Script" path="res://addons/gameAssetImporter/scenes/console/nativeFuncs.gd" id="4_p86el"]
+[ext_resource type="Script" uid="uid://dyt6bf3egpf50" path="res://addons/gameAssetImporter/scenes/console/console.gd" id="1_w2nb2"]
+[ext_resource type="Script" uid="uid://c3bcwjq4l0glv" path="res://addons/gameAssetImporter/scenes/console/execute.gd" id="2_nu70b"]
+[ext_resource type="Script" uid="uid://75lampctf8ug" path="res://addons/gameAssetImporter/scenes/console/nativeFuncs.gd" id="4_p86el"]
 
 [sub_resource type="InputEventKey" id="InputEventKey_vhftn"]
 keycode = 4194309
@@ -10,7 +10,7 @@ keycode = 4194309
 [sub_resource type="Shortcut" id="Shortcut_gly34"]
 events = [SubResource("InputEventKey_vhftn")]
 
-[node name="Console" type="Control"]
+[node name="Console" type="Control" unique_id=1934585264]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -19,7 +19,7 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_w2nb2")
 
-[node name="VBoxContainer" type="VBoxContainer" parent="."]
+[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=107595967]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -27,11 +27,11 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="ScrollContainer" type="ScrollContainer" parent="VBoxContainer"]
+[node name="ScrollContainer" type="ScrollContainer" parent="VBoxContainer" unique_id=275439406]
 layout_mode = 2
 size_flags_vertical = 3
 
-[node name="logText" type="RichTextLabel" parent="VBoxContainer/ScrollContainer"]
+[node name="logText" type="RichTextLabel" parent="VBoxContainer/ScrollContainer" unique_id=306253371]
 unique_name_in_owner = true
 layout_mode = 2
 size_flags_horizontal = 4
@@ -41,25 +41,25 @@ text = " "
 fit_content = true
 autowrap_mode = 0
 
-[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer"]
+[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer" unique_id=996362746]
 layout_mode = 2
 
-[node name="input" type="LineEdit" parent="VBoxContainer/HBoxContainer"]
+[node name="input" type="LineEdit" parent="VBoxContainer/HBoxContainer" unique_id=284442774]
 unique_name_in_owner = true
 layout_mode = 2
 size_flags_horizontal = 3
 
-[node name="inputSend" type="Button" parent="VBoxContainer/HBoxContainer"]
+[node name="inputSend" type="Button" parent="VBoxContainer/HBoxContainer" unique_id=1763158534]
 unique_name_in_owner = true
 custom_minimum_size = Vector2(32, 0)
 layout_mode = 2
 shortcut = SubResource("Shortcut_gly34")
 
-[node name="execute" type="Node" parent="."]
+[node name="execute" type="Node" parent="." unique_id=1406835198]
 unique_name_in_owner = true
 script = ExtResource("2_nu70b")
 
-[node name="nativeFuncs" type="Node" parent="execute"]
+[node name="nativeFuncs" type="Node" parent="execute" unique_id=28694511]
 script = ExtResource("4_p86el")
 
 [connection signal="visibility_changed" from="." to="." method="_on_visibility_changed"]

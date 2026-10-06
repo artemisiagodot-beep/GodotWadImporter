@@ -1,13 +1,13 @@
-[gd_scene load_steps=4 format=3 uid="uid://bpr478e7fn1uh"]
+[gd_scene format=3 uid="uid://bpr478e7fn1uh"]
 
 [ext_resource type="PackedScene" uid="uid://dhxyaai4rce5r" path="res://addons/godotWad/scenes/enemies/npc_template.tscn" id="1"]
 
-[sub_resource type="QuadMesh" id="QuadMesh_mc3ru"]
+[sub_resource type="QuadMesh" id="QuadMesh_ve8be"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_tuh2i"]
 size = Vector3(40, 56, 40)
 
-[node name="Imp" instance=ExtResource("1")]
+[node name="Imp" unique_id=414070370 instance=ExtResource("1")]
 process_priority = 0
 initialHP = 20.0
 height = 56.0
@@ -16,20 +16,20 @@ meleeRange = 3.0
 stateDataPath = "res://addons/godotWad/resources/monsterStates/impState.tres"
 flying = false
 
-[node name="AnimatedSprite3D" parent="visual" index="0"]
-mesh = SubResource("QuadMesh_mc3ru")
+[node name="AnimatedSprite3D" parent="visual" parent_id_path=PackedInt32Array(2133409113) index="0" unique_id=1982447299]
+mesh = SubResource("QuadMesh_ve8be")
 
-[node name="CollisionShape3D" parent="." index="3"]
+[node name="CollisionShape3D" parent="." index="3" unique_id=1659532864]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 28, 0)
 shape = SubResource("BoxShape3D_tuh2i")
 
-[node name="Generator" parent="." index="6"]
+[node name="Generator" parent="." index="6" unique_id=213520782]
 entityDepends = PackedStringArray("fireball")
 
-[node name="VisibleOnScreenNotifier3D" parent="." index="7"]
+[node name="VisibleOnScreenNotifier3D" parent="." index="7" unique_id=1106049519]
 aabb = AABB(-20, 0, -20, 40, 56, 40)
 
-[node name="cast" parent="." index="9"]
+[node name="cast" parent="." index="9" unique_id=714861743]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 44.8, 0)
 
 [editable path="visual/AnimatedSprite3D"]

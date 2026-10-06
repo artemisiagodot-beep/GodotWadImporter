@@ -1,25 +1,24 @@
-[gd_scene load_steps=4 format=3 uid="uid://dl1rvjph08yan"]
+[gd_scene format=3 uid="uid://dl1rvjph08yan"]
 
 [ext_resource type="PackedScene" uid="uid://bcpqqvj8ar2jt" path="res://addons/godotWad/scenes/guns/stateGuns/stateGunBase.tscn" id="1_yde0u"]
 
-[sub_resource type="QuadMesh" id="QuadMesh_rney0"]
+[sub_resource type="QuadMesh" id="QuadMesh_0n33t"]
 
-[sub_resource type="QuadMesh" id="QuadMesh_y0dnh"]
+[sub_resource type="QuadMesh" id="QuadMesh_po0hc"]
 
-[node name="pistol" instance=ExtResource("1_yde0u")]
+[node name="pistol" unique_id=1139526857 instance=ExtResource("1_yde0u")]
 weaponName = "pistol"
 category = 2
 maxSpread = Vector2(11, 0)
 stateResPath = "res://addons/godotWad/resources/pistolStates.tres"
 
-[node name="AnimatedSprite3D" parent="." index="0"]
-mesh = SubResource("QuadMesh_rney0")
+[node name="AnimatedSprite3D" parent="." index="0" unique_id=1623663330]
+mesh = SubResource("QuadMesh_0n33t")
 
-[node name="muzzleFlash" parent="." index="1"]
-mesh = SubResource("QuadMesh_y0dnh")
+[node name="muzzleFlash" parent="." index="1" unique_id=2145329871]
+mesh = SubResource("QuadMesh_po0hc")
 
-[node name="Generator" parent="." index="4"]
+[node name="Generator" parent="." index="4" unique_id=1027332455]
 spriteListMuzzleFlash = Array[String](["PISFA0"])
-entityDepends = PackedStringArray()
 
-[node name="Camera3D" type="Camera3D" parent="." index="7"]
+[node name="Camera3D" type="Camera3D" parent="." index="7" unique_id=567445048]

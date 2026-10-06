@@ -26,9 +26,8 @@ func _enter_tree():
 	
 
 
-func _handles(object):
-	if "name" in object:
-		return object
+func _handles(object) -> bool:
+	return "name" in object
 
 func _make_visible(visible: bool) -> void:
 	if dock:
@@ -128,6 +127,8 @@ func findItemInTreeByScriptName(node,scriptName):
 			var ret = findItemInTreeByScriptName(child,scriptName)
 			if ret != null:
 				return ret
+	
+	return null
 
 func collapseAllUnderItem(item):
 	item.collapsed = true
@@ -153,6 +154,8 @@ func findNodeByClass(node,className):
 		var ret = findNodeByClass(i,className)
 		if ret != null:
 			return ret
+	
+	return null
 			
 
 var m : Window = null
@@ -210,4 +213,3 @@ func diskInstanced(entity):
 
 			curObj.add_child(entity)
 			entity.owner = get_tree().edited_scene_root
-		

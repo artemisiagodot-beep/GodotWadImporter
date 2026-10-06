@@ -1,14 +1,14 @@
-[gd_scene load_steps=5 format=3 uid="uid://5omjuqcciiqj"]
+[gd_scene format=3 uid="uid://5omjuqcciiqj"]
 
 [ext_resource type="PackedScene" uid="uid://dhxyaai4rce5r" path="res://addons/godotWad/scenes/enemies/npc_template.tscn" id="1"]
-[ext_resource type="Resource" path="res://addons/godotWad/scenes/enemies/templates/sprites/wolfensteinSSsprites.tres" id="2"]
+[ext_resource type="Resource" uid="uid://dd62gnvi2mdxu" path="res://addons/godotWad/scenes/enemies/templates/sprites/wolfensteinSSsprites.tres" id="2"]
 
-[sub_resource type="QuadMesh" id="QuadMesh_2nkmk"]
+[sub_resource type="QuadMesh" id="QuadMesh_8drax"]
 
 [sub_resource type="BoxShape3D" id="1"]
 size = Vector3(40, 56, 40)
 
-[node name="wolfensteinSS" instance=ExtResource("1")]
+[node name="wolfensteinSS" unique_id=1274786305 instance=ExtResource("1")]
 initialHP = 50.0
 npcName = "wolfenstein ss"
 height = 56.0
@@ -17,20 +17,17 @@ painStateId = 16
 deadStateId = 20
 gibStateId = 23
 
-[node name="AnimatedSprite3D" parent="." index="0"]
-mesh = SubResource("QuadMesh_2nkmk")
+[node name="AnimatedSprite3D" parent="visual" parent_id_path=PackedInt32Array(2133409113) index="0" unique_id=1982447299]
+mesh = SubResource("QuadMesh_8drax")
 
-[node name="CollisionShape3D" parent="." index="3"]
+[node name="CollisionShape3D" parent="." index="3" unique_id=1659532864]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 28, 0)
 shape = SubResource("1")
 
-[node name="cast" parent="." index="4"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 44.8, 0)
-
-[node name="castWeapon" parent="." index="6"]
+[node name="castWeapon" parent="." index="5" unique_id=1758431114]
 spread = 600
 
-[node name="Generator" parent="." index="7"]
+[node name="Generator" parent="." index="6" unique_id=213520782]
 sprites = ExtResource("2")
 idle = "AB"
 chase = "AABBCCDD"
@@ -43,7 +40,10 @@ attackSounds = ["DSSHOTGN"]
 alertSounds = ["DSSSSIT"]
 searchSounds = Array[StringName]([&"DSPOSACT"])
 
-[node name="VisibleOnScreenNotifier3D" parent="." index="8"]
+[node name="VisibleOnScreenNotifier3D" parent="." index="7" unique_id=1106049519]
 aabb = AABB(-20, 0, -20, 40, 56, 40)
 
-[editable path="AnimatedSprite3D"]
+[node name="cast" parent="." index="9" unique_id=714861743]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 44.8, 0)
+
+[editable path="visual/AnimatedSprite3D"]

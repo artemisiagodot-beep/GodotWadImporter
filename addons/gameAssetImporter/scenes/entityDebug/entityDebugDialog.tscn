@@ -1,51 +1,51 @@
-[gd_scene load_steps=2 format=3 uid="uid://bhxvt0aae30m6"]
+[gd_scene format=3 uid="uid://bhxvt0aae30m6"]
 
-[ext_resource type="Script" path="res://addons/gameAssetImporter/scenes/entityDebug/entityDebugDialog.gd" id="1_egi4x"]
+[ext_resource type="Script" uid="uid://cokswln3ow4st" path="res://addons/gameAssetImporter/scenes/entityDebug/entityDebugDialog.gd" id="1_egi4x"]
 
-[node name="entityDebugDialog" type="Window"]
+[node name="entityDebugDialog" type="Window" unique_id=887684251]
+oversampling_override = 1.0
 position = Vector2i(0, 36)
 size = Vector2i(645, 350)
 script = ExtResource("1_egi4x")
 
-[node name="TabBar" type="TabContainer" parent="."]
+[node name="TabBar" type="TabContainer" parent="." unique_id=952427348]
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 current_tab = 0
 
-[node name="treeMeta" type="VSplitContainer" parent="TabBar"]
+[node name="treeMeta" type="VSplitContainer" parent="TabBar" unique_id=198083878]
 layout_mode = 2
 metadata/_tab_index = 0
 
-[node name="hSplit" type="HBoxContainer" parent="TabBar/treeMeta"]
+[node name="hSplit" type="HBoxContainer" parent="TabBar/treeMeta" unique_id=114068109]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
 
-[node name="listLeft" type="ItemList" parent="TabBar/treeMeta/hSplit"]
+[node name="listLeft" type="ItemList" parent="TabBar/treeMeta/hSplit" unique_id=1125923153]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
-item_count = 2
+item_count = 1
 item_0/text = "baseControl"
-item_1/text = "settings"
 
-[node name="listMiddle" type="ItemList" parent="TabBar/treeMeta/hSplit"]
+[node name="listMiddle" type="ItemList" parent="TabBar/treeMeta/hSplit" unique_id=1058270588]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
 
-[node name="listRight" type="ItemList" parent="TabBar/treeMeta/hSplit"]
+[node name="listRight" type="ItemList" parent="TabBar/treeMeta/hSplit" unique_id=1851387435]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
 
-[node name="ItemList4" type="ItemList" parent="TabBar/treeMeta/hSplit"]
+[node name="ItemList4" type="ItemList" parent="TabBar/treeMeta/hSplit" unique_id=1725564773]
 visible = false
 layout_mode = 2
 size_flags_horizontal = 3
 
-[node name="HSplitContainer" type="HSplitContainer" parent="TabBar"]
+[node name="HSplitContainer" type="HSplitContainer" parent="TabBar" unique_id=1795611772]
 visible = false
 layout_mode = 2
 metadata/_tab_index = 1

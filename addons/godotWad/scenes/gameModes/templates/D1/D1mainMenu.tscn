@@ -1,13 +1,10 @@
-[gd_scene load_steps=2 format=3 uid="uid://lcpyngty01mu"]
+[gd_scene format=3 uid="uid://lcpyngty01mu"]
 
 [ext_resource type="PackedScene" uid="uid://cy5lvq7dxe1ft" path="res://addons/godotWad/scenes/gameModes/main/title/mainMenu_template.tscn" id="1_fk1aq"]
 
-[node name="mainMenu" instance=ExtResource("1_fk1aq")]
+[node name="mainMenu" unique_id=1905733825 instance=ExtResource("1_fk1aq")]
 
-[node name="Label" parent="v/retry" index="0"]
-scale = Vector2(2.95082, 2.76923)
-
-[node name="Generator" parent="." index="2"]
+[node name="Generator" parent="." index="2" unique_id=362936455]
 titleSong = "D_INTRO"
 
 [editable path="v/retry"]

@@ -1,14 +1,14 @@
-[gd_scene load_steps=2 format=3 uid="uid://07f13xa8mq2m"]
+[gd_scene format=3 uid="uid://07f13xa8mq2m"]
 
 [ext_resource type="PackedScene" uid="uid://bkejiildygt63" path="res://addons/godotWad/scenes/projectiles/projectileBase.tscn" id="1"]
 
-[node name="Plasma" instance=ExtResource("1")]
+[node name="Plasma" unique_id=1411038848 instance=ExtResource("1")]
 velo = 875.0
 
-[node name="AnimatedSprite3D" parent="." index="1"]
+[node name="AnimatedSprite3D" parent="." index="1" unique_id=1548627495]
 modulate = Color(1, 1, 1, 0.72549)
 
-[node name="Generator" parent="." index="4"]
+[node name="Generator" parent="." index="4" unique_id=226752601]
 front = ["PLSSA0", "PLSSB0"]
 frontLeft = ["PLSSA0", "PLSSB0"]
 left = ["PLSSA0", "PLSSB0"]

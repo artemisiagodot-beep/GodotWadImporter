@@ -1,27 +1,27 @@
-[gd_scene load_steps=6 format=3 uid="uid://r8jp6yaq2sw8"]
+[gd_scene format=3 uid="uid://r8jp6yaq2sw8"]
 
-[ext_resource type="Script" path="res://addons/godotWad/scenes/guns/weaponPickup.gd" id="1"]
-[ext_resource type="Script" path="res://addons/godotWad/scenes/dropper.gd" id="4_tymeo"]
-[ext_resource type="Script" path="res://addons/godotWad/scenes/guns/template/pickupAudio.gd" id="5"]
+[ext_resource type="Script" uid="uid://bp4hyiq6g2c1r" path="res://addons/godotWad/scenes/guns/weaponPickup.gd" id="1"]
+[ext_resource type="Script" uid="uid://b0r014ildhrg4" path="res://addons/godotWad/scenes/dropper.gd" id="4_tymeo"]
+[ext_resource type="Script" uid="uid://bovxrj5ffh47o" path="res://addons/godotWad/scenes/guns/template/pickupAudio.gd" id="5"]
 
 [sub_resource type="BoxShape3D" id="2"]
 size = Vector3(32.258, 13.158, 16.13)
 
 [sub_resource type="QuadMesh" id="QuadMesh_2nmdh"]
 
-[node name="weaponPickup" type="Node3D"]
+[node name="weaponPickup" type="Node3D" unique_id=407694069]
 script = ExtResource("1")
 
-[node name="Area3D" type="Area3D" parent="."]
+[node name="Area3D" type="Area3D" parent="." unique_id=912018967]
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D" unique_id=1151435092]
 shape = SubResource("2")
 
-[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="."]
+[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="." unique_id=163300659]
 script = ExtResource("5")
 
-[node name="dropper" type="RayCast3D" parent="."]
+[node name="dropper" type="RayCast3D" parent="." unique_id=603736509]
 script = ExtResource("4_tymeo")
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=1453948298]
 mesh = SubResource("QuadMesh_2nmdh")

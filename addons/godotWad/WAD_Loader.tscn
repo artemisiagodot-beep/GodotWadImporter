@@ -1,59 +1,59 @@
-[gd_scene load_steps=13 format=3 uid="uid://dhl77huh1s1at"]
+[gd_scene format=3 uid="uid://dhl77huh1s1at"]
 
-[ext_resource type="Script" path="res://addons/godotWad/src/wadLoader/wadLoaderScript.gd" id="1"]
-[ext_resource type="Script" path="res://addons/godotWad/src/wadLoader/lumpParser.gd" id="3"]
-[ext_resource type="Script" path="res://addons/godotWad/src/wadLoader/LevelBuilder.gd" id="4"]
-[ext_resource type="Script" path="res://addons/godotWad/src/wadLoader/MeshCombiner.gd" id="5"]
-[ext_resource type="Script" path="res://addons/godotWad/src/thingScripts/thingParser.gd" id="6"]
-[ext_resource type="Script" path="res://addons/godotWad/src/wadLoader/ResourceManager.gd" id="7"]
-[ext_resource type="Script" path="res://addons/godotWad/src/wadLoader/ImagerBuilder.gd" id="8"]
-[ext_resource type="Script" path="res://addons/godotWad/gameModeCreator.gd" id="9"]
-[ext_resource type="Script" path="res://addons/godotWad/src/wadLoader/floorCreator3.gd" id="10"]
-[ext_resource type="Script" path="res://addons/godotWad/src/wadLoader/musConverter.gd" id="11_3hbe1"]
-[ext_resource type="Script" path="res://addons/godotWad/acs.gd" id="12_1y6nm"]
-[ext_resource type="Script" path="res://addons/godotWad/materialManager.gd" id="12_nbowk"]
+[ext_resource type="Script" uid="uid://dnr1srqlf6i1k" path="res://addons/godotWad/src/wadLoader/wadLoaderScript.gd" id="1"]
+[ext_resource type="Script" uid="uid://bul2dj1efeyc3" path="res://addons/godotWad/src/wadLoader/lumpParser.gd" id="3"]
+[ext_resource type="Script" uid="uid://c7v0tkk4icti5" path="res://addons/godotWad/src/wadLoader/LevelBuilder.gd" id="4"]
+[ext_resource type="Script" uid="uid://bftf5dt2rgvwd" path="res://addons/godotWad/src/wadLoader/MeshCombiner.gd" id="5"]
+[ext_resource type="Script" uid="uid://t0vxhjf211j3" path="res://addons/godotWad/src/thingScripts/thingParser.gd" id="6"]
+[ext_resource type="Script" uid="uid://btnor2etgw4n0" path="res://addons/godotWad/src/wadLoader/ResourceManager.gd" id="7"]
+[ext_resource type="Script" uid="uid://8bnwighsbtcv" path="res://addons/godotWad/src/wadLoader/ImagerBuilder.gd" id="8"]
+[ext_resource type="Script" uid="uid://bk12wttfcanj3" path="res://addons/godotWad/gameModeCreator.gd" id="9"]
+[ext_resource type="Script" uid="uid://cwu3wccmopsav" path="res://addons/godotWad/src/wadLoader/floorCreator3.gd" id="10"]
+[ext_resource type="Script" uid="uid://c0jdgyjmiuyai" path="res://addons/godotWad/src/wadLoader/musConverter.gd" id="11_3hbe1"]
+[ext_resource type="Script" uid="uid://xw7y8dh7xr8b" path="res://addons/godotWad/acs.gd" id="12_1y6nm"]
+[ext_resource type="Script" uid="uid://co2to2nhcbxxj" path="res://addons/godotWad/materialManager.gd" id="12_nbowk"]
 
-[node name="WadLoader" type="Node3D"]
+[node name="WadLoader" type="Node3D" unique_id=617914231]
 script = ExtResource("1")
 mergeMesh = 3
 unwrapLightmap = false
 
-[node name="LumpParser" type="Node" parent="."]
+[node name="LumpParser" type="Node" parent="." unique_id=184532151]
 script = ExtResource("3")
 metadata/hidden = true
 
-[node name="LevelBuilder" type="Node3D" parent="."]
+[node name="LevelBuilder" type="Node3D" parent="." unique_id=81250812]
 script = ExtResource("4")
 metadata/hidden = true
 
-[node name="ImageBuilder" type="Node" parent="."]
+[node name="ImageBuilder" type="Node" parent="." unique_id=1904189438]
 script = ExtResource("8")
 metadata/hidden = true
 
-[node name="ThingParser" type="Node3D" parent="."]
+[node name="ThingParser" type="Node3D" parent="." unique_id=739420281]
 script = ExtResource("6")
 metadata/hidden = true
 
-[node name="MeshCombiner" type="Node" parent="."]
+[node name="MeshCombiner" type="Node" parent="." unique_id=374126074]
 script = ExtResource("5")
 metadata/hidden = true
 
-[node name="ResourceManager" type="Node" parent="."]
+[node name="ResourceManager" type="Node" parent="." unique_id=1287921098]
 script = ExtResource("7")
 metadata/hidden = true
 
-[node name="FloorBuilder3" type="Node" parent="."]
+[node name="FloorBuilder3" type="Node" parent="." unique_id=110639125]
 script = ExtResource("10")
 metadata/hidden = true
 
-[node name="gameModeCreator" type="Node" parent="."]
+[node name="gameModeCreator" type="Node" parent="." unique_id=1720668469]
 script = ExtResource("9")
 
-[node name="musConverter" type="Node" parent="."]
+[node name="musConverter" type="Node" parent="." unique_id=186613544]
 script = ExtResource("11_3hbe1")
 
-[node name="MaterialManager" type="Node" parent="."]
+[node name="MaterialManager" type="Node" parent="." unique_id=716407942]
 script = ExtResource("12_nbowk")
 
-[node name="ACS" type="Node" parent="."]
+[node name="ACS" type="Node" parent="." unique_id=1704552838]
 script = ExtResource("12_1y6nm")

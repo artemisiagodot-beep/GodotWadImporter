@@ -1,8 +1,8 @@
-[gd_scene load_steps=2 format=3 uid="uid://yqhtv8mrlleh"]
+[gd_scene format=3 uid="uid://yqhtv8mrlleh"]
 
-[ext_resource type="Script" path="res://addons/godotWad/scenes/player/scenes/creosshair/Crosshair.gd" id="1"]
+[ext_resource type="Script" uid="uid://bowxc8r8aaajk" path="res://addons/godotWad/scenes/player/scenes/creosshair/Crosshair.gd" id="1"]
 
-[node name="Crosshair" type="Control"]
+[node name="Crosshair" type="Control" unique_id=401353526]
 layout_mode = 3
 anchors_preset = 8
 anchor_left = 0.5
@@ -14,22 +14,22 @@ grow_vertical = 2
 script = ExtResource("1")
 color = Color(0, 1, 0.156863, 1)
 
-[node name="right" type="Line2D" parent="."]
+[node name="right" type="Line2D" parent="." unique_id=2064419525]
 points = PackedVector2Array(5, 0, 10, 0)
 width = 1.0
 default_color = Color(0, 1, 0.156863, 1)
 
-[node name="left" type="Line2D" parent="."]
+[node name="left" type="Line2D" parent="." unique_id=725955429]
 points = PackedVector2Array(-5, 0, -10, 0)
 width = 1.0
 default_color = Color(0, 1, 0.156863, 1)
 
-[node name="up" type="Line2D" parent="."]
+[node name="up" type="Line2D" parent="." unique_id=1144557238]
 points = PackedVector2Array(0, -10, 0, -5)
 width = 1.0
 default_color = Color(0, 1, 0.156863, 1)
 
-[node name="down" type="Line2D" parent="."]
+[node name="down" type="Line2D" parent="." unique_id=1170133429]
 position = Vector2(0.105103, 0)
 points = PackedVector2Array(0, 10, 0, 5)
 width = 1.0

@@ -1,18 +1,18 @@
-[gd_scene load_steps=11 format=3 uid="uid://dhxyaai4rce5r"]
+[gd_scene format=3 uid="uid://dhxyaai4rce5r"]
 
-[ext_resource type="Script" path="res://addons/godotWad/scenes/enemies/enemyGenerator.gd" id="1"]
-[ext_resource type="Script" path="res://addons/godotWad/src/raycastDynamic.gd" id="2"]
-[ext_resource type="Script" path="res://addons/godotWad/scenes/enemies/npc.gd" id="3"]
-[ext_resource type="Script" path="res://addons/godotWad/scenes/interp.gd" id="3_5bh0w"]
-[ext_resource type="Script" path="res://addons/godotWad/scenes/enemies/enemySounds.gd" id="4"]
-[ext_resource type="Script" path="res://addons/godotWad/scenes/enemies/navigation2.gd" id="5_ew5gm"]
-[ext_resource type="Script" path="res://addons/godotWad/src/castWeapon.gd" id="6"]
+[ext_resource type="Script" uid="uid://dufl7dj1n8qnk" path="res://addons/godotWad/scenes/enemies/enemyGenerator.gd" id="1"]
+[ext_resource type="Script" uid="uid://b1o08k2b73r6i" path="res://addons/godotWad/src/raycastDynamic.gd" id="2"]
+[ext_resource type="Script" uid="uid://dqfiwa24bds1y" path="res://addons/godotWad/scenes/enemies/npc.gd" id="3"]
+[ext_resource type="Script" uid="uid://dvtsd2bsac47i" path="res://addons/godotWad/scenes/interp.gd" id="3_5bh0w"]
+[ext_resource type="Script" uid="uid://ctmhmbs1ljavv" path="res://addons/godotWad/scenes/enemies/enemySounds.gd" id="4"]
+[ext_resource type="Script" uid="uid://fyxunm77ofqn" path="res://addons/godotWad/scenes/enemies/navigation2.gd" id="5_ew5gm"]
+[ext_resource type="Script" uid="uid://rpafwt0ovus7" path="res://addons/godotWad/src/castWeapon.gd" id="6"]
 [ext_resource type="PackedScene" uid="uid://br07pau6iijsu" path="res://addons/godotWad/scenes/quad3Dsprite.tscn" id="7"]
 [ext_resource type="PackedScene" uid="uid://d0p1hm1hxo3nc" path="res://addons/godotWad/scenes/player/movement.tscn" id="8_upapq"]
 
-[sub_resource type="QuadMesh" id="QuadMesh_p7tp7"]
+[sub_resource type="QuadMesh" id="QuadMesh_km7mc"]
 
-[node name="npc" type="CharacterBody3D"]
+[node name="npc" type="CharacterBody3D" unique_id=525132478]
 process_priority = 1
 collision_layer = 3
 collision_mask = 3
@@ -25,45 +25,45 @@ projectileRange = -1.0
 flying = null
 metadata/originAtFeet = true
 
-[node name="visual" type="Node3D" parent="."]
+[node name="visual" type="Node3D" parent="." unique_id=2133409113]
 process_physics_priority = -1
 script = ExtResource("3_5bh0w")
 
-[node name="AnimatedSprite3D" parent="visual" instance=ExtResource("7")]
-mesh = SubResource("QuadMesh_p7tp7")
+[node name="AnimatedSprite3D" parent="visual" unique_id=1982447299 instance=ExtResource("7")]
+mesh = SubResource("QuadMesh_km7mc")
 skeleton = NodePath("../..")
 curAnimation = "front"
 
-[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="."]
+[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="." unique_id=1127007145]
 script = ExtResource("4")
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1243960134]
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1659532864]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 16, 0)
 
-[node name="navigationLogic" type="NavigationAgent3D" parent="."]
+[node name="navigationLogic" type="NavigationAgent3D" parent="." unique_id=238023467]
 script = ExtResource("5_ew5gm")
 
-[node name="castWeapon" type="Node3D" parent="."]
+[node name="castWeapon" type="Node3D" parent="." unique_id=1758431114]
 script = ExtResource("6")
 
-[node name="RayCast3D" type="RayCast3D" parent="castWeapon"]
+[node name="RayCast3D" type="RayCast3D" parent="castWeapon" unique_id=1335636203]
 enabled = false
 collision_mask = 2
 
-[node name="Generator" type="Node" parent="."]
+[node name="Generator" type="Node" parent="." unique_id=213520782]
 script = ExtResource("1")
 gibSounds = ["DSSLOP"]
 entityDepends = PackedStringArray()
 bloodSplatter = ["BLUDA0", "BLUDB0", "BLUDC0"]
 
-[node name="VisibleOnScreenNotifier3D" type="VisibleOnScreenNotifier3D" parent="."]
+[node name="VisibleOnScreenNotifier3D" type="VisibleOnScreenNotifier3D" parent="." unique_id=1106049519]
 aabb = AABB(-20, 0, -20, 40, 32, 40)
 
-[node name="movement" parent="." instance=ExtResource("8_upapq")]
+[node name="movement" parent="." unique_id=1401554554 instance=ExtResource("8_upapq")]
 
-[node name="cast" type="RayCast3D" parent="."]
+[node name="cast" type="RayCast3D" parent="." unique_id=714861743]
 script = ExtResource("2")
 
 [connection signal="screen_entered" from="VisibleOnScreenNotifier3D" to="." method="_on_visible_on_screen_notifier_3d_screen_entered"]

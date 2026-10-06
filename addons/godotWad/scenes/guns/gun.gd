@@ -71,12 +71,12 @@ var stateChanged = true
 @onready var curfirstShotAccuracy = firstShotAccuracy
 @onready var curFirstShotCooldown =  0
 
-func _get_configuration_warnings():
+func _get_configuration_warnings() -> PackedStringArray:
 	
 	if !has_node("AnimationPlayer"):
-		return "Child AnimationPlayer Node required"
+		return PackedStringArray(["Child AnimationPlayer Node required"])
 
-	return ''
+	return PackedStringArray()
 
 
 enum {

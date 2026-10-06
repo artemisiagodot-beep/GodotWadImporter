@@ -1,49 +1,46 @@
-[gd_scene load_steps=2 format=3 uid="uid://bdr3ighyehfur"]
+[gd_scene format=3 uid="uid://bdr3ighyehfur"]
 
 [ext_resource type="PackedScene" uid="uid://cy5lvq7dxe1ft" path="res://addons/godotWad/scenes/gameModes/main/title/mainMenu_template.tscn" id="1_q53vl"]
 
-[node name="mainMenu" instance=ExtResource("1_q53vl")]
+[node name="mainMenu" unique_id=317584727 instance=ExtResource("1_q53vl")]
 
-[node name="Label" parent="v/retry" index="0"]
-scale = Vector2(2.95082, 2.76923)
-
-[node name="Label" type="Label" parent="v/newGame" index="0"]
+[node name="Label" type="Label" parent="v/newGame" parent_id_path=PackedInt32Array(152138701) index="0" unique_id=834392680]
 layout_mode = 0
 offset_right = 40.0
 offset_bottom = 23.0
 text = "New Game"
 
-[node name="Label" type="Label" parent="v/options" index="0"]
+[node name="Label" type="Label" parent="v/options" parent_id_path=PackedInt32Array(346987332) index="0" unique_id=1390182169]
 layout_mode = 0
 offset_right = 40.0
 offset_bottom = 23.0
 text = "Options"
 
-[node name="Label" type="Label" parent="v/saveGame" index="0"]
+[node name="Label" type="Label" parent="v/saveGame" parent_id_path=PackedInt32Array(1274257678) index="0" unique_id=1677237848]
 layout_mode = 0
 offset_right = 40.0
 offset_bottom = 23.0
 text = "Save Game"
 
-[node name="Label" type="Label" parent="v/loadGame" index="0"]
+[node name="Label" type="Label" parent="v/loadGame" parent_id_path=PackedInt32Array(482981799) index="0" unique_id=1106170209]
 layout_mode = 0
 offset_right = 40.0
 offset_bottom = 23.0
 text = "Load Game"
 
-[node name="Label" type="Label" parent="v/quit" index="0"]
+[node name="Label" type="Label" parent="v/quit" parent_id_path=PackedInt32Array(938902735) index="0" unique_id=550138081]
 layout_mode = 0
 offset_right = 40.0
 offset_bottom = 23.0
 text = "Quit"
 
-[node name="Generator" parent="." index="2"]
+[node name="Generator" parent="." index="2" unique_id=362936455]
 titlePick = "TITLE"
 isTitleRaw = true
 titleSong = "HEXEN"
 slectorIcon = ["M_SLCTR1", "M_SLCTR2"]
 
-[node name="options" parent="." index="8"]
+[node name="options" parent="." index="8" unique_id=16902643]
 visible = false
 
 [editable path="v/retry"]

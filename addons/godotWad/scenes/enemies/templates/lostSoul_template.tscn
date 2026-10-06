@@ -1,14 +1,14 @@
-[gd_scene load_steps=5 format=3 uid="uid://dkhse7ihbp80h"]
+[gd_scene format=3 uid="uid://dkhse7ihbp80h"]
 
 [ext_resource type="PackedScene" uid="uid://dhxyaai4rce5r" path="res://addons/godotWad/scenes/enemies/npc_template.tscn" id="1"]
 [ext_resource type="Resource" uid="uid://b4dl3q8i8kk07" path="res://addons/godotWad/scenes/enemies/templates/sprites/lostSoulSprites.tres" id="2"]
 
-[sub_resource type="QuadMesh" id="QuadMesh_tulkc"]
+[sub_resource type="QuadMesh" id="QuadMesh_f3vs7"]
 
 [sub_resource type="BoxShape3D" id="1"]
 size = Vector3(32, 56, 32)
 
-[node name="LostSoul" instance=ExtResource("1")]
+[node name="LostSoul" unique_id=155186247 instance=ExtResource("1")]
 initialHP = 100.0
 npcName = "lost soul"
 height = 56.0
@@ -23,17 +23,14 @@ speed = 47.0
 chargeSpeed = 700.0
 painChance = 1.0
 
-[node name="AnimatedSprite3D" parent="." index="0"]
-mesh = SubResource("QuadMesh_tulkc")
+[node name="AnimatedSprite3D" parent="visual" parent_id_path=PackedInt32Array(2133409113) index="0" unique_id=1982447299]
+mesh = SubResource("QuadMesh_f3vs7")
 
-[node name="CollisionShape3D" parent="." index="3"]
+[node name="CollisionShape3D" parent="." index="3" unique_id=1659532864]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 28, 0)
 shape = SubResource("1")
 
-[node name="cast" parent="." index="4"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 44.8, 0)
-
-[node name="Generator" parent="." index="7"]
+[node name="Generator" parent="." index="6" unique_id=213520782]
 sprites = ExtResource("2")
 idle = "AB"
 chase = "AB"
@@ -47,7 +44,10 @@ meleeSounds = ["DSSKLATK"]
 alertSounds = []
 searchSounds = Array[StringName]([&"DSDMACT"])
 
-[node name="VisibleOnScreenNotifier3D" parent="." index="8"]
+[node name="VisibleOnScreenNotifier3D" parent="." index="7" unique_id=1106049519]
 aabb = AABB(-16, 0, -16, 32, 56, 32)
 
-[editable path="AnimatedSprite3D"]
+[node name="cast" parent="." index="9" unique_id=714861743]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 44.8, 0)
+
+[editable path="visual/AnimatedSprite3D"]

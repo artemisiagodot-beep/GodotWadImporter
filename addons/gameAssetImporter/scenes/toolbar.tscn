@@ -1,4 +1,4 @@
-[gd_scene load_steps=3 format=3 uid="uid://b1iouqqfrxpiw"]
+[gd_scene format=3 uid="uid://b1iouqqfrxpiw"]
 
 [sub_resource type="Animation" id="1"]
 resource_name = "loading"
@@ -19,27 +19,25 @@ tracks/0/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_p83nr"]
 _data = {
-"loading": SubResource("1")
+&"loading": SubResource("1")
 }
 
-[node name="Control" type="HBoxContainer"]
+[node name="Control" type="HBoxContainer" unique_id=1167158239]
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 offset_top = -1.05263
 offset_bottom = -1.05261
 
-[node name="loadingLabel" type="Label" parent="."]
+[node name="loadingLabel" type="Label" parent="." unique_id=1684306220]
 visible = false
 layout_mode = 2
 text = "Loading...."
 
-[node name="anim" type="AnimationPlayer" parent="loadingLabel"]
+[node name="anim" type="AnimationPlayer" parent="loadingLabel" unique_id=828884542]
 callback_mode_method = 1
-libraries = {
-"": SubResource("AnimationLibrary_p83nr")
-}
+libraries/ = SubResource("AnimationLibrary_p83nr")
 
-[node name="createAll" type="Button" parent="."]
+[node name="createAll" type="Button" parent="." unique_id=945746375]
 layout_mode = 2
 text = "Import"

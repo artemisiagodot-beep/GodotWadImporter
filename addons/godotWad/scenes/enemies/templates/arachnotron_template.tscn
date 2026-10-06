@@ -1,14 +1,14 @@
-[gd_scene load_steps=5 format=3 uid="uid://5stinnv33vnt"]
+[gd_scene format=3 uid="uid://5stinnv33vnt"]
 
 [ext_resource type="Resource" uid="uid://b4l84ldp8loi3" path="res://addons/godotWad/scenes/enemies/templates/sprites/arachnotronSprites.tres" id="1"]
 [ext_resource type="PackedScene" uid="uid://dhxyaai4rce5r" path="res://addons/godotWad/scenes/enemies/npc_template.tscn" id="2"]
 
-[sub_resource type="QuadMesh" id="QuadMesh_ffw34"]
+[sub_resource type="QuadMesh" id="QuadMesh_ff03b"]
 
 [sub_resource type="BoxShape3D" id="1"]
 size = Vector3(128, 64, 128)
 
-[node name="arachnotron" instance=ExtResource("2")]
+[node name="arachnotron" unique_id=254710608 instance=ExtResource("2")]
 initialHP = 500.0
 npcName = "arachnotron"
 height = 64.0
@@ -23,17 +23,14 @@ deadStateId = 21
 continuousFire = true
 painChance = 0.5
 
-[node name="AnimatedSprite3D" parent="." index="0"]
-mesh = SubResource("QuadMesh_ffw34")
+[node name="AnimatedSprite3D" parent="visual" parent_id_path=PackedInt32Array(2133409113) index="0" unique_id=1982447299]
+mesh = SubResource("QuadMesh_ff03b")
 
-[node name="CollisionShape3D" parent="." index="3"]
+[node name="CollisionShape3D" parent="." index="3" unique_id=1659532864]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 32, 0)
 shape = SubResource("1")
 
-[node name="cast" parent="." index="4"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 51.2, 0)
-
-[node name="Generator" parent="." index="7"]
+[node name="Generator" parent="." index="6" unique_id=213520782]
 sprites = ExtResource("1")
 idle = "AB"
 chase = "AABBCCDDEEFF"
@@ -47,7 +44,10 @@ alertSounds = ["DSBSPSIT"]
 searchSounds = Array[StringName]([&"DSBSPACT"])
 stompSounds = Array[StringName]([&"DSBSPWLK"])
 
-[node name="VisibleOnScreenNotifier3D" parent="." index="8"]
+[node name="VisibleOnScreenNotifier3D" parent="." index="7" unique_id=1106049519]
 aabb = AABB(-1, 0, -1, 2, 64, 2)
 
-[editable path="AnimatedSprite3D"]
+[node name="cast" parent="." index="9" unique_id=714861743]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 51.2, 0)
+
+[editable path="visual/AnimatedSprite3D"]

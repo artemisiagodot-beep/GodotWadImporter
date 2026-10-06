@@ -1,8 +1,8 @@
-[gd_scene load_steps=2 format=3 uid="uid://c1jyb0dowphiu"]
+[gd_scene format=3 uid="uid://c1jyb0dowphiu"]
 
-[ext_resource type="Script" path="res://addons/gSheet/scenes/typedLineEdit/typedLineEdit.gd" id="1"]
+[ext_resource type="Script" uid="uid://c7wu6squu276a" path="res://addons/gSheet/scenes/typedLineEdit/typedLineEdit.gd" id="1"]
 
-[node name="typedLineEdit" type="LineEdit"]
+[node name="typedLineEdit" type="LineEdit" unique_id=926496817]
 anchors_preset = -1
 anchor_right = 0.155
 anchor_bottom = 0.04

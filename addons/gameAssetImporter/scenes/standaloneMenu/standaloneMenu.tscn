@@ -1,9 +1,9 @@
-[gd_scene load_steps=3 format=3 uid="uid://de5o0tf6yu0ma"]
+[gd_scene format=3 uid="uid://de5o0tf6yu0ma"]
 
 [ext_resource type="PackedScene" uid="uid://dv8lfeokrqwgj" path="res://addons/gameAssetImporter/scenes/makeUI/makeUI.tscn" id="1"]
-[ext_resource type="Script" path="res://addons/gameAssetImporter/scenes/standaloneMenu/standaloneMenu.gd" id="2"]
+[ext_resource type="Script" uid="uid://dahwf1vx445ga" path="res://addons/gameAssetImporter/scenes/standaloneMenu/standaloneMenu.gd" id="2"]
 
-[node name="standaloneMenu" type="Control"]
+[node name="standaloneMenu" type="Control" unique_id=50529547]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -12,7 +12,7 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("2")
 
-[node name="makeUI" parent="." instance=ExtResource("1")]
+[node name="makeUI" parent="." unique_id=842688172 instance=ExtResource("1")]
 position = Vector2i(0, 0)
 size = Vector2i(1753, 898)
 borderless = true

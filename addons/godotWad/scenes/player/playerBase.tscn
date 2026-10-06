@@ -1,7 +1,7 @@
-[gd_scene load_steps=12 format=3 uid="uid://dm4psfgy7p5y8"]
+[gd_scene format=3 uid="uid://dm4psfgy7p5y8"]
 
-[ext_resource type="Script" path="res://addons/godotWad/scenes/player/player.gd" id="1"]
-[ext_resource type="Script" path="res://addons/godotWad/scenes/player/visual.gd" id="2_n4kaj"]
+[ext_resource type="Script" uid="uid://gn8lwt2lbc06" path="res://addons/godotWad/scenes/player/player.gd" id="1"]
+[ext_resource type="Script" uid="uid://ca4n34f33xqxq" path="res://addons/godotWad/scenes/player/visual.gd" id="2_n4kaj"]
 [ext_resource type="Resource" uid="uid://cfjb3dfk8io58" path="res://addons/godotWad/resources/ammoCaps.tres" id="2_p44px"]
 [ext_resource type="PackedScene" uid="uid://yqhtv8mrlleh" path="res://addons/godotWad/scenes/player/scenes/creosshair/Crosshair.tscn" id="3"]
 [ext_resource type="PackedScene" uid="uid://k3yruj1jf1rh" path="res://addons/gameAssetImporter/scenes/perfOverlay/perfInfo.tscn" id="4"]
@@ -40,14 +40,14 @@ tracks/0/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_loak2"]
 _data = {
-"default": SubResource("Animation_jwxq8"),
-"fadeOut": SubResource("Animation_gxyao")
+&"default": SubResource("Animation_jwxq8"),
+&"fadeOut": SubResource("Animation_gxyao")
 }
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_jedgj"]
 size = Vector3(31.94, 55, 31.94)
 
-[node name="playerBase" type="CharacterBody3D" groups=["player"]]
+[node name="playerBase" type="CharacterBody3D" unique_id=1024989533 groups=["player"]]
 collision_layer = 3
 collision_priority = 2.0
 wall_min_slide_angle = 0.0
@@ -65,19 +65,19 @@ thickness = 15.97
 height = 55.0
 ammoLimits = ExtResource("2_p44px")
 
-[node name="visual" type="Node3D" parent="."]
+[node name="visual" type="Node3D" parent="." unique_id=1324029492]
 script = ExtResource("2_n4kaj")
 
-[node name="gunManager" parent="visual" instance=ExtResource("4_hpyjv")]
+[node name="gunManager" parent="visual" unique_id=1156202907 instance=ExtResource("4_hpyjv")]
 
-[node name="cameraAttach" type="Marker3D" parent="visual"]
+[node name="cameraAttach" type="Marker3D" parent="visual" unique_id=662713097]
 
-[node name="remoteTransform" type="RemoteTransform3D" parent="visual/cameraAttach"]
+[node name="remoteTransform" type="RemoteTransform3D" parent="visual/cameraAttach" unique_id=1384813647]
 update_rotation = false
 
-[node name="debug" parent="." instance=ExtResource("4")]
+[node name="debug" parent="." unique_id=1909741043 instance=ExtResource("4")]
 
-[node name="UI" type="Control" parent="."]
+[node name="UI" type="Control" parent="." unique_id=1898719054]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -86,17 +86,17 @@ grow_horizontal = 2
 grow_vertical = 2
 mouse_filter = 2
 
-[node name="Crosshair" parent="UI" instance=ExtResource("3")]
+[node name="Crosshair" parent="UI" unique_id=446633488 instance=ExtResource("3")]
 layout_mode = 1
 color = Color(0.752941, 0, 0.176471, 1)
 
-[node name="HUDS" type="Control" parent="UI"]
+[node name="HUDS" type="Control" parent="UI" unique_id=839087512]
 anchors_preset = 0
 anchor_right = 1.0
 anchor_bottom = 1.0
 mouse_filter = 2
 
-[node name="HUD1" type="Control" parent="UI/HUDS"]
+[node name="HUD1" type="Control" parent="UI/HUDS" unique_id=1653081573]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -105,7 +105,7 @@ grow_horizontal = 2
 grow_vertical = 2
 mouse_filter = 2
 
-[node name="hp" type="Label" parent="UI/HUDS/HUD1"]
+[node name="hp" type="Label" parent="UI/HUDS/HUD1" unique_id=1212283806]
 layout_mode = 0
 anchor_left = 1.0
 anchor_top = 1.0
@@ -117,7 +117,7 @@ offset_right = -3.0
 offset_bottom = -39.0
 text = "100"
 
-[node name="armor" type="Label" parent="UI/HUDS/HUD1"]
+[node name="armor" type="Label" parent="UI/HUDS/HUD1" unique_id=1326523166]
 layout_mode = 0
 anchor_left = 1.0
 anchor_top = 1.0
@@ -128,7 +128,7 @@ offset_top = -37.0
 offset_right = -11.0
 offset_bottom = -23.0
 
-[node name="ammo" type="Label" parent="UI/HUDS/HUD1"]
+[node name="ammo" type="Label" parent="UI/HUDS/HUD1" unique_id=150079008]
 layout_mode = 0
 anchor_left = 1.0
 anchor_top = 1.0
@@ -140,7 +140,7 @@ offset_right = -1.0
 offset_bottom = -6.0
 text = ";kokpjio"
 
-[node name="speedmeter" type="RichTextLabel" parent="UI"]
+[node name="speedmeter" type="RichTextLabel" parent="UI" unique_id=713177819]
 layout_mode = 1
 anchors_preset = 7
 anchor_left = 0.5
@@ -155,7 +155,7 @@ grow_vertical = 0
 text = "0000"
 scroll_active = false
 
-[node name="PopupTxts" type="VBoxContainer" parent="UI"]
+[node name="PopupTxts" type="VBoxContainer" parent="UI" unique_id=1680856908]
 visible = false
 layout_mode = 1
 anchors_preset = -1
@@ -171,16 +171,14 @@ grow_horizontal = 2
 grow_vertical = 2
 metadata/_edit_use_anchors_ = true
 
-[node name="Label" type="Label" parent="UI/PopupTxts"]
+[node name="Label" type="Label" parent="UI/PopupTxts" unique_id=566798464]
 layout_mode = 2
 text = "ojoioj"
 
-[node name="fadeAmim" type="AnimationPlayer" parent="UI/PopupTxts"]
-libraries = {
-"": SubResource("AnimationLibrary_loak2")
-}
+[node name="fadeAmim" type="AnimationPlayer" parent="UI/PopupTxts" unique_id=1389386125]
+libraries/ = SubResource("AnimationLibrary_loak2")
 
-[node name="ItemList" type="ItemList" parent="."]
+[node name="ItemList" type="ItemList" parent="." unique_id=510099055]
 visible = false
 anchors_preset = -1
 anchor_left = 0.305
@@ -193,20 +191,20 @@ offset_right = 0.415955
 offset_bottom = -18.0
 max_columns = 2
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=3698377]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 27.5, 0)
 top_level = true
 shape = SubResource("BoxShape3D_jedgj")
 
-[node name="lightCast" type="RayCast3D" parent="."]
+[node name="lightCast" type="RayCast3D" parent="." unique_id=1381290238]
 visible = false
 target_position = Vector3(0, -200, 0)
 collision_mask = 32768
 
-[node name="footstepSound" type="AudioStreamPlayer3D" parent="."]
+[node name="footstepSound" type="AudioStreamPlayer3D" parent="." unique_id=1509431495]
 volume_db = 10.0
 
-[node name="TextureRect" type="TextureRect" parent="." groups=["fullscreenTexture"]]
+[node name="TextureRect" type="TextureRect" parent="." unique_id=484011549 groups=["fullscreenTexture"]]
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
@@ -214,11 +212,11 @@ grow_horizontal = 2
 grow_vertical = 2
 mouse_filter = 2
 
-[node name="movement" parent="." instance=ExtResource("6_y2c3e")]
+[node name="movement" parent="." unique_id=904606600 instance=ExtResource("6_y2c3e")]
 sideSpeed = 1.563
 jumpVelo = 800
 groundEmergeFix = true
 
-[node name="jumpPlayer" type="AudioStreamPlayer3D" parent="."]
+[node name="jumpPlayer" type="AudioStreamPlayer3D" parent="." unique_id=31915139]
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1665574620]

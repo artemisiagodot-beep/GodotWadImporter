@@ -1,23 +1,23 @@
-[gd_scene load_steps=4 format=3 uid="uid://c1jshd4cbsids"]
+[gd_scene format=3 uid="uid://c1jshd4cbsids"]
 
-[ext_resource type="Script" path="res://addons/godotWad/scenes/player/weaponManager.gd" id="1_vf2sy"]
+[ext_resource type="Script" uid="uid://d3k4lnpdp3v8t" path="res://addons/godotWad/scenes/player/weaponManager.gd" id="1_vf2sy"]
 [ext_resource type="PackedScene" uid="uid://cmpog4jmqm6ak" path="res://addons/godotWad/scenes/player/scenes/weaponManager/weapon_bar.tscn" id="2_3h5g0"]
-[ext_resource type="Script" path="res://addons/godotWad/scenes/player/scenes/weaponManager/weaponWheel.gd" id="2_xfsa8"]
+[ext_resource type="Script" uid="uid://cpc0e3b813081" path="res://addons/godotWad/scenes/player/scenes/weaponManager/weaponWheel.gd" id="2_xfsa8"]
 
-[node name="gunManager" type="Node3D"]
+[node name="gunManager" type="Node3D" unique_id=302868883]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3.14822, 0)
 script = ExtResource("1_vf2sy")
 
-[node name="weapons" type="Node3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0129951, -0.0195066, 0)
+[node name="weapons" type="Node3D" parent="." unique_id=1278131052]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.011487961, -0.008574667, 0)
 
-[node name="shootCast" type="RayCast3D" parent="."]
+[node name="shootCast" type="RayCast3D" parent="." unique_id=916566643]
 visible = false
 target_position = Vector3(0, 0, -800)
 collision_mask = 2
 debug_shape_custom_color = Color(0.3555, 0.79, 0, 1)
 
-[node name="ui" type="Control" parent="."]
+[node name="ui" type="Control" parent="." unique_id=1340657409]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -25,7 +25,7 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="weaponBar" parent="ui" instance=ExtResource("2_3h5g0")]
+[node name="weaponBar" parent="ui" unique_id=540988177 instance=ExtResource("2_3h5g0")]
 layout_mode = 1
 anchors_preset = -1
 anchor_left = 0.00868056
@@ -36,7 +36,7 @@ offset_top = 1.0
 offset_bottom = 1.0
 metadata/_edit_use_anchors_ = true
 
-[node name="weaponWheel" type="Control" parent="ui"]
+[node name="weaponWheel" type="Control" parent="ui" unique_id=1562485248]
 visible = false
 layout_mode = 1
 anchors_preset = 15

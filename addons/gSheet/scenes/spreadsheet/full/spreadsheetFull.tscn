@@ -1,28 +1,12 @@
-[gd_scene load_steps=10 format=3 uid="uid://ctflwppp4dnmp"]
+[gd_scene format=3 uid="uid://ctflwppp4dnmp"]
 
-[ext_resource type="Script" path="res://addons/gSheet/scenes/spreadsheet/full/spreadsheetFull.gd" id="1_6x40p"]
+[ext_resource type="Script" uid="uid://dcv1gc8ao1tdh" path="res://addons/gSheet/scenes/spreadsheet/full/spreadsheetFull.gd" id="1_6x40p"]
 [ext_resource type="PackedScene" uid="uid://t1bfn7p2lb0i" path="res://addons/gSheet/scenes/spreadsheet/full/scenes/topBar/topBar.tscn" id="2_xqvm1"]
-[ext_resource type="Script" path="res://addons/gSheet/scenes/spreadsheet/full/top.gd" id="3_n0wqq"]
+[ext_resource type="Script" uid="uid://cjg58w7bnaxtf" path="res://addons/gSheet/scenes/spreadsheet/full/top.gd" id="3_n0wqq"]
 [ext_resource type="PackedScene" uid="uid://bgurwybr4dki2" path="res://addons/gSheet/scenes/spreadsheet/spreadsheet.tscn" id="4_6c366"]
 [ext_resource type="PackedScene" uid="uid://dq6vbimtda568" path="res://addons/gSheet/scenes/spreadsheet/full/scenes/enumPopup/enumPopup.tscn" id="4_qn18n"]
 [ext_resource type="PackedScene" uid="uid://bveyyu6jeengh" path="res://addons/gSheet/scenes/spreadsheet/dataFromText/dataFromText.tscn" id="5_nokws"]
-[ext_resource type="Script" path="res://addons/gSheet/scenes/spreadsheet/parsers/enumParse.gd" id="5_p83tn"]
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_sc3ve"]
-content_margin_left = 7.0
-content_margin_top = 3.0
-content_margin_right = 7.0
-content_margin_bottom = 3.0
-bg_color = Color(0.176471, 0.2, 0.266667, 1)
-border_width_left = 1
-border_width_top = 1
-border_width_right = 1
-border_width_bottom = 1
-border_color = Color(0.0784314, 0.0980392, 0.14902, 1)
-expand_margin_left = 7.0
-expand_margin_top = 3.0
-expand_margin_right = 7.0
-expand_margin_bottom = 3.0
+[ext_resource type="Script" uid="uid://bk84oldmd26u" path="res://addons/gSheet/scenes/spreadsheet/parsers/enumParse.gd" id="5_p83tn"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_t3t67"]
 content_margin_left = 7.0
@@ -40,7 +24,23 @@ expand_margin_top = 3.0
 expand_margin_right = 7.0
 expand_margin_bottom = 3.0
 
-[node name="root4" type="Panel"]
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_af35l"]
+content_margin_left = 7.0
+content_margin_top = 3.0
+content_margin_right = 7.0
+content_margin_bottom = 3.0
+bg_color = Color(0.176471, 0.2, 0.266667, 1)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0.0784314, 0.0980392, 0.14902, 1)
+expand_margin_left = 7.0
+expand_margin_top = 3.0
+expand_margin_right = 7.0
+expand_margin_bottom = 3.0
+
+[node name="root4" type="Panel" unique_id=1511891707]
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
@@ -48,7 +48,7 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_6x40p")
 
-[node name="whole" type="VBoxContainer" parent="."]
+[node name="whole" type="VBoxContainer" parent="." unique_id=252599210]
 custom_minimum_size = Vector2(62, 20)
 layout_mode = 1
 anchors_preset = 15
@@ -59,30 +59,32 @@ grow_vertical = 2
 mouse_filter = 2
 theme_override_constants/separation = 0
 
-[node name="pathLabel" type="Label" parent="whole"]
+[node name="pathLabel" type="Label" parent="whole" unique_id=1907586963]
 unique_name_in_owner = true
 custom_minimum_size = Vector2(0, 30)
 layout_mode = 2
 mouse_filter = 1
 
-[node name="Panel" type="Control" parent="whole"]
-clip_contents = true
+[node name="Panel" type="Control" parent="whole" unique_id=1267021804]
 custom_minimum_size = Vector2(0, 32)
+clip_contents = true
 layout_mode = 2
 
-[node name="toolBar" parent="whole/Panel" instance=ExtResource("2_xqvm1")]
+[node name="toolBar" parent="whole/Panel" unique_id=789972475 instance=ExtResource("2_xqvm1")]
 unique_name_in_owner = true
-layout_mode = 2
+layout_mode = 0
 anchors_preset = 0
+anchor_right = 0.0
 offset_right = -11.0
+grow_horizontal = 1
 theme_override_constants/separation = 21
 
-[node name="uppper" type="Control" parent="whole"]
-clip_contents = true
+[node name="uppper" type="Control" parent="whole" unique_id=1917516836]
 custom_minimum_size = Vector2(62, 35)
+clip_contents = true
 layout_mode = 2
 
-[node name="upperBox" type="HBoxContainer" parent="whole/uppper"]
+[node name="upperBox" type="HBoxContainer" parent="whole/uppper" unique_id=878004253]
 unique_name_in_owner = true
 layout_mode = 1
 anchors_preset = 15
@@ -97,54 +99,54 @@ grow_vertical = 2
 theme_override_constants/separation = 0
 script = ExtResource("3_n0wqq")
 
-[node name="enumPopup" parent="whole/uppper/upperBox" instance=ExtResource("4_qn18n")]
+[node name="enumPopup" parent="whole/uppper/upperBox" unique_id=718136737 instance=ExtResource("4_qn18n")]
 
-[node name="enumParse" type="Node" parent="whole/uppper/upperBox"]
+[node name="enumParse" type="Node" parent="whole/uppper/upperBox" unique_id=1950461233]
 script = ExtResource("5_p83tn")
 
-[node name="AcceptDialog" type="AcceptDialog" parent="whole/uppper/upperBox"]
+[node name="AcceptDialog" type="AcceptDialog" parent="whole/uppper/upperBox" unique_id=1325083869]
 dialog_text = "No Enums found in file."
 
-[node name="lower" type="HBoxContainer" parent="whole"]
+[node name="lower" type="HBoxContainer" parent="whole" unique_id=234829314]
 clip_contents = true
 layout_mode = 2
 size_flags_vertical = 3
 theme_override_constants/separation = 7
 
-[node name="side" type="Control" parent="whole/lower"]
+[node name="side" type="Control" parent="whole/lower" unique_id=1664292524]
 custom_minimum_size = Vector2(62, 0)
 layout_mode = 2
 
-[node name="sideBox" type="VBoxContainer" parent="whole/lower/side"]
+[node name="sideBox" type="VBoxContainer" parent="whole/lower/side" unique_id=1381755554]
 unique_name_in_owner = true
 custom_minimum_size = Vector2(62, 0)
-layout_mode = 2
+layout_mode = 0
 offset_left = -1.0
 offset_right = 72.0
 offset_bottom = 656.0
 
-[node name="sheet" parent="whole/lower" instance=ExtResource("4_6c366")]
+[node name="sheet" parent="whole/lower" unique_id=1027891907 instance=ExtResource("4_6c366")]
 unique_name_in_owner = true
 layout_mode = 2
 mouse_filter = 2
 
-[node name="DataFromText" parent="." instance=ExtResource("5_nokws")]
+[node name="DataFromText" parent="." unique_id=2023681133 instance=ExtResource("5_nokws")]
 unique_name_in_owner = true
 visible = false
 
-[node name="corner" type="LineEdit" parent="."]
+[node name="corner" type="LineEdit" parent="." unique_id=1841844620]
 unique_name_in_owner = true
 z_index = -1
-layout_mode = 2
+layout_mode = 0
 offset_left = -7.0
 offset_top = 70.0
-offset_right = 66.0625
+offset_right = 67.5
 offset_bottom = 99.0
-theme_override_styles/read_only = SubResource("StyleBoxFlat_sc3ve")
 theme_override_styles/normal = SubResource("StyleBoxFlat_t3t67")
+theme_override_styles/read_only = SubResource("StyleBoxFlat_af35l")
 editable = false
 
-[node name="enumSelectorDialog" type="FileDialog" parent="."]
+[node name="enumSelectorDialog" type="FileDialog" parent="." unique_id=1555010527]
 title = "Open a File"
 size = Vector2i(822, 449)
 ok_button_text = "Open"
@@ -154,163 +156,163 @@ filters = PackedStringArray("*.gd")
 use_native_dialog = true
 
 [connection signal="gui_input" from="whole/pathLabel" to="." method="_on_path_label_gui_input"]
-[connection signal="child_entered_tree" from="whole/uppper/upperBox/col 0/@VBoxContainer@19525/typedLineEdit" to="whole/uppper/upperBox/col 0/@VBoxContainer@19525/typedLineEdit" method="_on_child_entered_tree"]
-[connection signal="focus_entered" from="whole/uppper/upperBox/col 0/@VBoxContainer@19525/typedLineEdit" to="whole/uppper/upperBox/col 0/@VBoxContainer@19525/typedLineEdit" method="_on_typedLineEdit_focus_entered"]
-[connection signal="focus_exited" from="whole/uppper/upperBox/col 0/@VBoxContainer@19525/typedLineEdit" to="whole/uppper/upperBox/col 0/@VBoxContainer@19525/typedLineEdit" method="_on_typedLineEdit_focus_exited"]
-[connection signal="text_submitted" from="whole/uppper/upperBox/col 0/@VBoxContainer@19525/typedLineEdit" to="whole/uppper/upperBox/col 0/@VBoxContainer@19525/typedLineEdit" method="_on_text_submitted"]
-[connection signal="child_entered_tree" from="whole/uppper/upperBox/col 0/col 1/@VBoxContainer@19529/typedLineEdit" to="whole/uppper/upperBox/col 0/col 1/@VBoxContainer@19529/typedLineEdit" method="_on_child_entered_tree"]
-[connection signal="focus_entered" from="whole/uppper/upperBox/col 0/col 1/@VBoxContainer@19529/typedLineEdit" to="whole/uppper/upperBox/col 0/col 1/@VBoxContainer@19529/typedLineEdit" method="_on_typedLineEdit_focus_entered"]
-[connection signal="focus_exited" from="whole/uppper/upperBox/col 0/col 1/@VBoxContainer@19529/typedLineEdit" to="whole/uppper/upperBox/col 0/col 1/@VBoxContainer@19529/typedLineEdit" method="_on_typedLineEdit_focus_exited"]
-[connection signal="text_submitted" from="whole/uppper/upperBox/col 0/col 1/@VBoxContainer@19529/typedLineEdit" to="whole/uppper/upperBox/col 0/col 1/@VBoxContainer@19529/typedLineEdit" method="_on_text_submitted"]
-[connection signal="child_entered_tree" from="whole/uppper/upperBox/col 0/col 1/col 2/@VBoxContainer@19533/typedLineEdit" to="whole/uppper/upperBox/col 0/col 1/col 2/@VBoxContainer@19533/typedLineEdit" method="_on_child_entered_tree"]
-[connection signal="focus_entered" from="whole/uppper/upperBox/col 0/col 1/col 2/@VBoxContainer@19533/typedLineEdit" to="whole/uppper/upperBox/col 0/col 1/col 2/@VBoxContainer@19533/typedLineEdit" method="_on_typedLineEdit_focus_entered"]
-[connection signal="focus_exited" from="whole/uppper/upperBox/col 0/col 1/col 2/@VBoxContainer@19533/typedLineEdit" to="whole/uppper/upperBox/col 0/col 1/col 2/@VBoxContainer@19533/typedLineEdit" method="_on_typedLineEdit_focus_exited"]
-[connection signal="text_submitted" from="whole/uppper/upperBox/col 0/col 1/col 2/@VBoxContainer@19533/typedLineEdit" to="whole/uppper/upperBox/col 0/col 1/col 2/@VBoxContainer@19533/typedLineEdit" method="_on_text_submitted"]
-[connection signal="child_entered_tree" from="whole/uppper/upperBox/col 0/col 1/col 2/col 3/@VBoxContainer@19537/typedLineEdit" to="whole/uppper/upperBox/col 0/col 1/col 2/col 3/@VBoxContainer@19537/typedLineEdit" method="_on_child_entered_tree"]
-[connection signal="focus_entered" from="whole/uppper/upperBox/col 0/col 1/col 2/col 3/@VBoxContainer@19537/typedLineEdit" to="whole/uppper/upperBox/col 0/col 1/col 2/col 3/@VBoxContainer@19537/typedLineEdit" method="_on_typedLineEdit_focus_entered"]
-[connection signal="focus_exited" from="whole/uppper/upperBox/col 0/col 1/col 2/col 3/@VBoxContainer@19537/typedLineEdit" to="whole/uppper/upperBox/col 0/col 1/col 2/col 3/@VBoxContainer@19537/typedLineEdit" method="_on_typedLineEdit_focus_exited"]
-[connection signal="text_submitted" from="whole/uppper/upperBox/col 0/col 1/col 2/col 3/@VBoxContainer@19537/typedLineEdit" to="whole/uppper/upperBox/col 0/col 1/col 2/col 3/@VBoxContainer@19537/typedLineEdit" method="_on_text_submitted"]
-[connection signal="child_entered_tree" from="whole/uppper/upperBox/col 0/col 1/col 2/col 3/col 4/@VBoxContainer@19541/typedLineEdit" to="whole/uppper/upperBox/col 0/col 1/col 2/col 3/col 4/@VBoxContainer@19541/typedLineEdit" method="_on_child_entered_tree"]
-[connection signal="focus_entered" from="whole/uppper/upperBox/col 0/col 1/col 2/col 3/col 4/@VBoxContainer@19541/typedLineEdit" to="whole/uppper/upperBox/col 0/col 1/col 2/col 3/col 4/@VBoxContainer@19541/typedLineEdit" method="_on_typedLineEdit_focus_entered"]
-[connection signal="focus_exited" from="whole/uppper/upperBox/col 0/col 1/col 2/col 3/col 4/@VBoxContainer@19541/typedLineEdit" to="whole/uppper/upperBox/col 0/col 1/col 2/col 3/col 4/@VBoxContainer@19541/typedLineEdit" method="_on_typedLineEdit_focus_exited"]
-[connection signal="text_submitted" from="whole/uppper/upperBox/col 0/col 1/col 2/col 3/col 4/@VBoxContainer@19541/typedLineEdit" to="whole/uppper/upperBox/col 0/col 1/col 2/col 3/col 4/@VBoxContainer@19541/typedLineEdit" method="_on_text_submitted"]
-[connection signal="child_entered_tree" from="whole/uppper/upperBox/col 0/col 1/col 2/col 3/col 4/col 5/@VBoxContainer@19545/typedLineEdit" to="whole/uppper/upperBox/col 0/col 1/col 2/col 3/col 4/col 5/@VBoxContainer@19545/typedLineEdit" method="_on_child_entered_tree"]
-[connection signal="focus_entered" from="whole/uppper/upperBox/col 0/col 1/col 2/col 3/col 4/col 5/@VBoxContainer@19545/typedLineEdit" to="whole/uppper/upperBox/col 0/col 1/col 2/col 3/col 4/col 5/@VBoxContainer@19545/typedLineEdit" method="_on_typedLineEdit_focus_entered"]
-[connection signal="focus_exited" from="whole/uppper/upperBox/col 0/col 1/col 2/col 3/col 4/col 5/@VBoxContainer@19545/typedLineEdit" to="whole/uppper/upperBox/col 0/col 1/col 2/col 3/col 4/col 5/@VBoxContainer@19545/typedLineEdit" method="_on_typedLineEdit_focus_exited"]
-[connection signal="text_submitted" from="whole/uppper/upperBox/col 0/col 1/col 2/col 3/col 4/col 5/@VBoxContainer@19545/typedLineEdit" to="whole/uppper/upperBox/col 0/col 1/col 2/col 3/col 4/col 5/@VBoxContainer@19545/typedLineEdit" method="_on_text_submitted"]
-[connection signal="child_entered_tree" from="whole/uppper/upperBox/col 0/col 1/col 2/col 3/col 4/col 5/col 6/@VBoxContainer@19549/typedLineEdit" to="whole/uppper/upperBox/col 0/col 1/col 2/col 3/col 4/col 5/col 6/@VBoxContainer@19549/typedLineEdit" method="_on_child_entered_tree"]
-[connection signal="focus_entered" from="whole/uppper/upperBox/col 0/col 1/col 2/col 3/col 4/col 5/col 6/@VBoxContainer@19549/typedLineEdit" to="whole/uppper/upperBox/col 0/col 1/col 2/col 3/col 4/col 5/col 6/@VBoxContainer@19549/typedLineEdit" method="_on_typedLineEdit_focus_entered"]
-[connection signal="focus_exited" from="whole/uppper/upperBox/col 0/col 1/col 2/col 3/col 4/col 5/col 6/@VBoxContainer@19549/typedLineEdit" to="whole/uppper/upperBox/col 0/col 1/col 2/col 3/col 4/col 5/col 6/@VBoxContainer@19549/typedLineEdit" method="_on_typedLineEdit_focus_exited"]
-[connection signal="text_submitted" from="whole/uppper/upperBox/col 0/col 1/col 2/col 3/col 4/col 5/col 6/@VBoxContainer@19549/typedLineEdit" to="whole/uppper/upperBox/col 0/col 1/col 2/col 3/col 4/col 5/col 6/@VBoxContainer@19549/typedLineEdit" method="_on_text_submitted"]
-[connection signal="child_entered_tree" from="whole/uppper/upperBox/col 0/col 1/col 2/col 3/col 4/col 5/col 6/col 7/@VBoxContainer@19553/typedLineEdit" to="whole/uppper/upperBox/col 0/col 1/col 2/col 3/col 4/col 5/col 6/col 7/@VBoxContainer@19553/typedLineEdit" method="_on_child_entered_tree"]
-[connection signal="focus_entered" from="whole/uppper/upperBox/col 0/col 1/col 2/col 3/col 4/col 5/col 6/col 7/@VBoxContainer@19553/typedLineEdit" to="whole/uppper/upperBox/col 0/col 1/col 2/col 3/col 4/col 5/col 6/col 7/@VBoxContainer@19553/typedLineEdit" method="_on_typedLineEdit_focus_entered"]
-[connection signal="focus_exited" from="whole/uppper/upperBox/col 0/col 1/col 2/col 3/col 4/col 5/col 6/col 7/@VBoxContainer@19553/typedLineEdit" to="whole/uppper/upperBox/col 0/col 1/col 2/col 3/col 4/col 5/col 6/col 7/@VBoxContainer@19553/typedLineEdit" method="_on_typedLineEdit_focus_exited"]
-[connection signal="text_submitted" from="whole/uppper/upperBox/col 0/col 1/col 2/col 3/col 4/col 5/col 6/col 7/@VBoxContainer@19553/typedLineEdit" to="whole/uppper/upperBox/col 0/col 1/col 2/col 3/col 4/col 5/col 6/col 7/@VBoxContainer@19553/typedLineEdit" method="_on_text_submitted"]
-[connection signal="child_entered_tree" from="whole/uppper/upperBox/col 0/col 1/col 2/col 3/col 4/col 5/col 6/col 7/col 8/@VBoxContainer@19557/typedLineEdit" to="whole/uppper/upperBox/col 0/col 1/col 2/col 3/col 4/col 5/col 6/col 7/col 8/@VBoxContainer@19557/typedLineEdit" method="_on_child_entered_tree"]
-[connection signal="focus_entered" from="whole/uppper/upperBox/col 0/col 1/col 2/col 3/col 4/col 5/col 6/col 7/col 8/@VBoxContainer@19557/typedLineEdit" to="whole/uppper/upperBox/col 0/col 1/col 2/col 3/col 4/col 5/col 6/col 7/col 8/@VBoxContainer@19557/typedLineEdit" method="_on_typedLineEdit_focus_entered"]
-[connection signal="focus_exited" from="whole/uppper/upperBox/col 0/col 1/col 2/col 3/col 4/col 5/col 6/col 7/col 8/@VBoxContainer@19557/typedLineEdit" to="whole/uppper/upperBox/col 0/col 1/col 2/col 3/col 4/col 5/col 6/col 7/col 8/@VBoxContainer@19557/typedLineEdit" method="_on_typedLineEdit_focus_exited"]
-[connection signal="text_submitted" from="whole/uppper/upperBox/col 0/col 1/col 2/col 3/col 4/col 5/col 6/col 7/col 8/@VBoxContainer@19557/typedLineEdit" to="whole/uppper/upperBox/col 0/col 1/col 2/col 3/col 4/col 5/col 6/col 7/col 8/@VBoxContainer@19557/typedLineEdit" method="_on_text_submitted"]
-[connection signal="child_entered_tree" from="whole/uppper/upperBox/col 0/col 1/col 2/col 3/col 4/col 5/col 6/col 7/col 8/col 9/@VBoxContainer@19561/typedLineEdit" to="whole/uppper/upperBox/col 0/col 1/col 2/col 3/col 4/col 5/col 6/col 7/col 8/col 9/@VBoxContainer@19561/typedLineEdit" method="_on_child_entered_tree"]
-[connection signal="focus_entered" from="whole/uppper/upperBox/col 0/col 1/col 2/col 3/col 4/col 5/col 6/col 7/col 8/col 9/@VBoxContainer@19561/typedLineEdit" to="whole/uppper/upperBox/col 0/col 1/col 2/col 3/col 4/col 5/col 6/col 7/col 8/col 9/@VBoxContainer@19561/typedLineEdit" method="_on_typedLineEdit_focus_entered"]
-[connection signal="focus_exited" from="whole/uppper/upperBox/col 0/col 1/col 2/col 3/col 4/col 5/col 6/col 7/col 8/col 9/@VBoxContainer@19561/typedLineEdit" to="whole/uppper/upperBox/col 0/col 1/col 2/col 3/col 4/col 5/col 6/col 7/col 8/col 9/@VBoxContainer@19561/typedLineEdit" method="_on_typedLineEdit_focus_exited"]
-[connection signal="text_submitted" from="whole/uppper/upperBox/col 0/col 1/col 2/col 3/col 4/col 5/col 6/col 7/col 8/col 9/@VBoxContainer@19561/typedLineEdit" to="whole/uppper/upperBox/col 0/col 1/col 2/col 3/col 4/col 5/col 6/col 7/col 8/col 9/@VBoxContainer@19561/typedLineEdit" method="_on_text_submitted"]
-[connection signal="child_entered_tree" from="whole/uppper/upperBox/col 0/col 1/col 2/col 3/col 4/col 5/col 6/col 7/col 8/col 9/col 10/@VBoxContainer@19565/typedLineEdit" to="whole/uppper/upperBox/col 0/col 1/col 2/col 3/col 4/col 5/col 6/col 7/col 8/col 9/col 10/@VBoxContainer@19565/typedLineEdit" method="_on_child_entered_tree"]
-[connection signal="focus_entered" from="whole/uppper/upperBox/col 0/col 1/col 2/col 3/col 4/col 5/col 6/col 7/col 8/col 9/col 10/@VBoxContainer@19565/typedLineEdit" to="whole/uppper/upperBox/col 0/col 1/col 2/col 3/col 4/col 5/col 6/col 7/col 8/col 9/col 10/@VBoxContainer@19565/typedLineEdit" method="_on_typedLineEdit_focus_entered"]
-[connection signal="focus_exited" from="whole/uppper/upperBox/col 0/col 1/col 2/col 3/col 4/col 5/col 6/col 7/col 8/col 9/col 10/@VBoxContainer@19565/typedLineEdit" to="whole/uppper/upperBox/col 0/col 1/col 2/col 3/col 4/col 5/col 6/col 7/col 8/col 9/col 10/@VBoxContainer@19565/typedLineEdit" method="_on_typedLineEdit_focus_exited"]
-[connection signal="text_submitted" from="whole/uppper/upperBox/col 0/col 1/col 2/col 3/col 4/col 5/col 6/col 7/col 8/col 9/col 10/@VBoxContainer@19565/typedLineEdit" to="whole/uppper/upperBox/col 0/col 1/col 2/col 3/col 4/col 5/col 6/col 7/col 8/col 9/col 10/@VBoxContainer@19565/typedLineEdit" method="_on_text_submitted"]
-[connection signal="child_entered_tree" from="whole/uppper/upperBox/col 0/col 1/col 2/col 3/col 4/col 5/col 6/col 7/col 8/col 9/col 10/col 11/@VBoxContainer@19569/typedLineEdit" to="whole/uppper/upperBox/col 0/col 1/col 2/col 3/col 4/col 5/col 6/col 7/col 8/col 9/col 10/col 11/@VBoxContainer@19569/typedLineEdit" method="_on_child_entered_tree"]
-[connection signal="focus_entered" from="whole/uppper/upperBox/col 0/col 1/col 2/col 3/col 4/col 5/col 6/col 7/col 8/col 9/col 10/col 11/@VBoxContainer@19569/typedLineEdit" to="whole/uppper/upperBox/col 0/col 1/col 2/col 3/col 4/col 5/col 6/col 7/col 8/col 9/col 10/col 11/@VBoxContainer@19569/typedLineEdit" method="_on_typedLineEdit_focus_entered"]
-[connection signal="focus_exited" from="whole/uppper/upperBox/col 0/col 1/col 2/col 3/col 4/col 5/col 6/col 7/col 8/col 9/col 10/col 11/@VBoxContainer@19569/typedLineEdit" to="whole/uppper/upperBox/col 0/col 1/col 2/col 3/col 4/col 5/col 6/col 7/col 8/col 9/col 10/col 11/@VBoxContainer@19569/typedLineEdit" method="_on_typedLineEdit_focus_exited"]
-[connection signal="text_submitted" from="whole/uppper/upperBox/col 0/col 1/col 2/col 3/col 4/col 5/col 6/col 7/col 8/col 9/col 10/col 11/@VBoxContainer@19569/typedLineEdit" to="whole/uppper/upperBox/col 0/col 1/col 2/col 3/col 4/col 5/col 6/col 7/col 8/col 9/col 10/col 11/@VBoxContainer@19569/typedLineEdit" method="_on_text_submitted"]
-[connection signal="child_entered_tree" from="whole/uppper/upperBox/col 0/col 1/col 2/col 3/col 4/col 5/col 6/col 7/col 8/col 9/col 10/col 11/col 12/@VBoxContainer@19573/typedLineEdit" to="whole/uppper/upperBox/col 0/col 1/col 2/col 3/col 4/col 5/col 6/col 7/col 8/col 9/col 10/col 11/col 12/@VBoxContainer@19573/typedLineEdit" method="_on_child_entered_tree"]
-[connection signal="focus_entered" from="whole/uppper/upperBox/col 0/col 1/col 2/col 3/col 4/col 5/col 6/col 7/col 8/col 9/col 10/col 11/col 12/@VBoxContainer@19573/typedLineEdit" to="whole/uppper/upperBox/col 0/col 1/col 2/col 3/col 4/col 5/col 6/col 7/col 8/col 9/col 10/col 11/col 12/@VBoxContainer@19573/typedLineEdit" method="_on_typedLineEdit_focus_entered"]
-[connection signal="focus_exited" from="whole/uppper/upperBox/col 0/col 1/col 2/col 3/col 4/col 5/col 6/col 7/col 8/col 9/col 10/col 11/col 12/@VBoxContainer@19573/typedLineEdit" to="whole/uppper/upperBox/col 0/col 1/col 2/col 3/col 4/col 5/col 6/col 7/col 8/col 9/col 10/col 11/col 12/@VBoxContainer@19573/typedLineEdit" method="_on_typedLineEdit_focus_exited"]
-[connection signal="text_submitted" from="whole/uppper/upperBox/col 0/col 1/col 2/col 3/col 4/col 5/col 6/col 7/col 8/col 9/col 10/col 11/col 12/@VBoxContainer@19573/typedLineEdit" to="whole/uppper/upperBox/col 0/col 1/col 2/col 3/col 4/col 5/col 6/col 7/col 8/col 9/col 10/col 11/col 12/@VBoxContainer@19573/typedLineEdit" method="_on_text_submitted"]
-[connection signal="child_entered_tree" from="whole/uppper/upperBox/col 0/col 1/col 2/col 3/col 4/col 5/col 6/col 7/col 8/col 9/col 10/col 11/col 12/col 13/@VBoxContainer@19577/typedLineEdit" to="whole/uppper/upperBox/col 0/col 1/col 2/col 3/col 4/col 5/col 6/col 7/col 8/col 9/col 10/col 11/col 12/col 13/@VBoxContainer@19577/typedLineEdit" method="_on_child_entered_tree"]
-[connection signal="focus_entered" from="whole/uppper/upperBox/col 0/col 1/col 2/col 3/col 4/col 5/col 6/col 7/col 8/col 9/col 10/col 11/col 12/col 13/@VBoxContainer@19577/typedLineEdit" to="whole/uppper/upperBox/col 0/col 1/col 2/col 3/col 4/col 5/col 6/col 7/col 8/col 9/col 10/col 11/col 12/col 13/@VBoxContainer@19577/typedLineEdit" method="_on_typedLineEdit_focus_entered"]
-[connection signal="focus_exited" from="whole/uppper/upperBox/col 0/col 1/col 2/col 3/col 4/col 5/col 6/col 7/col 8/col 9/col 10/col 11/col 12/col 13/@VBoxContainer@19577/typedLineEdit" to="whole/uppper/upperBox/col 0/col 1/col 2/col 3/col 4/col 5/col 6/col 7/col 8/col 9/col 10/col 11/col 12/col 13/@VBoxContainer@19577/typedLineEdit" method="_on_typedLineEdit_focus_exited"]
-[connection signal="text_submitted" from="whole/uppper/upperBox/col 0/col 1/col 2/col 3/col 4/col 5/col 6/col 7/col 8/col 9/col 10/col 11/col 12/col 13/@VBoxContainer@19577/typedLineEdit" to="whole/uppper/upperBox/col 0/col 1/col 2/col 3/col 4/col 5/col 6/col 7/col 8/col 9/col 10/col 11/col 12/col 13/@VBoxContainer@19577/typedLineEdit" method="_on_text_submitted"]
-[connection signal="child_entered_tree" from="whole/uppper/upperBox/col 0/col 1/col 2/col 3/col 4/col 5/col 6/col 7/col 8/col 9/col 10/col 11/col 12/col 13/col 14/@VBoxContainer@19581/typedLineEdit" to="whole/uppper/upperBox/col 0/col 1/col 2/col 3/col 4/col 5/col 6/col 7/col 8/col 9/col 10/col 11/col 12/col 13/col 14/@VBoxContainer@19581/typedLineEdit" method="_on_child_entered_tree"]
-[connection signal="focus_entered" from="whole/uppper/upperBox/col 0/col 1/col 2/col 3/col 4/col 5/col 6/col 7/col 8/col 9/col 10/col 11/col 12/col 13/col 14/@VBoxContainer@19581/typedLineEdit" to="whole/uppper/upperBox/col 0/col 1/col 2/col 3/col 4/col 5/col 6/col 7/col 8/col 9/col 10/col 11/col 12/col 13/col 14/@VBoxContainer@19581/typedLineEdit" method="_on_typedLineEdit_focus_entered"]
-[connection signal="focus_exited" from="whole/uppper/upperBox/col 0/col 1/col 2/col 3/col 4/col 5/col 6/col 7/col 8/col 9/col 10/col 11/col 12/col 13/col 14/@VBoxContainer@19581/typedLineEdit" to="whole/uppper/upperBox/col 0/col 1/col 2/col 3/col 4/col 5/col 6/col 7/col 8/col 9/col 10/col 11/col 12/col 13/col 14/@VBoxContainer@19581/typedLineEdit" method="_on_typedLineEdit_focus_exited"]
-[connection signal="text_submitted" from="whole/uppper/upperBox/col 0/col 1/col 2/col 3/col 4/col 5/col 6/col 7/col 8/col 9/col 10/col 11/col 12/col 13/col 14/@VBoxContainer@19581/typedLineEdit" to="whole/uppper/upperBox/col 0/col 1/col 2/col 3/col 4/col 5/col 6/col 7/col 8/col 9/col 10/col 11/col 12/col 13/col 14/@VBoxContainer@19581/typedLineEdit" method="_on_text_submitted"]
-[connection signal="child_entered_tree" from="whole/uppper/upperBox/col 0/col 1/col 2/col 3/col 4/col 5/col 6/col 7/col 8/col 9/col 10/col 11/col 12/col 13/col 14/col 15/@VBoxContainer@19585/typedLineEdit" to="whole/uppper/upperBox/col 0/col 1/col 2/col 3/col 4/col 5/col 6/col 7/col 8/col 9/col 10/col 11/col 12/col 13/col 14/col 15/@VBoxContainer@19585/typedLineEdit" method="_on_child_entered_tree"]
-[connection signal="focus_entered" from="whole/uppper/upperBox/col 0/col 1/col 2/col 3/col 4/col 5/col 6/col 7/col 8/col 9/col 10/col 11/col 12/col 13/col 14/col 15/@VBoxContainer@19585/typedLineEdit" to="whole/uppper/upperBox/col 0/col 1/col 2/col 3/col 4/col 5/col 6/col 7/col 8/col 9/col 10/col 11/col 12/col 13/col 14/col 15/@VBoxContainer@19585/typedLineEdit" method="_on_typedLineEdit_focus_entered"]
-[connection signal="focus_exited" from="whole/uppper/upperBox/col 0/col 1/col 2/col 3/col 4/col 5/col 6/col 7/col 8/col 9/col 10/col 11/col 12/col 13/col 14/col 15/@VBoxContainer@19585/typedLineEdit" to="whole/uppper/upperBox/col 0/col 1/col 2/col 3/col 4/col 5/col 6/col 7/col 8/col 9/col 10/col 11/col 12/col 13/col 14/col 15/@VBoxContainer@19585/typedLineEdit" method="_on_typedLineEdit_focus_exited"]
-[connection signal="text_submitted" from="whole/uppper/upperBox/col 0/col 1/col 2/col 3/col 4/col 5/col 6/col 7/col 8/col 9/col 10/col 11/col 12/col 13/col 14/col 15/@VBoxContainer@19585/typedLineEdit" to="whole/uppper/upperBox/col 0/col 1/col 2/col 3/col 4/col 5/col 6/col 7/col 8/col 9/col 10/col 11/col 12/col 13/col 14/col 15/@VBoxContainer@19585/typedLineEdit" method="_on_text_submitted"]
-[connection signal="child_entered_tree" from="whole/uppper/upperBox/col 0/col 1/col 2/col 3/col 4/col 5/col 6/col 7/col 8/col 9/col 10/col 11/col 12/col 13/col 14/col 15/col 16/@VBoxContainer@19589/typedLineEdit" to="whole/uppper/upperBox/col 0/col 1/col 2/col 3/col 4/col 5/col 6/col 7/col 8/col 9/col 10/col 11/col 12/col 13/col 14/col 15/col 16/@VBoxContainer@19589/typedLineEdit" method="_on_child_entered_tree"]
-[connection signal="focus_entered" from="whole/uppper/upperBox/col 0/col 1/col 2/col 3/col 4/col 5/col 6/col 7/col 8/col 9/col 10/col 11/col 12/col 13/col 14/col 15/col 16/@VBoxContainer@19589/typedLineEdit" to="whole/uppper/upperBox/col 0/col 1/col 2/col 3/col 4/col 5/col 6/col 7/col 8/col 9/col 10/col 11/col 12/col 13/col 14/col 15/col 16/@VBoxContainer@19589/typedLineEdit" method="_on_typedLineEdit_focus_entered"]
-[connection signal="focus_exited" from="whole/uppper/upperBox/col 0/col 1/col 2/col 3/col 4/col 5/col 6/col 7/col 8/col 9/col 10/col 11/col 12/col 13/col 14/col 15/col 16/@VBoxContainer@19589/typedLineEdit" to="whole/uppper/upperBox/col 0/col 1/col 2/col 3/col 4/col 5/col 6/col 7/col 8/col 9/col 10/col 11/col 12/col 13/col 14/col 15/col 16/@VBoxContainer@19589/typedLineEdit" method="_on_typedLineEdit_focus_exited"]
-[connection signal="text_submitted" from="whole/uppper/upperBox/col 0/col 1/col 2/col 3/col 4/col 5/col 6/col 7/col 8/col 9/col 10/col 11/col 12/col 13/col 14/col 15/col 16/@VBoxContainer@19589/typedLineEdit" to="whole/uppper/upperBox/col 0/col 1/col 2/col 3/col 4/col 5/col 6/col 7/col 8/col 9/col 10/col 11/col 12/col 13/col 14/col 15/col 16/@VBoxContainer@19589/typedLineEdit" method="_on_text_submitted"]
-[connection signal="child_entered_tree" from="whole/uppper/upperBox/col 0/col 1/col 2/col 3/col 4/col 5/col 6/col 7/col 8/col 9/col 10/col 11/col 12/col 13/col 14/col 15/col 16/col 17/@VBoxContainer@19593/typedLineEdit" to="whole/uppper/upperBox/col 0/col 1/col 2/col 3/col 4/col 5/col 6/col 7/col 8/col 9/col 10/col 11/col 12/col 13/col 14/col 15/col 16/col 17/@VBoxContainer@19593/typedLineEdit" method="_on_child_entered_tree"]
-[connection signal="focus_entered" from="whole/uppper/upperBox/col 0/col 1/col 2/col 3/col 4/col 5/col 6/col 7/col 8/col 9/col 10/col 11/col 12/col 13/col 14/col 15/col 16/col 17/@VBoxContainer@19593/typedLineEdit" to="whole/uppper/upperBox/col 0/col 1/col 2/col 3/col 4/col 5/col 6/col 7/col 8/col 9/col 10/col 11/col 12/col 13/col 14/col 15/col 16/col 17/@VBoxContainer@19593/typedLineEdit" method="_on_typedLineEdit_focus_entered"]
-[connection signal="focus_exited" from="whole/uppper/upperBox/col 0/col 1/col 2/col 3/col 4/col 5/col 6/col 7/col 8/col 9/col 10/col 11/col 12/col 13/col 14/col 15/col 16/col 17/@VBoxContainer@19593/typedLineEdit" to="whole/uppper/upperBox/col 0/col 1/col 2/col 3/col 4/col 5/col 6/col 7/col 8/col 9/col 10/col 11/col 12/col 13/col 14/col 15/col 16/col 17/@VBoxContainer@19593/typedLineEdit" method="_on_typedLineEdit_focus_exited"]
-[connection signal="text_submitted" from="whole/uppper/upperBox/col 0/col 1/col 2/col 3/col 4/col 5/col 6/col 7/col 8/col 9/col 10/col 11/col 12/col 13/col 14/col 15/col 16/col 17/@VBoxContainer@19593/typedLineEdit" to="whole/uppper/upperBox/col 0/col 1/col 2/col 3/col 4/col 5/col 6/col 7/col 8/col 9/col 10/col 11/col 12/col 13/col 14/col 15/col 16/col 17/@VBoxContainer@19593/typedLineEdit" method="_on_text_submitted"]
-[connection signal="child_entered_tree" from="whole/uppper/upperBox/col 0/col 1/col 2/col 3/col 4/col 5/col 6/col 7/col 8/col 9/col 10/col 11/col 12/col 13/col 14/col 15/col 16/col 17/col 18/@VBoxContainer@19597/typedLineEdit" to="whole/uppper/upperBox/col 0/col 1/col 2/col 3/col 4/col 5/col 6/col 7/col 8/col 9/col 10/col 11/col 12/col 13/col 14/col 15/col 16/col 17/col 18/@VBoxContainer@19597/typedLineEdit" method="_on_child_entered_tree"]
-[connection signal="focus_entered" from="whole/uppper/upperBox/col 0/col 1/col 2/col 3/col 4/col 5/col 6/col 7/col 8/col 9/col 10/col 11/col 12/col 13/col 14/col 15/col 16/col 17/col 18/@VBoxContainer@19597/typedLineEdit" to="whole/uppper/upperBox/col 0/col 1/col 2/col 3/col 4/col 5/col 6/col 7/col 8/col 9/col 10/col 11/col 12/col 13/col 14/col 15/col 16/col 17/col 18/@VBoxContainer@19597/typedLineEdit" method="_on_typedLineEdit_focus_entered"]
-[connection signal="focus_exited" from="whole/uppper/upperBox/col 0/col 1/col 2/col 3/col 4/col 5/col 6/col 7/col 8/col 9/col 10/col 11/col 12/col 13/col 14/col 15/col 16/col 17/col 18/@VBoxContainer@19597/typedLineEdit" to="whole/uppper/upperBox/col 0/col 1/col 2/col 3/col 4/col 5/col 6/col 7/col 8/col 9/col 10/col 11/col 12/col 13/col 14/col 15/col 16/col 17/col 18/@VBoxContainer@19597/typedLineEdit" method="_on_typedLineEdit_focus_exited"]
-[connection signal="text_submitted" from="whole/uppper/upperBox/col 0/col 1/col 2/col 3/col 4/col 5/col 6/col 7/col 8/col 9/col 10/col 11/col 12/col 13/col 14/col 15/col 16/col 17/col 18/@VBoxContainer@19597/typedLineEdit" to="whole/uppper/upperBox/col 0/col 1/col 2/col 3/col 4/col 5/col 6/col 7/col 8/col 9/col 10/col 11/col 12/col 13/col 14/col 15/col 16/col 17/col 18/@VBoxContainer@19597/typedLineEdit" method="_on_text_submitted"]
-[connection signal="child_entered_tree" from="whole/uppper/upperBox/col 0/col 1/col 2/col 3/col 4/col 5/col 6/col 7/col 8/col 9/col 10/col 11/col 12/col 13/col 14/col 15/col 16/col 17/col 18/col 19/@VBoxContainer@19601/typedLineEdit" to="whole/uppper/upperBox/col 0/col 1/col 2/col 3/col 4/col 5/col 6/col 7/col 8/col 9/col 10/col 11/col 12/col 13/col 14/col 15/col 16/col 17/col 18/col 19/@VBoxContainer@19601/typedLineEdit" method="_on_child_entered_tree"]
-[connection signal="focus_entered" from="whole/uppper/upperBox/col 0/col 1/col 2/col 3/col 4/col 5/col 6/col 7/col 8/col 9/col 10/col 11/col 12/col 13/col 14/col 15/col 16/col 17/col 18/col 19/@VBoxContainer@19601/typedLineEdit" to="whole/uppper/upperBox/col 0/col 1/col 2/col 3/col 4/col 5/col 6/col 7/col 8/col 9/col 10/col 11/col 12/col 13/col 14/col 15/col 16/col 17/col 18/col 19/@VBoxContainer@19601/typedLineEdit" method="_on_typedLineEdit_focus_entered"]
-[connection signal="focus_exited" from="whole/uppper/upperBox/col 0/col 1/col 2/col 3/col 4/col 5/col 6/col 7/col 8/col 9/col 10/col 11/col 12/col 13/col 14/col 15/col 16/col 17/col 18/col 19/@VBoxContainer@19601/typedLineEdit" to="whole/uppper/upperBox/col 0/col 1/col 2/col 3/col 4/col 5/col 6/col 7/col 8/col 9/col 10/col 11/col 12/col 13/col 14/col 15/col 16/col 17/col 18/col 19/@VBoxContainer@19601/typedLineEdit" method="_on_typedLineEdit_focus_exited"]
-[connection signal="text_submitted" from="whole/uppper/upperBox/col 0/col 1/col 2/col 3/col 4/col 5/col 6/col 7/col 8/col 9/col 10/col 11/col 12/col 13/col 14/col 15/col 16/col 17/col 18/col 19/@VBoxContainer@19601/typedLineEdit" to="whole/uppper/upperBox/col 0/col 1/col 2/col 3/col 4/col 5/col 6/col 7/col 8/col 9/col 10/col 11/col 12/col 13/col 14/col 15/col 16/col 17/col 18/col 19/@VBoxContainer@19601/typedLineEdit" method="_on_text_submitted"]
-[connection signal="child_entered_tree" from="whole/lower/side/@VBoxContainer@19602/typedLineEdit" to="whole/lower/side/@VBoxContainer@19602/typedLineEdit" method="_on_child_entered_tree"]
-[connection signal="focus_entered" from="whole/lower/side/@VBoxContainer@19602/typedLineEdit" to="whole/lower/side/@VBoxContainer@19602/typedLineEdit" method="_on_typedLineEdit_focus_entered"]
-[connection signal="focus_exited" from="whole/lower/side/@VBoxContainer@19602/typedLineEdit" to="whole/lower/side/@VBoxContainer@19602/typedLineEdit" method="_on_typedLineEdit_focus_exited"]
-[connection signal="text_submitted" from="whole/lower/side/@VBoxContainer@19602/typedLineEdit" to="whole/lower/side/@VBoxContainer@19602/typedLineEdit" method="_on_text_submitted"]
-[connection signal="child_entered_tree" from="whole/lower/side/@VBoxContainer@19602/@LineEdit@19603" to="whole/lower/side/@VBoxContainer@19602/@LineEdit@19603" method="_on_child_entered_tree"]
-[connection signal="focus_entered" from="whole/lower/side/@VBoxContainer@19602/@LineEdit@19603" to="whole/lower/side/@VBoxContainer@19602/@LineEdit@19603" method="_on_typedLineEdit_focus_entered"]
-[connection signal="focus_exited" from="whole/lower/side/@VBoxContainer@19602/@LineEdit@19603" to="whole/lower/side/@VBoxContainer@19602/@LineEdit@19603" method="_on_typedLineEdit_focus_exited"]
-[connection signal="text_submitted" from="whole/lower/side/@VBoxContainer@19602/@LineEdit@19603" to="whole/lower/side/@VBoxContainer@19602/@LineEdit@19603" method="_on_text_submitted"]
-[connection signal="child_entered_tree" from="whole/lower/side/@VBoxContainer@19602/@LineEdit@19604" to="whole/lower/side/@VBoxContainer@19602/@LineEdit@19604" method="_on_child_entered_tree"]
-[connection signal="focus_entered" from="whole/lower/side/@VBoxContainer@19602/@LineEdit@19604" to="whole/lower/side/@VBoxContainer@19602/@LineEdit@19604" method="_on_typedLineEdit_focus_entered"]
-[connection signal="focus_exited" from="whole/lower/side/@VBoxContainer@19602/@LineEdit@19604" to="whole/lower/side/@VBoxContainer@19602/@LineEdit@19604" method="_on_typedLineEdit_focus_exited"]
-[connection signal="text_submitted" from="whole/lower/side/@VBoxContainer@19602/@LineEdit@19604" to="whole/lower/side/@VBoxContainer@19602/@LineEdit@19604" method="_on_text_submitted"]
-[connection signal="child_entered_tree" from="whole/lower/side/@VBoxContainer@19602/@LineEdit@19605" to="whole/lower/side/@VBoxContainer@19602/@LineEdit@19605" method="_on_child_entered_tree"]
-[connection signal="focus_entered" from="whole/lower/side/@VBoxContainer@19602/@LineEdit@19605" to="whole/lower/side/@VBoxContainer@19602/@LineEdit@19605" method="_on_typedLineEdit_focus_entered"]
-[connection signal="focus_exited" from="whole/lower/side/@VBoxContainer@19602/@LineEdit@19605" to="whole/lower/side/@VBoxContainer@19602/@LineEdit@19605" method="_on_typedLineEdit_focus_exited"]
-[connection signal="text_submitted" from="whole/lower/side/@VBoxContainer@19602/@LineEdit@19605" to="whole/lower/side/@VBoxContainer@19602/@LineEdit@19605" method="_on_text_submitted"]
-[connection signal="child_entered_tree" from="whole/lower/side/@VBoxContainer@19602/@LineEdit@19606" to="whole/lower/side/@VBoxContainer@19602/@LineEdit@19606" method="_on_child_entered_tree"]
-[connection signal="focus_entered" from="whole/lower/side/@VBoxContainer@19602/@LineEdit@19606" to="whole/lower/side/@VBoxContainer@19602/@LineEdit@19606" method="_on_typedLineEdit_focus_entered"]
-[connection signal="focus_exited" from="whole/lower/side/@VBoxContainer@19602/@LineEdit@19606" to="whole/lower/side/@VBoxContainer@19602/@LineEdit@19606" method="_on_typedLineEdit_focus_exited"]
-[connection signal="text_submitted" from="whole/lower/side/@VBoxContainer@19602/@LineEdit@19606" to="whole/lower/side/@VBoxContainer@19602/@LineEdit@19606" method="_on_text_submitted"]
-[connection signal="child_entered_tree" from="whole/lower/side/@VBoxContainer@19602/@LineEdit@19607" to="whole/lower/side/@VBoxContainer@19602/@LineEdit@19607" method="_on_child_entered_tree"]
-[connection signal="focus_entered" from="whole/lower/side/@VBoxContainer@19602/@LineEdit@19607" to="whole/lower/side/@VBoxContainer@19602/@LineEdit@19607" method="_on_typedLineEdit_focus_entered"]
-[connection signal="focus_exited" from="whole/lower/side/@VBoxContainer@19602/@LineEdit@19607" to="whole/lower/side/@VBoxContainer@19602/@LineEdit@19607" method="_on_typedLineEdit_focus_exited"]
-[connection signal="text_submitted" from="whole/lower/side/@VBoxContainer@19602/@LineEdit@19607" to="whole/lower/side/@VBoxContainer@19602/@LineEdit@19607" method="_on_text_submitted"]
-[connection signal="child_entered_tree" from="whole/lower/side/@VBoxContainer@19602/@LineEdit@19608" to="whole/lower/side/@VBoxContainer@19602/@LineEdit@19608" method="_on_child_entered_tree"]
-[connection signal="focus_entered" from="whole/lower/side/@VBoxContainer@19602/@LineEdit@19608" to="whole/lower/side/@VBoxContainer@19602/@LineEdit@19608" method="_on_typedLineEdit_focus_entered"]
-[connection signal="focus_exited" from="whole/lower/side/@VBoxContainer@19602/@LineEdit@19608" to="whole/lower/side/@VBoxContainer@19602/@LineEdit@19608" method="_on_typedLineEdit_focus_exited"]
-[connection signal="text_submitted" from="whole/lower/side/@VBoxContainer@19602/@LineEdit@19608" to="whole/lower/side/@VBoxContainer@19602/@LineEdit@19608" method="_on_text_submitted"]
-[connection signal="child_entered_tree" from="whole/lower/side/@VBoxContainer@19602/@LineEdit@19609" to="whole/lower/side/@VBoxContainer@19602/@LineEdit@19609" method="_on_child_entered_tree"]
-[connection signal="focus_entered" from="whole/lower/side/@VBoxContainer@19602/@LineEdit@19609" to="whole/lower/side/@VBoxContainer@19602/@LineEdit@19609" method="_on_typedLineEdit_focus_entered"]
-[connection signal="focus_exited" from="whole/lower/side/@VBoxContainer@19602/@LineEdit@19609" to="whole/lower/side/@VBoxContainer@19602/@LineEdit@19609" method="_on_typedLineEdit_focus_exited"]
-[connection signal="text_submitted" from="whole/lower/side/@VBoxContainer@19602/@LineEdit@19609" to="whole/lower/side/@VBoxContainer@19602/@LineEdit@19609" method="_on_text_submitted"]
-[connection signal="child_entered_tree" from="whole/lower/side/@VBoxContainer@19602/@LineEdit@19610" to="whole/lower/side/@VBoxContainer@19602/@LineEdit@19610" method="_on_child_entered_tree"]
-[connection signal="focus_entered" from="whole/lower/side/@VBoxContainer@19602/@LineEdit@19610" to="whole/lower/side/@VBoxContainer@19602/@LineEdit@19610" method="_on_typedLineEdit_focus_entered"]
-[connection signal="focus_exited" from="whole/lower/side/@VBoxContainer@19602/@LineEdit@19610" to="whole/lower/side/@VBoxContainer@19602/@LineEdit@19610" method="_on_typedLineEdit_focus_exited"]
-[connection signal="text_submitted" from="whole/lower/side/@VBoxContainer@19602/@LineEdit@19610" to="whole/lower/side/@VBoxContainer@19602/@LineEdit@19610" method="_on_text_submitted"]
-[connection signal="child_entered_tree" from="whole/lower/side/@VBoxContainer@19602/@LineEdit@19611" to="whole/lower/side/@VBoxContainer@19602/@LineEdit@19611" method="_on_child_entered_tree"]
-[connection signal="focus_entered" from="whole/lower/side/@VBoxContainer@19602/@LineEdit@19611" to="whole/lower/side/@VBoxContainer@19602/@LineEdit@19611" method="_on_typedLineEdit_focus_entered"]
-[connection signal="focus_exited" from="whole/lower/side/@VBoxContainer@19602/@LineEdit@19611" to="whole/lower/side/@VBoxContainer@19602/@LineEdit@19611" method="_on_typedLineEdit_focus_exited"]
-[connection signal="text_submitted" from="whole/lower/side/@VBoxContainer@19602/@LineEdit@19611" to="whole/lower/side/@VBoxContainer@19602/@LineEdit@19611" method="_on_text_submitted"]
-[connection signal="child_entered_tree" from="whole/lower/side/@VBoxContainer@19602/@LineEdit@19612" to="whole/lower/side/@VBoxContainer@19602/@LineEdit@19612" method="_on_child_entered_tree"]
-[connection signal="focus_entered" from="whole/lower/side/@VBoxContainer@19602/@LineEdit@19612" to="whole/lower/side/@VBoxContainer@19602/@LineEdit@19612" method="_on_typedLineEdit_focus_entered"]
-[connection signal="focus_exited" from="whole/lower/side/@VBoxContainer@19602/@LineEdit@19612" to="whole/lower/side/@VBoxContainer@19602/@LineEdit@19612" method="_on_typedLineEdit_focus_exited"]
-[connection signal="text_submitted" from="whole/lower/side/@VBoxContainer@19602/@LineEdit@19612" to="whole/lower/side/@VBoxContainer@19602/@LineEdit@19612" method="_on_text_submitted"]
-[connection signal="child_entered_tree" from="whole/lower/side/@VBoxContainer@19602/@LineEdit@19613" to="whole/lower/side/@VBoxContainer@19602/@LineEdit@19613" method="_on_child_entered_tree"]
-[connection signal="focus_entered" from="whole/lower/side/@VBoxContainer@19602/@LineEdit@19613" to="whole/lower/side/@VBoxContainer@19602/@LineEdit@19613" method="_on_typedLineEdit_focus_entered"]
-[connection signal="focus_exited" from="whole/lower/side/@VBoxContainer@19602/@LineEdit@19613" to="whole/lower/side/@VBoxContainer@19602/@LineEdit@19613" method="_on_typedLineEdit_focus_exited"]
-[connection signal="text_submitted" from="whole/lower/side/@VBoxContainer@19602/@LineEdit@19613" to="whole/lower/side/@VBoxContainer@19602/@LineEdit@19613" method="_on_text_submitted"]
-[connection signal="child_entered_tree" from="whole/lower/side/@VBoxContainer@19602/@LineEdit@19614" to="whole/lower/side/@VBoxContainer@19602/@LineEdit@19614" method="_on_child_entered_tree"]
-[connection signal="focus_entered" from="whole/lower/side/@VBoxContainer@19602/@LineEdit@19614" to="whole/lower/side/@VBoxContainer@19602/@LineEdit@19614" method="_on_typedLineEdit_focus_entered"]
-[connection signal="focus_exited" from="whole/lower/side/@VBoxContainer@19602/@LineEdit@19614" to="whole/lower/side/@VBoxContainer@19602/@LineEdit@19614" method="_on_typedLineEdit_focus_exited"]
-[connection signal="text_submitted" from="whole/lower/side/@VBoxContainer@19602/@LineEdit@19614" to="whole/lower/side/@VBoxContainer@19602/@LineEdit@19614" method="_on_text_submitted"]
-[connection signal="child_entered_tree" from="whole/lower/side/@VBoxContainer@19602/@LineEdit@19615" to="whole/lower/side/@VBoxContainer@19602/@LineEdit@19615" method="_on_child_entered_tree"]
-[connection signal="focus_entered" from="whole/lower/side/@VBoxContainer@19602/@LineEdit@19615" to="whole/lower/side/@VBoxContainer@19602/@LineEdit@19615" method="_on_typedLineEdit_focus_entered"]
-[connection signal="focus_exited" from="whole/lower/side/@VBoxContainer@19602/@LineEdit@19615" to="whole/lower/side/@VBoxContainer@19602/@LineEdit@19615" method="_on_typedLineEdit_focus_exited"]
-[connection signal="text_submitted" from="whole/lower/side/@VBoxContainer@19602/@LineEdit@19615" to="whole/lower/side/@VBoxContainer@19602/@LineEdit@19615" method="_on_text_submitted"]
-[connection signal="child_entered_tree" from="whole/lower/side/@VBoxContainer@19602/@LineEdit@19616" to="whole/lower/side/@VBoxContainer@19602/@LineEdit@19616" method="_on_child_entered_tree"]
-[connection signal="focus_entered" from="whole/lower/side/@VBoxContainer@19602/@LineEdit@19616" to="whole/lower/side/@VBoxContainer@19602/@LineEdit@19616" method="_on_typedLineEdit_focus_entered"]
-[connection signal="focus_exited" from="whole/lower/side/@VBoxContainer@19602/@LineEdit@19616" to="whole/lower/side/@VBoxContainer@19602/@LineEdit@19616" method="_on_typedLineEdit_focus_exited"]
-[connection signal="text_submitted" from="whole/lower/side/@VBoxContainer@19602/@LineEdit@19616" to="whole/lower/side/@VBoxContainer@19602/@LineEdit@19616" method="_on_text_submitted"]
-[connection signal="child_entered_tree" from="whole/lower/side/@VBoxContainer@19602/@LineEdit@19617" to="whole/lower/side/@VBoxContainer@19602/@LineEdit@19617" method="_on_child_entered_tree"]
-[connection signal="focus_entered" from="whole/lower/side/@VBoxContainer@19602/@LineEdit@19617" to="whole/lower/side/@VBoxContainer@19602/@LineEdit@19617" method="_on_typedLineEdit_focus_entered"]
-[connection signal="focus_exited" from="whole/lower/side/@VBoxContainer@19602/@LineEdit@19617" to="whole/lower/side/@VBoxContainer@19602/@LineEdit@19617" method="_on_typedLineEdit_focus_exited"]
-[connection signal="text_submitted" from="whole/lower/side/@VBoxContainer@19602/@LineEdit@19617" to="whole/lower/side/@VBoxContainer@19602/@LineEdit@19617" method="_on_text_submitted"]
-[connection signal="child_entered_tree" from="whole/lower/side/@VBoxContainer@19602/@LineEdit@19618" to="whole/lower/side/@VBoxContainer@19602/@LineEdit@19618" method="_on_child_entered_tree"]
-[connection signal="focus_entered" from="whole/lower/side/@VBoxContainer@19602/@LineEdit@19618" to="whole/lower/side/@VBoxContainer@19602/@LineEdit@19618" method="_on_typedLineEdit_focus_entered"]
-[connection signal="focus_exited" from="whole/lower/side/@VBoxContainer@19602/@LineEdit@19618" to="whole/lower/side/@VBoxContainer@19602/@LineEdit@19618" method="_on_typedLineEdit_focus_exited"]
-[connection signal="text_submitted" from="whole/lower/side/@VBoxContainer@19602/@LineEdit@19618" to="whole/lower/side/@VBoxContainer@19602/@LineEdit@19618" method="_on_text_submitted"]
-[connection signal="child_entered_tree" from="whole/lower/side/@VBoxContainer@19602/@LineEdit@19619" to="whole/lower/side/@VBoxContainer@19602/@LineEdit@19619" method="_on_child_entered_tree"]
-[connection signal="focus_entered" from="whole/lower/side/@VBoxContainer@19602/@LineEdit@19619" to="whole/lower/side/@VBoxContainer@19602/@LineEdit@19619" method="_on_typedLineEdit_focus_entered"]
-[connection signal="focus_exited" from="whole/lower/side/@VBoxContainer@19602/@LineEdit@19619" to="whole/lower/side/@VBoxContainer@19602/@LineEdit@19619" method="_on_typedLineEdit_focus_exited"]
-[connection signal="text_submitted" from="whole/lower/side/@VBoxContainer@19602/@LineEdit@19619" to="whole/lower/side/@VBoxContainer@19602/@LineEdit@19619" method="_on_text_submitted"]
-[connection signal="child_entered_tree" from="whole/lower/side/@VBoxContainer@19602/@LineEdit@19620" to="whole/lower/side/@VBoxContainer@19602/@LineEdit@19620" method="_on_child_entered_tree"]
-[connection signal="focus_entered" from="whole/lower/side/@VBoxContainer@19602/@LineEdit@19620" to="whole/lower/side/@VBoxContainer@19602/@LineEdit@19620" method="_on_typedLineEdit_focus_entered"]
-[connection signal="focus_exited" from="whole/lower/side/@VBoxContainer@19602/@LineEdit@19620" to="whole/lower/side/@VBoxContainer@19602/@LineEdit@19620" method="_on_typedLineEdit_focus_exited"]
-[connection signal="text_submitted" from="whole/lower/side/@VBoxContainer@19602/@LineEdit@19620" to="whole/lower/side/@VBoxContainer@19602/@LineEdit@19620" method="_on_text_submitted"]
-[connection signal="child_entered_tree" from="whole/lower/side/@VBoxContainer@19602/@LineEdit@19621" to="whole/lower/side/@VBoxContainer@19602/@LineEdit@19621" method="_on_child_entered_tree"]
-[connection signal="focus_entered" from="whole/lower/side/@VBoxContainer@19602/@LineEdit@19621" to="whole/lower/side/@VBoxContainer@19602/@LineEdit@19621" method="_on_typedLineEdit_focus_entered"]
-[connection signal="focus_exited" from="whole/lower/side/@VBoxContainer@19602/@LineEdit@19621" to="whole/lower/side/@VBoxContainer@19602/@LineEdit@19621" method="_on_typedLineEdit_focus_exited"]
-[connection signal="text_submitted" from="whole/lower/side/@VBoxContainer@19602/@LineEdit@19621" to="whole/lower/side/@VBoxContainer@19602/@LineEdit@19621" method="_on_text_submitted"]
+[connection signal="child_entered_tree" from="whole/uppper/upperBox/col 0/@VBoxContainer@26068/typedLineEdit" to="whole/uppper/upperBox/col 0/@VBoxContainer@26068/typedLineEdit" method="_on_child_entered_tree"]
+[connection signal="focus_entered" from="whole/uppper/upperBox/col 0/@VBoxContainer@26068/typedLineEdit" to="whole/uppper/upperBox/col 0/@VBoxContainer@26068/typedLineEdit" method="_on_typedLineEdit_focus_entered"]
+[connection signal="focus_exited" from="whole/uppper/upperBox/col 0/@VBoxContainer@26068/typedLineEdit" to="whole/uppper/upperBox/col 0/@VBoxContainer@26068/typedLineEdit" method="_on_typedLineEdit_focus_exited"]
+[connection signal="text_submitted" from="whole/uppper/upperBox/col 0/@VBoxContainer@26068/typedLineEdit" to="whole/uppper/upperBox/col 0/@VBoxContainer@26068/typedLineEdit" method="_on_text_submitted"]
+[connection signal="child_entered_tree" from="whole/uppper/upperBox/col 0/col 1/@VBoxContainer@26072/typedLineEdit" to="whole/uppper/upperBox/col 0/col 1/@VBoxContainer@26072/typedLineEdit" method="_on_child_entered_tree"]
+[connection signal="focus_entered" from="whole/uppper/upperBox/col 0/col 1/@VBoxContainer@26072/typedLineEdit" to="whole/uppper/upperBox/col 0/col 1/@VBoxContainer@26072/typedLineEdit" method="_on_typedLineEdit_focus_entered"]
+[connection signal="focus_exited" from="whole/uppper/upperBox/col 0/col 1/@VBoxContainer@26072/typedLineEdit" to="whole/uppper/upperBox/col 0/col 1/@VBoxContainer@26072/typedLineEdit" method="_on_typedLineEdit_focus_exited"]
+[connection signal="text_submitted" from="whole/uppper/upperBox/col 0/col 1/@VBoxContainer@26072/typedLineEdit" to="whole/uppper/upperBox/col 0/col 1/@VBoxContainer@26072/typedLineEdit" method="_on_text_submitted"]
+[connection signal="child_entered_tree" from="whole/uppper/upperBox/col 0/col 1/col 2/@VBoxContainer@26076/typedLineEdit" to="whole/uppper/upperBox/col 0/col 1/col 2/@VBoxContainer@26076/typedLineEdit" method="_on_child_entered_tree"]
+[connection signal="focus_entered" from="whole/uppper/upperBox/col 0/col 1/col 2/@VBoxContainer@26076/typedLineEdit" to="whole/uppper/upperBox/col 0/col 1/col 2/@VBoxContainer@26076/typedLineEdit" method="_on_typedLineEdit_focus_entered"]
+[connection signal="focus_exited" from="whole/uppper/upperBox/col 0/col 1/col 2/@VBoxContainer@26076/typedLineEdit" to="whole/uppper/upperBox/col 0/col 1/col 2/@VBoxContainer@26076/typedLineEdit" method="_on_typedLineEdit_focus_exited"]
+[connection signal="text_submitted" from="whole/uppper/upperBox/col 0/col 1/col 2/@VBoxContainer@26076/typedLineEdit" to="whole/uppper/upperBox/col 0/col 1/col 2/@VBoxContainer@26076/typedLineEdit" method="_on_text_submitted"]
+[connection signal="child_entered_tree" from="whole/uppper/upperBox/col 0/col 1/col 2/col 3/@VBoxContainer@26080/typedLineEdit" to="whole/uppper/upperBox/col 0/col 1/col 2/col 3/@VBoxContainer@26080/typedLineEdit" method="_on_child_entered_tree"]
+[connection signal="focus_entered" from="whole/uppper/upperBox/col 0/col 1/col 2/col 3/@VBoxContainer@26080/typedLineEdit" to="whole/uppper/upperBox/col 0/col 1/col 2/col 3/@VBoxContainer@26080/typedLineEdit" method="_on_typedLineEdit_focus_entered"]
+[connection signal="focus_exited" from="whole/uppper/upperBox/col 0/col 1/col 2/col 3/@VBoxContainer@26080/typedLineEdit" to="whole/uppper/upperBox/col 0/col 1/col 2/col 3/@VBoxContainer@26080/typedLineEdit" method="_on_typedLineEdit_focus_exited"]
+[connection signal="text_submitted" from="whole/uppper/upperBox/col 0/col 1/col 2/col 3/@VBoxContainer@26080/typedLineEdit" to="whole/uppper/upperBox/col 0/col 1/col 2/col 3/@VBoxContainer@26080/typedLineEdit" method="_on_text_submitted"]
+[connection signal="child_entered_tree" from="whole/uppper/upperBox/col 0/col 1/col 2/col 3/col 4/@VBoxContainer@26084/typedLineEdit" to="whole/uppper/upperBox/col 0/col 1/col 2/col 3/col 4/@VBoxContainer@26084/typedLineEdit" method="_on_child_entered_tree"]
+[connection signal="focus_entered" from="whole/uppper/upperBox/col 0/col 1/col 2/col 3/col 4/@VBoxContainer@26084/typedLineEdit" to="whole/uppper/upperBox/col 0/col 1/col 2/col 3/col 4/@VBoxContainer@26084/typedLineEdit" method="_on_typedLineEdit_focus_entered"]
+[connection signal="focus_exited" from="whole/uppper/upperBox/col 0/col 1/col 2/col 3/col 4/@VBoxContainer@26084/typedLineEdit" to="whole/uppper/upperBox/col 0/col 1/col 2/col 3/col 4/@VBoxContainer@26084/typedLineEdit" method="_on_typedLineEdit_focus_exited"]
+[connection signal="text_submitted" from="whole/uppper/upperBox/col 0/col 1/col 2/col 3/col 4/@VBoxContainer@26084/typedLineEdit" to="whole/uppper/upperBox/col 0/col 1/col 2/col 3/col 4/@VBoxContainer@26084/typedLineEdit" method="_on_text_submitted"]
+[connection signal="child_entered_tree" from="whole/uppper/upperBox/col 0/col 1/col 2/col 3/col 4/col 5/@VBoxContainer@26088/typedLineEdit" to="whole/uppper/upperBox/col 0/col 1/col 2/col 3/col 4/col 5/@VBoxContainer@26088/typedLineEdit" method="_on_child_entered_tree"]
+[connection signal="focus_entered" from="whole/uppper/upperBox/col 0/col 1/col 2/col 3/col 4/col 5/@VBoxContainer@26088/typedLineEdit" to="whole/uppper/upperBox/col 0/col 1/col 2/col 3/col 4/col 5/@VBoxContainer@26088/typedLineEdit" method="_on_typedLineEdit_focus_entered"]
+[connection signal="focus_exited" from="whole/uppper/upperBox/col 0/col 1/col 2/col 3/col 4/col 5/@VBoxContainer@26088/typedLineEdit" to="whole/uppper/upperBox/col 0/col 1/col 2/col 3/col 4/col 5/@VBoxContainer@26088/typedLineEdit" method="_on_typedLineEdit_focus_exited"]
+[connection signal="text_submitted" from="whole/uppper/upperBox/col 0/col 1/col 2/col 3/col 4/col 5/@VBoxContainer@26088/typedLineEdit" to="whole/uppper/upperBox/col 0/col 1/col 2/col 3/col 4/col 5/@VBoxContainer@26088/typedLineEdit" method="_on_text_submitted"]
+[connection signal="child_entered_tree" from="whole/uppper/upperBox/col 0/col 1/col 2/col 3/col 4/col 5/col 6/@VBoxContainer@26092/typedLineEdit" to="whole/uppper/upperBox/col 0/col 1/col 2/col 3/col 4/col 5/col 6/@VBoxContainer@26092/typedLineEdit" method="_on_child_entered_tree"]
+[connection signal="focus_entered" from="whole/uppper/upperBox/col 0/col 1/col 2/col 3/col 4/col 5/col 6/@VBoxContainer@26092/typedLineEdit" to="whole/uppper/upperBox/col 0/col 1/col 2/col 3/col 4/col 5/col 6/@VBoxContainer@26092/typedLineEdit" method="_on_typedLineEdit_focus_entered"]
+[connection signal="focus_exited" from="whole/uppper/upperBox/col 0/col 1/col 2/col 3/col 4/col 5/col 6/@VBoxContainer@26092/typedLineEdit" to="whole/uppper/upperBox/col 0/col 1/col 2/col 3/col 4/col 5/col 6/@VBoxContainer@26092/typedLineEdit" method="_on_typedLineEdit_focus_exited"]
+[connection signal="text_submitted" from="whole/uppper/upperBox/col 0/col 1/col 2/col 3/col 4/col 5/col 6/@VBoxContainer@26092/typedLineEdit" to="whole/uppper/upperBox/col 0/col 1/col 2/col 3/col 4/col 5/col 6/@VBoxContainer@26092/typedLineEdit" method="_on_text_submitted"]
+[connection signal="child_entered_tree" from="whole/uppper/upperBox/col 0/col 1/col 2/col 3/col 4/col 5/col 6/col 7/@VBoxContainer@26096/typedLineEdit" to="whole/uppper/upperBox/col 0/col 1/col 2/col 3/col 4/col 5/col 6/col 7/@VBoxContainer@26096/typedLineEdit" method="_on_child_entered_tree"]
+[connection signal="focus_entered" from="whole/uppper/upperBox/col 0/col 1/col 2/col 3/col 4/col 5/col 6/col 7/@VBoxContainer@26096/typedLineEdit" to="whole/uppper/upperBox/col 0/col 1/col 2/col 3/col 4/col 5/col 6/col 7/@VBoxContainer@26096/typedLineEdit" method="_on_typedLineEdit_focus_entered"]
+[connection signal="focus_exited" from="whole/uppper/upperBox/col 0/col 1/col 2/col 3/col 4/col 5/col 6/col 7/@VBoxContainer@26096/typedLineEdit" to="whole/uppper/upperBox/col 0/col 1/col 2/col 3/col 4/col 5/col 6/col 7/@VBoxContainer@26096/typedLineEdit" method="_on_typedLineEdit_focus_exited"]
+[connection signal="text_submitted" from="whole/uppper/upperBox/col 0/col 1/col 2/col 3/col 4/col 5/col 6/col 7/@VBoxContainer@26096/typedLineEdit" to="whole/uppper/upperBox/col 0/col 1/col 2/col 3/col 4/col 5/col 6/col 7/@VBoxContainer@26096/typedLineEdit" method="_on_text_submitted"]
+[connection signal="child_entered_tree" from="whole/uppper/upperBox/col 0/col 1/col 2/col 3/col 4/col 5/col 6/col 7/col 8/@VBoxContainer@26100/typedLineEdit" to="whole/uppper/upperBox/col 0/col 1/col 2/col 3/col 4/col 5/col 6/col 7/col 8/@VBoxContainer@26100/typedLineEdit" method="_on_child_entered_tree"]
+[connection signal="focus_entered" from="whole/uppper/upperBox/col 0/col 1/col 2/col 3/col 4/col 5/col 6/col 7/col 8/@VBoxContainer@26100/typedLineEdit" to="whole/uppper/upperBox/col 0/col 1/col 2/col 3/col 4/col 5/col 6/col 7/col 8/@VBoxContainer@26100/typedLineEdit" method="_on_typedLineEdit_focus_entered"]
+[connection signal="focus_exited" from="whole/uppper/upperBox/col 0/col 1/col 2/col 3/col 4/col 5/col 6/col 7/col 8/@VBoxContainer@26100/typedLineEdit" to="whole/uppper/upperBox/col 0/col 1/col 2/col 3/col 4/col 5/col 6/col 7/col 8/@VBoxContainer@26100/typedLineEdit" method="_on_typedLineEdit_focus_exited"]
+[connection signal="text_submitted" from="whole/uppper/upperBox/col 0/col 1/col 2/col 3/col 4/col 5/col 6/col 7/col 8/@VBoxContainer@26100/typedLineEdit" to="whole/uppper/upperBox/col 0/col 1/col 2/col 3/col 4/col 5/col 6/col 7/col 8/@VBoxContainer@26100/typedLineEdit" method="_on_text_submitted"]
+[connection signal="child_entered_tree" from="whole/uppper/upperBox/col 0/col 1/col 2/col 3/col 4/col 5/col 6/col 7/col 8/col 9/@VBoxContainer@26104/typedLineEdit" to="whole/uppper/upperBox/col 0/col 1/col 2/col 3/col 4/col 5/col 6/col 7/col 8/col 9/@VBoxContainer@26104/typedLineEdit" method="_on_child_entered_tree"]
+[connection signal="focus_entered" from="whole/uppper/upperBox/col 0/col 1/col 2/col 3/col 4/col 5/col 6/col 7/col 8/col 9/@VBoxContainer@26104/typedLineEdit" to="whole/uppper/upperBox/col 0/col 1/col 2/col 3/col 4/col 5/col 6/col 7/col 8/col 9/@VBoxContainer@26104/typedLineEdit" method="_on_typedLineEdit_focus_entered"]
+[connection signal="focus_exited" from="whole/uppper/upperBox/col 0/col 1/col 2/col 3/col 4/col 5/col 6/col 7/col 8/col 9/@VBoxContainer@26104/typedLineEdit" to="whole/uppper/upperBox/col 0/col 1/col 2/col 3/col 4/col 5/col 6/col 7/col 8/col 9/@VBoxContainer@26104/typedLineEdit" method="_on_typedLineEdit_focus_exited"]
+[connection signal="text_submitted" from="whole/uppper/upperBox/col 0/col 1/col 2/col 3/col 4/col 5/col 6/col 7/col 8/col 9/@VBoxContainer@26104/typedLineEdit" to="whole/uppper/upperBox/col 0/col 1/col 2/col 3/col 4/col 5/col 6/col 7/col 8/col 9/@VBoxContainer@26104/typedLineEdit" method="_on_text_submitted"]
+[connection signal="child_entered_tree" from="whole/uppper/upperBox/col 0/col 1/col 2/col 3/col 4/col 5/col 6/col 7/col 8/col 9/col 10/@VBoxContainer@26108/typedLineEdit" to="whole/uppper/upperBox/col 0/col 1/col 2/col 3/col 4/col 5/col 6/col 7/col 8/col 9/col 10/@VBoxContainer@26108/typedLineEdit" method="_on_child_entered_tree"]
+[connection signal="focus_entered" from="whole/uppper/upperBox/col 0/col 1/col 2/col 3/col 4/col 5/col 6/col 7/col 8/col 9/col 10/@VBoxContainer@26108/typedLineEdit" to="whole/uppper/upperBox/col 0/col 1/col 2/col 3/col 4/col 5/col 6/col 7/col 8/col 9/col 10/@VBoxContainer@26108/typedLineEdit" method="_on_typedLineEdit_focus_entered"]
+[connection signal="focus_exited" from="whole/uppper/upperBox/col 0/col 1/col 2/col 3/col 4/col 5/col 6/col 7/col 8/col 9/col 10/@VBoxContainer@26108/typedLineEdit" to="whole/uppper/upperBox/col 0/col 1/col 2/col 3/col 4/col 5/col 6/col 7/col 8/col 9/col 10/@VBoxContainer@26108/typedLineEdit" method="_on_typedLineEdit_focus_exited"]
+[connection signal="text_submitted" from="whole/uppper/upperBox/col 0/col 1/col 2/col 3/col 4/col 5/col 6/col 7/col 8/col 9/col 10/@VBoxContainer@26108/typedLineEdit" to="whole/uppper/upperBox/col 0/col 1/col 2/col 3/col 4/col 5/col 6/col 7/col 8/col 9/col 10/@VBoxContainer@26108/typedLineEdit" method="_on_text_submitted"]
+[connection signal="child_entered_tree" from="whole/uppper/upperBox/col 0/col 1/col 2/col 3/col 4/col 5/col 6/col 7/col 8/col 9/col 10/col 11/@VBoxContainer@26112/typedLineEdit" to="whole/uppper/upperBox/col 0/col 1/col 2/col 3/col 4/col 5/col 6/col 7/col 8/col 9/col 10/col 11/@VBoxContainer@26112/typedLineEdit" method="_on_child_entered_tree"]
+[connection signal="focus_entered" from="whole/uppper/upperBox/col 0/col 1/col 2/col 3/col 4/col 5/col 6/col 7/col 8/col 9/col 10/col 11/@VBoxContainer@26112/typedLineEdit" to="whole/uppper/upperBox/col 0/col 1/col 2/col 3/col 4/col 5/col 6/col 7/col 8/col 9/col 10/col 11/@VBoxContainer@26112/typedLineEdit" method="_on_typedLineEdit_focus_entered"]
+[connection signal="focus_exited" from="whole/uppper/upperBox/col 0/col 1/col 2/col 3/col 4/col 5/col 6/col 7/col 8/col 9/col 10/col 11/@VBoxContainer@26112/typedLineEdit" to="whole/uppper/upperBox/col 0/col 1/col 2/col 3/col 4/col 5/col 6/col 7/col 8/col 9/col 10/col 11/@VBoxContainer@26112/typedLineEdit" method="_on_typedLineEdit_focus_exited"]
+[connection signal="text_submitted" from="whole/uppper/upperBox/col 0/col 1/col 2/col 3/col 4/col 5/col 6/col 7/col 8/col 9/col 10/col 11/@VBoxContainer@26112/typedLineEdit" to="whole/uppper/upperBox/col 0/col 1/col 2/col 3/col 4/col 5/col 6/col 7/col 8/col 9/col 10/col 11/@VBoxContainer@26112/typedLineEdit" method="_on_text_submitted"]
+[connection signal="child_entered_tree" from="whole/uppper/upperBox/col 0/col 1/col 2/col 3/col 4/col 5/col 6/col 7/col 8/col 9/col 10/col 11/col 12/@VBoxContainer@26116/typedLineEdit" to="whole/uppper/upperBox/col 0/col 1/col 2/col 3/col 4/col 5/col 6/col 7/col 8/col 9/col 10/col 11/col 12/@VBoxContainer@26116/typedLineEdit" method="_on_child_entered_tree"]
+[connection signal="focus_entered" from="whole/uppper/upperBox/col 0/col 1/col 2/col 3/col 4/col 5/col 6/col 7/col 8/col 9/col 10/col 11/col 12/@VBoxContainer@26116/typedLineEdit" to="whole/uppper/upperBox/col 0/col 1/col 2/col 3/col 4/col 5/col 6/col 7/col 8/col 9/col 10/col 11/col 12/@VBoxContainer@26116/typedLineEdit" method="_on_typedLineEdit_focus_entered"]
+[connection signal="focus_exited" from="whole/uppper/upperBox/col 0/col 1/col 2/col 3/col 4/col 5/col 6/col 7/col 8/col 9/col 10/col 11/col 12/@VBoxContainer@26116/typedLineEdit" to="whole/uppper/upperBox/col 0/col 1/col 2/col 3/col 4/col 5/col 6/col 7/col 8/col 9/col 10/col 11/col 12/@VBoxContainer@26116/typedLineEdit" method="_on_typedLineEdit_focus_exited"]
+[connection signal="text_submitted" from="whole/uppper/upperBox/col 0/col 1/col 2/col 3/col 4/col 5/col 6/col 7/col 8/col 9/col 10/col 11/col 12/@VBoxContainer@26116/typedLineEdit" to="whole/uppper/upperBox/col 0/col 1/col 2/col 3/col 4/col 5/col 6/col 7/col 8/col 9/col 10/col 11/col 12/@VBoxContainer@26116/typedLineEdit" method="_on_text_submitted"]
+[connection signal="child_entered_tree" from="whole/uppper/upperBox/col 0/col 1/col 2/col 3/col 4/col 5/col 6/col 7/col 8/col 9/col 10/col 11/col 12/col 13/@VBoxContainer@26120/typedLineEdit" to="whole/uppper/upperBox/col 0/col 1/col 2/col 3/col 4/col 5/col 6/col 7/col 8/col 9/col 10/col 11/col 12/col 13/@VBoxContainer@26120/typedLineEdit" method="_on_child_entered_tree"]
+[connection signal="focus_entered" from="whole/uppper/upperBox/col 0/col 1/col 2/col 3/col 4/col 5/col 6/col 7/col 8/col 9/col 10/col 11/col 12/col 13/@VBoxContainer@26120/typedLineEdit" to="whole/uppper/upperBox/col 0/col 1/col 2/col 3/col 4/col 5/col 6/col 7/col 8/col 9/col 10/col 11/col 12/col 13/@VBoxContainer@26120/typedLineEdit" method="_on_typedLineEdit_focus_entered"]
+[connection signal="focus_exited" from="whole/uppper/upperBox/col 0/col 1/col 2/col 3/col 4/col 5/col 6/col 7/col 8/col 9/col 10/col 11/col 12/col 13/@VBoxContainer@26120/typedLineEdit" to="whole/uppper/upperBox/col 0/col 1/col 2/col 3/col 4/col 5/col 6/col 7/col 8/col 9/col 10/col 11/col 12/col 13/@VBoxContainer@26120/typedLineEdit" method="_on_typedLineEdit_focus_exited"]
+[connection signal="text_submitted" from="whole/uppper/upperBox/col 0/col 1/col 2/col 3/col 4/col 5/col 6/col 7/col 8/col 9/col 10/col 11/col 12/col 13/@VBoxContainer@26120/typedLineEdit" to="whole/uppper/upperBox/col 0/col 1/col 2/col 3/col 4/col 5/col 6/col 7/col 8/col 9/col 10/col 11/col 12/col 13/@VBoxContainer@26120/typedLineEdit" method="_on_text_submitted"]
+[connection signal="child_entered_tree" from="whole/uppper/upperBox/col 0/col 1/col 2/col 3/col 4/col 5/col 6/col 7/col 8/col 9/col 10/col 11/col 12/col 13/col 14/@VBoxContainer@26124/typedLineEdit" to="whole/uppper/upperBox/col 0/col 1/col 2/col 3/col 4/col 5/col 6/col 7/col 8/col 9/col 10/col 11/col 12/col 13/col 14/@VBoxContainer@26124/typedLineEdit" method="_on_child_entered_tree"]
+[connection signal="focus_entered" from="whole/uppper/upperBox/col 0/col 1/col 2/col 3/col 4/col 5/col 6/col 7/col 8/col 9/col 10/col 11/col 12/col 13/col 14/@VBoxContainer@26124/typedLineEdit" to="whole/uppper/upperBox/col 0/col 1/col 2/col 3/col 4/col 5/col 6/col 7/col 8/col 9/col 10/col 11/col 12/col 13/col 14/@VBoxContainer@26124/typedLineEdit" method="_on_typedLineEdit_focus_entered"]
+[connection signal="focus_exited" from="whole/uppper/upperBox/col 0/col 1/col 2/col 3/col 4/col 5/col 6/col 7/col 8/col 9/col 10/col 11/col 12/col 13/col 14/@VBoxContainer@26124/typedLineEdit" to="whole/uppper/upperBox/col 0/col 1/col 2/col 3/col 4/col 5/col 6/col 7/col 8/col 9/col 10/col 11/col 12/col 13/col 14/@VBoxContainer@26124/typedLineEdit" method="_on_typedLineEdit_focus_exited"]
+[connection signal="text_submitted" from="whole/uppper/upperBox/col 0/col 1/col 2/col 3/col 4/col 5/col 6/col 7/col 8/col 9/col 10/col 11/col 12/col 13/col 14/@VBoxContainer@26124/typedLineEdit" to="whole/uppper/upperBox/col 0/col 1/col 2/col 3/col 4/col 5/col 6/col 7/col 8/col 9/col 10/col 11/col 12/col 13/col 14/@VBoxContainer@26124/typedLineEdit" method="_on_text_submitted"]
+[connection signal="child_entered_tree" from="whole/uppper/upperBox/col 0/col 1/col 2/col 3/col 4/col 5/col 6/col 7/col 8/col 9/col 10/col 11/col 12/col 13/col 14/col 15/@VBoxContainer@26128/typedLineEdit" to="whole/uppper/upperBox/col 0/col 1/col 2/col 3/col 4/col 5/col 6/col 7/col 8/col 9/col 10/col 11/col 12/col 13/col 14/col 15/@VBoxContainer@26128/typedLineEdit" method="_on_child_entered_tree"]
+[connection signal="focus_entered" from="whole/uppper/upperBox/col 0/col 1/col 2/col 3/col 4/col 5/col 6/col 7/col 8/col 9/col 10/col 11/col 12/col 13/col 14/col 15/@VBoxContainer@26128/typedLineEdit" to="whole/uppper/upperBox/col 0/col 1/col 2/col 3/col 4/col 5/col 6/col 7/col 8/col 9/col 10/col 11/col 12/col 13/col 14/col 15/@VBoxContainer@26128/typedLineEdit" method="_on_typedLineEdit_focus_entered"]
+[connection signal="focus_exited" from="whole/uppper/upperBox/col 0/col 1/col 2/col 3/col 4/col 5/col 6/col 7/col 8/col 9/col 10/col 11/col 12/col 13/col 14/col 15/@VBoxContainer@26128/typedLineEdit" to="whole/uppper/upperBox/col 0/col 1/col 2/col 3/col 4/col 5/col 6/col 7/col 8/col 9/col 10/col 11/col 12/col 13/col 14/col 15/@VBoxContainer@26128/typedLineEdit" method="_on_typedLineEdit_focus_exited"]
+[connection signal="text_submitted" from="whole/uppper/upperBox/col 0/col 1/col 2/col 3/col 4/col 5/col 6/col 7/col 8/col 9/col 10/col 11/col 12/col 13/col 14/col 15/@VBoxContainer@26128/typedLineEdit" to="whole/uppper/upperBox/col 0/col 1/col 2/col 3/col 4/col 5/col 6/col 7/col 8/col 9/col 10/col 11/col 12/col 13/col 14/col 15/@VBoxContainer@26128/typedLineEdit" method="_on_text_submitted"]
+[connection signal="child_entered_tree" from="whole/uppper/upperBox/col 0/col 1/col 2/col 3/col 4/col 5/col 6/col 7/col 8/col 9/col 10/col 11/col 12/col 13/col 14/col 15/col 16/@VBoxContainer@26132/typedLineEdit" to="whole/uppper/upperBox/col 0/col 1/col 2/col 3/col 4/col 5/col 6/col 7/col 8/col 9/col 10/col 11/col 12/col 13/col 14/col 15/col 16/@VBoxContainer@26132/typedLineEdit" method="_on_child_entered_tree"]
+[connection signal="focus_entered" from="whole/uppper/upperBox/col 0/col 1/col 2/col 3/col 4/col 5/col 6/col 7/col 8/col 9/col 10/col 11/col 12/col 13/col 14/col 15/col 16/@VBoxContainer@26132/typedLineEdit" to="whole/uppper/upperBox/col 0/col 1/col 2/col 3/col 4/col 5/col 6/col 7/col 8/col 9/col 10/col 11/col 12/col 13/col 14/col 15/col 16/@VBoxContainer@26132/typedLineEdit" method="_on_typedLineEdit_focus_entered"]
+[connection signal="focus_exited" from="whole/uppper/upperBox/col 0/col 1/col 2/col 3/col 4/col 5/col 6/col 7/col 8/col 9/col 10/col 11/col 12/col 13/col 14/col 15/col 16/@VBoxContainer@26132/typedLineEdit" to="whole/uppper/upperBox/col 0/col 1/col 2/col 3/col 4/col 5/col 6/col 7/col 8/col 9/col 10/col 11/col 12/col 13/col 14/col 15/col 16/@VBoxContainer@26132/typedLineEdit" method="_on_typedLineEdit_focus_exited"]
+[connection signal="text_submitted" from="whole/uppper/upperBox/col 0/col 1/col 2/col 3/col 4/col 5/col 6/col 7/col 8/col 9/col 10/col 11/col 12/col 13/col 14/col 15/col 16/@VBoxContainer@26132/typedLineEdit" to="whole/uppper/upperBox/col 0/col 1/col 2/col 3/col 4/col 5/col 6/col 7/col 8/col 9/col 10/col 11/col 12/col 13/col 14/col 15/col 16/@VBoxContainer@26132/typedLineEdit" method="_on_text_submitted"]
+[connection signal="child_entered_tree" from="whole/uppper/upperBox/col 0/col 1/col 2/col 3/col 4/col 5/col 6/col 7/col 8/col 9/col 10/col 11/col 12/col 13/col 14/col 15/col 16/col 17/@VBoxContainer@26136/typedLineEdit" to="whole/uppper/upperBox/col 0/col 1/col 2/col 3/col 4/col 5/col 6/col 7/col 8/col 9/col 10/col 11/col 12/col 13/col 14/col 15/col 16/col 17/@VBoxContainer@26136/typedLineEdit" method="_on_child_entered_tree"]
+[connection signal="focus_entered" from="whole/uppper/upperBox/col 0/col 1/col 2/col 3/col 4/col 5/col 6/col 7/col 8/col 9/col 10/col 11/col 12/col 13/col 14/col 15/col 16/col 17/@VBoxContainer@26136/typedLineEdit" to="whole/uppper/upperBox/col 0/col 1/col 2/col 3/col 4/col 5/col 6/col 7/col 8/col 9/col 10/col 11/col 12/col 13/col 14/col 15/col 16/col 17/@VBoxContainer@26136/typedLineEdit" method="_on_typedLineEdit_focus_entered"]
+[connection signal="focus_exited" from="whole/uppper/upperBox/col 0/col 1/col 2/col 3/col 4/col 5/col 6/col 7/col 8/col 9/col 10/col 11/col 12/col 13/col 14/col 15/col 16/col 17/@VBoxContainer@26136/typedLineEdit" to="whole/uppper/upperBox/col 0/col 1/col 2/col 3/col 4/col 5/col 6/col 7/col 8/col 9/col 10/col 11/col 12/col 13/col 14/col 15/col 16/col 17/@VBoxContainer@26136/typedLineEdit" method="_on_typedLineEdit_focus_exited"]
+[connection signal="text_submitted" from="whole/uppper/upperBox/col 0/col 1/col 2/col 3/col 4/col 5/col 6/col 7/col 8/col 9/col 10/col 11/col 12/col 13/col 14/col 15/col 16/col 17/@VBoxContainer@26136/typedLineEdit" to="whole/uppper/upperBox/col 0/col 1/col 2/col 3/col 4/col 5/col 6/col 7/col 8/col 9/col 10/col 11/col 12/col 13/col 14/col 15/col 16/col 17/@VBoxContainer@26136/typedLineEdit" method="_on_text_submitted"]
+[connection signal="child_entered_tree" from="whole/uppper/upperBox/col 0/col 1/col 2/col 3/col 4/col 5/col 6/col 7/col 8/col 9/col 10/col 11/col 12/col 13/col 14/col 15/col 16/col 17/col 18/@VBoxContainer@26140/typedLineEdit" to="whole/uppper/upperBox/col 0/col 1/col 2/col 3/col 4/col 5/col 6/col 7/col 8/col 9/col 10/col 11/col 12/col 13/col 14/col 15/col 16/col 17/col 18/@VBoxContainer@26140/typedLineEdit" method="_on_child_entered_tree"]
+[connection signal="focus_entered" from="whole/uppper/upperBox/col 0/col 1/col 2/col 3/col 4/col 5/col 6/col 7/col 8/col 9/col 10/col 11/col 12/col 13/col 14/col 15/col 16/col 17/col 18/@VBoxContainer@26140/typedLineEdit" to="whole/uppper/upperBox/col 0/col 1/col 2/col 3/col 4/col 5/col 6/col 7/col 8/col 9/col 10/col 11/col 12/col 13/col 14/col 15/col 16/col 17/col 18/@VBoxContainer@26140/typedLineEdit" method="_on_typedLineEdit_focus_entered"]
+[connection signal="focus_exited" from="whole/uppper/upperBox/col 0/col 1/col 2/col 3/col 4/col 5/col 6/col 7/col 8/col 9/col 10/col 11/col 12/col 13/col 14/col 15/col 16/col 17/col 18/@VBoxContainer@26140/typedLineEdit" to="whole/uppper/upperBox/col 0/col 1/col 2/col 3/col 4/col 5/col 6/col 7/col 8/col 9/col 10/col 11/col 12/col 13/col 14/col 15/col 16/col 17/col 18/@VBoxContainer@26140/typedLineEdit" method="_on_typedLineEdit_focus_exited"]
+[connection signal="text_submitted" from="whole/uppper/upperBox/col 0/col 1/col 2/col 3/col 4/col 5/col 6/col 7/col 8/col 9/col 10/col 11/col 12/col 13/col 14/col 15/col 16/col 17/col 18/@VBoxContainer@26140/typedLineEdit" to="whole/uppper/upperBox/col 0/col 1/col 2/col 3/col 4/col 5/col 6/col 7/col 8/col 9/col 10/col 11/col 12/col 13/col 14/col 15/col 16/col 17/col 18/@VBoxContainer@26140/typedLineEdit" method="_on_text_submitted"]
+[connection signal="child_entered_tree" from="whole/uppper/upperBox/col 0/col 1/col 2/col 3/col 4/col 5/col 6/col 7/col 8/col 9/col 10/col 11/col 12/col 13/col 14/col 15/col 16/col 17/col 18/col 19/@VBoxContainer@26144/typedLineEdit" to="whole/uppper/upperBox/col 0/col 1/col 2/col 3/col 4/col 5/col 6/col 7/col 8/col 9/col 10/col 11/col 12/col 13/col 14/col 15/col 16/col 17/col 18/col 19/@VBoxContainer@26144/typedLineEdit" method="_on_child_entered_tree"]
+[connection signal="focus_entered" from="whole/uppper/upperBox/col 0/col 1/col 2/col 3/col 4/col 5/col 6/col 7/col 8/col 9/col 10/col 11/col 12/col 13/col 14/col 15/col 16/col 17/col 18/col 19/@VBoxContainer@26144/typedLineEdit" to="whole/uppper/upperBox/col 0/col 1/col 2/col 3/col 4/col 5/col 6/col 7/col 8/col 9/col 10/col 11/col 12/col 13/col 14/col 15/col 16/col 17/col 18/col 19/@VBoxContainer@26144/typedLineEdit" method="_on_typedLineEdit_focus_entered"]
+[connection signal="focus_exited" from="whole/uppper/upperBox/col 0/col 1/col 2/col 3/col 4/col 5/col 6/col 7/col 8/col 9/col 10/col 11/col 12/col 13/col 14/col 15/col 16/col 17/col 18/col 19/@VBoxContainer@26144/typedLineEdit" to="whole/uppper/upperBox/col 0/col 1/col 2/col 3/col 4/col 5/col 6/col 7/col 8/col 9/col 10/col 11/col 12/col 13/col 14/col 15/col 16/col 17/col 18/col 19/@VBoxContainer@26144/typedLineEdit" method="_on_typedLineEdit_focus_exited"]
+[connection signal="text_submitted" from="whole/uppper/upperBox/col 0/col 1/col 2/col 3/col 4/col 5/col 6/col 7/col 8/col 9/col 10/col 11/col 12/col 13/col 14/col 15/col 16/col 17/col 18/col 19/@VBoxContainer@26144/typedLineEdit" to="whole/uppper/upperBox/col 0/col 1/col 2/col 3/col 4/col 5/col 6/col 7/col 8/col 9/col 10/col 11/col 12/col 13/col 14/col 15/col 16/col 17/col 18/col 19/@VBoxContainer@26144/typedLineEdit" method="_on_text_submitted"]
+[connection signal="child_entered_tree" from="whole/lower/side/@VBoxContainer@26145/typedLineEdit" to="whole/lower/side/@VBoxContainer@26145/typedLineEdit" method="_on_child_entered_tree"]
+[connection signal="focus_entered" from="whole/lower/side/@VBoxContainer@26145/typedLineEdit" to="whole/lower/side/@VBoxContainer@26145/typedLineEdit" method="_on_typedLineEdit_focus_entered"]
+[connection signal="focus_exited" from="whole/lower/side/@VBoxContainer@26145/typedLineEdit" to="whole/lower/side/@VBoxContainer@26145/typedLineEdit" method="_on_typedLineEdit_focus_exited"]
+[connection signal="text_submitted" from="whole/lower/side/@VBoxContainer@26145/typedLineEdit" to="whole/lower/side/@VBoxContainer@26145/typedLineEdit" method="_on_text_submitted"]
+[connection signal="child_entered_tree" from="whole/lower/side/@VBoxContainer@26145/@LineEdit@26146" to="whole/lower/side/@VBoxContainer@26145/@LineEdit@26146" method="_on_child_entered_tree"]
+[connection signal="focus_entered" from="whole/lower/side/@VBoxContainer@26145/@LineEdit@26146" to="whole/lower/side/@VBoxContainer@26145/@LineEdit@26146" method="_on_typedLineEdit_focus_entered"]
+[connection signal="focus_exited" from="whole/lower/side/@VBoxContainer@26145/@LineEdit@26146" to="whole/lower/side/@VBoxContainer@26145/@LineEdit@26146" method="_on_typedLineEdit_focus_exited"]
+[connection signal="text_submitted" from="whole/lower/side/@VBoxContainer@26145/@LineEdit@26146" to="whole/lower/side/@VBoxContainer@26145/@LineEdit@26146" method="_on_text_submitted"]
+[connection signal="child_entered_tree" from="whole/lower/side/@VBoxContainer@26145/@LineEdit@26147" to="whole/lower/side/@VBoxContainer@26145/@LineEdit@26147" method="_on_child_entered_tree"]
+[connection signal="focus_entered" from="whole/lower/side/@VBoxContainer@26145/@LineEdit@26147" to="whole/lower/side/@VBoxContainer@26145/@LineEdit@26147" method="_on_typedLineEdit_focus_entered"]
+[connection signal="focus_exited" from="whole/lower/side/@VBoxContainer@26145/@LineEdit@26147" to="whole/lower/side/@VBoxContainer@26145/@LineEdit@26147" method="_on_typedLineEdit_focus_exited"]
+[connection signal="text_submitted" from="whole/lower/side/@VBoxContainer@26145/@LineEdit@26147" to="whole/lower/side/@VBoxContainer@26145/@LineEdit@26147" method="_on_text_submitted"]
+[connection signal="child_entered_tree" from="whole/lower/side/@VBoxContainer@26145/@LineEdit@26148" to="whole/lower/side/@VBoxContainer@26145/@LineEdit@26148" method="_on_child_entered_tree"]
+[connection signal="focus_entered" from="whole/lower/side/@VBoxContainer@26145/@LineEdit@26148" to="whole/lower/side/@VBoxContainer@26145/@LineEdit@26148" method="_on_typedLineEdit_focus_entered"]
+[connection signal="focus_exited" from="whole/lower/side/@VBoxContainer@26145/@LineEdit@26148" to="whole/lower/side/@VBoxContainer@26145/@LineEdit@26148" method="_on_typedLineEdit_focus_exited"]
+[connection signal="text_submitted" from="whole/lower/side/@VBoxContainer@26145/@LineEdit@26148" to="whole/lower/side/@VBoxContainer@26145/@LineEdit@26148" method="_on_text_submitted"]
+[connection signal="child_entered_tree" from="whole/lower/side/@VBoxContainer@26145/@LineEdit@26149" to="whole/lower/side/@VBoxContainer@26145/@LineEdit@26149" method="_on_child_entered_tree"]
+[connection signal="focus_entered" from="whole/lower/side/@VBoxContainer@26145/@LineEdit@26149" to="whole/lower/side/@VBoxContainer@26145/@LineEdit@26149" method="_on_typedLineEdit_focus_entered"]
+[connection signal="focus_exited" from="whole/lower/side/@VBoxContainer@26145/@LineEdit@26149" to="whole/lower/side/@VBoxContainer@26145/@LineEdit@26149" method="_on_typedLineEdit_focus_exited"]
+[connection signal="text_submitted" from="whole/lower/side/@VBoxContainer@26145/@LineEdit@26149" to="whole/lower/side/@VBoxContainer@26145/@LineEdit@26149" method="_on_text_submitted"]
+[connection signal="child_entered_tree" from="whole/lower/side/@VBoxContainer@26145/@LineEdit@26150" to="whole/lower/side/@VBoxContainer@26145/@LineEdit@26150" method="_on_child_entered_tree"]
+[connection signal="focus_entered" from="whole/lower/side/@VBoxContainer@26145/@LineEdit@26150" to="whole/lower/side/@VBoxContainer@26145/@LineEdit@26150" method="_on_typedLineEdit_focus_entered"]
+[connection signal="focus_exited" from="whole/lower/side/@VBoxContainer@26145/@LineEdit@26150" to="whole/lower/side/@VBoxContainer@26145/@LineEdit@26150" method="_on_typedLineEdit_focus_exited"]
+[connection signal="text_submitted" from="whole/lower/side/@VBoxContainer@26145/@LineEdit@26150" to="whole/lower/side/@VBoxContainer@26145/@LineEdit@26150" method="_on_text_submitted"]
+[connection signal="child_entered_tree" from="whole/lower/side/@VBoxContainer@26145/@LineEdit@26151" to="whole/lower/side/@VBoxContainer@26145/@LineEdit@26151" method="_on_child_entered_tree"]
+[connection signal="focus_entered" from="whole/lower/side/@VBoxContainer@26145/@LineEdit@26151" to="whole/lower/side/@VBoxContainer@26145/@LineEdit@26151" method="_on_typedLineEdit_focus_entered"]
+[connection signal="focus_exited" from="whole/lower/side/@VBoxContainer@26145/@LineEdit@26151" to="whole/lower/side/@VBoxContainer@26145/@LineEdit@26151" method="_on_typedLineEdit_focus_exited"]
+[connection signal="text_submitted" from="whole/lower/side/@VBoxContainer@26145/@LineEdit@26151" to="whole/lower/side/@VBoxContainer@26145/@LineEdit@26151" method="_on_text_submitted"]
+[connection signal="child_entered_tree" from="whole/lower/side/@VBoxContainer@26145/@LineEdit@26152" to="whole/lower/side/@VBoxContainer@26145/@LineEdit@26152" method="_on_child_entered_tree"]
+[connection signal="focus_entered" from="whole/lower/side/@VBoxContainer@26145/@LineEdit@26152" to="whole/lower/side/@VBoxContainer@26145/@LineEdit@26152" method="_on_typedLineEdit_focus_entered"]
+[connection signal="focus_exited" from="whole/lower/side/@VBoxContainer@26145/@LineEdit@26152" to="whole/lower/side/@VBoxContainer@26145/@LineEdit@26152" method="_on_typedLineEdit_focus_exited"]
+[connection signal="text_submitted" from="whole/lower/side/@VBoxContainer@26145/@LineEdit@26152" to="whole/lower/side/@VBoxContainer@26145/@LineEdit@26152" method="_on_text_submitted"]
+[connection signal="child_entered_tree" from="whole/lower/side/@VBoxContainer@26145/@LineEdit@26153" to="whole/lower/side/@VBoxContainer@26145/@LineEdit@26153" method="_on_child_entered_tree"]
+[connection signal="focus_entered" from="whole/lower/side/@VBoxContainer@26145/@LineEdit@26153" to="whole/lower/side/@VBoxContainer@26145/@LineEdit@26153" method="_on_typedLineEdit_focus_entered"]
+[connection signal="focus_exited" from="whole/lower/side/@VBoxContainer@26145/@LineEdit@26153" to="whole/lower/side/@VBoxContainer@26145/@LineEdit@26153" method="_on_typedLineEdit_focus_exited"]
+[connection signal="text_submitted" from="whole/lower/side/@VBoxContainer@26145/@LineEdit@26153" to="whole/lower/side/@VBoxContainer@26145/@LineEdit@26153" method="_on_text_submitted"]
+[connection signal="child_entered_tree" from="whole/lower/side/@VBoxContainer@26145/@LineEdit@26154" to="whole/lower/side/@VBoxContainer@26145/@LineEdit@26154" method="_on_child_entered_tree"]
+[connection signal="focus_entered" from="whole/lower/side/@VBoxContainer@26145/@LineEdit@26154" to="whole/lower/side/@VBoxContainer@26145/@LineEdit@26154" method="_on_typedLineEdit_focus_entered"]
+[connection signal="focus_exited" from="whole/lower/side/@VBoxContainer@26145/@LineEdit@26154" to="whole/lower/side/@VBoxContainer@26145/@LineEdit@26154" method="_on_typedLineEdit_focus_exited"]
+[connection signal="text_submitted" from="whole/lower/side/@VBoxContainer@26145/@LineEdit@26154" to="whole/lower/side/@VBoxContainer@26145/@LineEdit@26154" method="_on_text_submitted"]
+[connection signal="child_entered_tree" from="whole/lower/side/@VBoxContainer@26145/@LineEdit@26155" to="whole/lower/side/@VBoxContainer@26145/@LineEdit@26155" method="_on_child_entered_tree"]
+[connection signal="focus_entered" from="whole/lower/side/@VBoxContainer@26145/@LineEdit@26155" to="whole/lower/side/@VBoxContainer@26145/@LineEdit@26155" method="_on_typedLineEdit_focus_entered"]
+[connection signal="focus_exited" from="whole/lower/side/@VBoxContainer@26145/@LineEdit@26155" to="whole/lower/side/@VBoxContainer@26145/@LineEdit@26155" method="_on_typedLineEdit_focus_exited"]
+[connection signal="text_submitted" from="whole/lower/side/@VBoxContainer@26145/@LineEdit@26155" to="whole/lower/side/@VBoxContainer@26145/@LineEdit@26155" method="_on_text_submitted"]
+[connection signal="child_entered_tree" from="whole/lower/side/@VBoxContainer@26145/@LineEdit@26156" to="whole/lower/side/@VBoxContainer@26145/@LineEdit@26156" method="_on_child_entered_tree"]
+[connection signal="focus_entered" from="whole/lower/side/@VBoxContainer@26145/@LineEdit@26156" to="whole/lower/side/@VBoxContainer@26145/@LineEdit@26156" method="_on_typedLineEdit_focus_entered"]
+[connection signal="focus_exited" from="whole/lower/side/@VBoxContainer@26145/@LineEdit@26156" to="whole/lower/side/@VBoxContainer@26145/@LineEdit@26156" method="_on_typedLineEdit_focus_exited"]
+[connection signal="text_submitted" from="whole/lower/side/@VBoxContainer@26145/@LineEdit@26156" to="whole/lower/side/@VBoxContainer@26145/@LineEdit@26156" method="_on_text_submitted"]
+[connection signal="child_entered_tree" from="whole/lower/side/@VBoxContainer@26145/@LineEdit@26157" to="whole/lower/side/@VBoxContainer@26145/@LineEdit@26157" method="_on_child_entered_tree"]
+[connection signal="focus_entered" from="whole/lower/side/@VBoxContainer@26145/@LineEdit@26157" to="whole/lower/side/@VBoxContainer@26145/@LineEdit@26157" method="_on_typedLineEdit_focus_entered"]
+[connection signal="focus_exited" from="whole/lower/side/@VBoxContainer@26145/@LineEdit@26157" to="whole/lower/side/@VBoxContainer@26145/@LineEdit@26157" method="_on_typedLineEdit_focus_exited"]
+[connection signal="text_submitted" from="whole/lower/side/@VBoxContainer@26145/@LineEdit@26157" to="whole/lower/side/@VBoxContainer@26145/@LineEdit@26157" method="_on_text_submitted"]
+[connection signal="child_entered_tree" from="whole/lower/side/@VBoxContainer@26145/@LineEdit@26158" to="whole/lower/side/@VBoxContainer@26145/@LineEdit@26158" method="_on_child_entered_tree"]
+[connection signal="focus_entered" from="whole/lower/side/@VBoxContainer@26145/@LineEdit@26158" to="whole/lower/side/@VBoxContainer@26145/@LineEdit@26158" method="_on_typedLineEdit_focus_entered"]
+[connection signal="focus_exited" from="whole/lower/side/@VBoxContainer@26145/@LineEdit@26158" to="whole/lower/side/@VBoxContainer@26145/@LineEdit@26158" method="_on_typedLineEdit_focus_exited"]
+[connection signal="text_submitted" from="whole/lower/side/@VBoxContainer@26145/@LineEdit@26158" to="whole/lower/side/@VBoxContainer@26145/@LineEdit@26158" method="_on_text_submitted"]
+[connection signal="child_entered_tree" from="whole/lower/side/@VBoxContainer@26145/@LineEdit@26159" to="whole/lower/side/@VBoxContainer@26145/@LineEdit@26159" method="_on_child_entered_tree"]
+[connection signal="focus_entered" from="whole/lower/side/@VBoxContainer@26145/@LineEdit@26159" to="whole/lower/side/@VBoxContainer@26145/@LineEdit@26159" method="_on_typedLineEdit_focus_entered"]
+[connection signal="focus_exited" from="whole/lower/side/@VBoxContainer@26145/@LineEdit@26159" to="whole/lower/side/@VBoxContainer@26145/@LineEdit@26159" method="_on_typedLineEdit_focus_exited"]
+[connection signal="text_submitted" from="whole/lower/side/@VBoxContainer@26145/@LineEdit@26159" to="whole/lower/side/@VBoxContainer@26145/@LineEdit@26159" method="_on_text_submitted"]
+[connection signal="child_entered_tree" from="whole/lower/side/@VBoxContainer@26145/@LineEdit@26160" to="whole/lower/side/@VBoxContainer@26145/@LineEdit@26160" method="_on_child_entered_tree"]
+[connection signal="focus_entered" from="whole/lower/side/@VBoxContainer@26145/@LineEdit@26160" to="whole/lower/side/@VBoxContainer@26145/@LineEdit@26160" method="_on_typedLineEdit_focus_entered"]
+[connection signal="focus_exited" from="whole/lower/side/@VBoxContainer@26145/@LineEdit@26160" to="whole/lower/side/@VBoxContainer@26145/@LineEdit@26160" method="_on_typedLineEdit_focus_exited"]
+[connection signal="text_submitted" from="whole/lower/side/@VBoxContainer@26145/@LineEdit@26160" to="whole/lower/side/@VBoxContainer@26145/@LineEdit@26160" method="_on_text_submitted"]
+[connection signal="child_entered_tree" from="whole/lower/side/@VBoxContainer@26145/@LineEdit@26161" to="whole/lower/side/@VBoxContainer@26145/@LineEdit@26161" method="_on_child_entered_tree"]
+[connection signal="focus_entered" from="whole/lower/side/@VBoxContainer@26145/@LineEdit@26161" to="whole/lower/side/@VBoxContainer@26145/@LineEdit@26161" method="_on_typedLineEdit_focus_entered"]
+[connection signal="focus_exited" from="whole/lower/side/@VBoxContainer@26145/@LineEdit@26161" to="whole/lower/side/@VBoxContainer@26145/@LineEdit@26161" method="_on_typedLineEdit_focus_exited"]
+[connection signal="text_submitted" from="whole/lower/side/@VBoxContainer@26145/@LineEdit@26161" to="whole/lower/side/@VBoxContainer@26145/@LineEdit@26161" method="_on_text_submitted"]
+[connection signal="child_entered_tree" from="whole/lower/side/@VBoxContainer@26145/@LineEdit@26162" to="whole/lower/side/@VBoxContainer@26145/@LineEdit@26162" method="_on_child_entered_tree"]
+[connection signal="focus_entered" from="whole/lower/side/@VBoxContainer@26145/@LineEdit@26162" to="whole/lower/side/@VBoxContainer@26145/@LineEdit@26162" method="_on_typedLineEdit_focus_entered"]
+[connection signal="focus_exited" from="whole/lower/side/@VBoxContainer@26145/@LineEdit@26162" to="whole/lower/side/@VBoxContainer@26145/@LineEdit@26162" method="_on_typedLineEdit_focus_exited"]
+[connection signal="text_submitted" from="whole/lower/side/@VBoxContainer@26145/@LineEdit@26162" to="whole/lower/side/@VBoxContainer@26145/@LineEdit@26162" method="_on_text_submitted"]
+[connection signal="child_entered_tree" from="whole/lower/side/@VBoxContainer@26145/@LineEdit@26163" to="whole/lower/side/@VBoxContainer@26145/@LineEdit@26163" method="_on_child_entered_tree"]
+[connection signal="focus_entered" from="whole/lower/side/@VBoxContainer@26145/@LineEdit@26163" to="whole/lower/side/@VBoxContainer@26145/@LineEdit@26163" method="_on_typedLineEdit_focus_entered"]
+[connection signal="focus_exited" from="whole/lower/side/@VBoxContainer@26145/@LineEdit@26163" to="whole/lower/side/@VBoxContainer@26145/@LineEdit@26163" method="_on_typedLineEdit_focus_exited"]
+[connection signal="text_submitted" from="whole/lower/side/@VBoxContainer@26145/@LineEdit@26163" to="whole/lower/side/@VBoxContainer@26145/@LineEdit@26163" method="_on_text_submitted"]
+[connection signal="child_entered_tree" from="whole/lower/side/@VBoxContainer@26145/@LineEdit@26164" to="whole/lower/side/@VBoxContainer@26145/@LineEdit@26164" method="_on_child_entered_tree"]
+[connection signal="focus_entered" from="whole/lower/side/@VBoxContainer@26145/@LineEdit@26164" to="whole/lower/side/@VBoxContainer@26145/@LineEdit@26164" method="_on_typedLineEdit_focus_entered"]
+[connection signal="focus_exited" from="whole/lower/side/@VBoxContainer@26145/@LineEdit@26164" to="whole/lower/side/@VBoxContainer@26145/@LineEdit@26164" method="_on_typedLineEdit_focus_exited"]
+[connection signal="text_submitted" from="whole/lower/side/@VBoxContainer@26145/@LineEdit@26164" to="whole/lower/side/@VBoxContainer@26145/@LineEdit@26164" method="_on_text_submitted"]

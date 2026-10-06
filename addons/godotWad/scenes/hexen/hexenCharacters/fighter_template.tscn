@@ -1,27 +1,25 @@
-[gd_scene load_steps=10 format=3 uid="uid://m4koy7ibkugg"]
+[gd_scene format=3 uid="uid://m4koy7ibkugg"]
 
 [ext_resource type="PackedScene" uid="uid://dm4psfgy7p5y8" path="res://addons/godotWad/scenes/player/playerBase.tscn" id="1"]
-[ext_resource type="Script" path="res://addons/godotWad/scenes/player/debug/playerGenerator.gd" id="2"]
-[ext_resource type="Resource" path="res://addons/godotWad/scenes/hexen/hexenCharacters/fighter_sprites.tres" id="3"]
+[ext_resource type="Script" uid="uid://bfmkp672r48wx" path="res://addons/godotWad/scenes/player/debug/playerGenerator.gd" id="2"]
+[ext_resource type="Resource" uid="uid://bubkfnw405xba" path="res://addons/godotWad/scenes/hexen/hexenCharacters/fighter_sprites.tres" id="3"]
 [ext_resource type="PackedScene" uid="uid://br07pau6iijsu" path="res://addons/godotWad/scenes/quad3Dsprite.tscn" id="4"]
-[ext_resource type="Script" path="res://addons/godotWad/scenes/player/playerSounds.gd" id="5"]
+[ext_resource type="Script" uid="uid://x7fffmpwxn01" path="res://addons/godotWad/scenes/player/playerSounds.gd" id="5"]
 [ext_resource type="PackedScene" uid="uid://c2ghunf5b5s4q" path="res://addons/godotWad/scenes/player/doomHud.tscn" id="6"]
 [ext_resource type="PackedScene" uid="uid://cqedrxebbbduy" path="res://addons/godotWad/scenes/player/ColorOverlay.tscn" id="7"]
 
-[sub_resource type="QuadMesh" id="QuadMesh_qv6jj"]
+[sub_resource type="QuadMesh" id="QuadMesh_3m2r8"]
 size = Vector2(1.271, 1.767)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_kbh8g"]
 size = Vector3(31.94, 55, 31.94)
 
-[node name="CharacterBody3D" instance=ExtResource("1")]
+[node name="CharacterBody3D" unique_id=463017468 instance=ExtResource("1")]
 mouseSensitivity = 0.05
 headBobSpeed = 1000
 initialHp = 100
 maxHp = 100
 maxSpeed = 1600
-thickness = 15.97
-height = 55.0
 ammoLimits = null
 inventory = {
 "Spiked gauntlets": {
@@ -29,41 +27,34 @@ inventory = {
 }
 }
 
-[node name="AnimatedSprite3D" parent="visual" index="0" instance=ExtResource("4")]
-mesh = SubResource("QuadMesh_qv6jj")
+[node name="AnimatedSprite3D" parent="visual" parent_id_path=PackedInt32Array(1324029492) index="0" unique_id=782072934 instance=ExtResource("4")]
+mesh = SubResource("QuadMesh_3m2r8")
 
-[node name="ColorOverlay" parent="UI" index="1" instance=ExtResource("7")]
+[node name="ColorOverlay" parent="UI" parent_id_path=PackedInt32Array(1898719054) index="1" unique_id=1041199655 instance=ExtResource("7")]
 layout_mode = 0
 anchors_preset = 0
 anchor_right = 0.0
 anchor_bottom = 0.0
 
-[node name="HUD2" parent="UI/HUDS" index="1" instance=ExtResource("6")]
+[node name="HUD2" parent="UI/HUDS" parent_id_path=PackedInt32Array(839087512) index="1" unique_id=78724916 instance=ExtResource("6")]
 layout_mode = 1
 
-[node name="CollisionShape3D" parent="." index="4"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 27.5, 0)
+[node name="CollisionShape3D" parent="." index="4" unique_id=3698377]
 shape = SubResource("BoxShape3D_kbh8g")
 
-[node name="Generator" type="Node" parent="." index="5"]
+[node name="Generator" type="Node" parent="." index="5" unique_id=1709129209]
 script = ExtResource("2")
 sprites = ExtResource("3")
 spawnWeapons = ["Spiked gauntlets"]
-idle = "A"
-chase = "ABCD"
-attack = "EF"
-hurt = "GG"
 dying = "HIJKLMN"
-gib = "OPQRSTUVW"
 gruntSound = "DSNOWAY"
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="." index="6"]
+[node name="AnimationPlayer2" type="AnimationPlayer" parent="." index="6" unique_id=1647038994]
 
-[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="." index="7"]
+[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="." index="7" unique_id=1777193891]
 script = ExtResource("5")
 
-[node name="movement" parent="." index="11"]
+[node name="movement" parent="." index="11" unique_id=904606600]
 visible = false
-airStepRatio = 0.389
 maxVelo = Vector3(50, inf, 50)
 slopeAngle = 46.0

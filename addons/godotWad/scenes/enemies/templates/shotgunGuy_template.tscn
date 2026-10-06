@@ -1,14 +1,14 @@
-[gd_scene load_steps=5 format=3 uid="uid://bgjg3mg6afa2"]
+[gd_scene format=3 uid="uid://bgjg3mg6afa2"]
 
 [ext_resource type="Resource" uid="uid://cpwt0pf1d3w22" path="res://addons/godotWad/scenes/enemies/templates/sprites/shotgunGuySprites.tres" id="1"]
 [ext_resource type="PackedScene" uid="uid://dhxyaai4rce5r" path="res://addons/godotWad/scenes/enemies/npc_template.tscn" id="2"]
 
-[sub_resource type="QuadMesh" id="QuadMesh_wp37a"]
+[sub_resource type="QuadMesh" id="QuadMesh_6gtdy"]
 
 [sub_resource type="BoxShape3D" id="9"]
 size = Vector3(40, 56, 40)
 
-[node name="ShotgunGuy" instance=ExtResource("2")]
+[node name="ShotgunGuy" unique_id=1097947055 instance=ExtResource("2")]
 npcName = "shotgun guy"
 height = 56.0
 meleeRange = -1.0
@@ -19,22 +19,17 @@ deadStateId = 15
 gibStateId = 20
 painChance = 0.676
 
-[node name="AnimatedSprite3D" parent="." index="0"]
-mesh = SubResource("QuadMesh_wp37a")
+[node name="AnimatedSprite3D" parent="visual" parent_id_path=PackedInt32Array(2133409113) index="0" unique_id=1982447299]
+mesh = SubResource("QuadMesh_6gtdy")
 
-[node name="CollisionShape3D" parent="." index="3"]
+[node name="CollisionShape3D" parent="." index="3" unique_id=1659532864]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 28, 0)
 shape = SubResource("9")
 
-[node name="cast" parent="." index="4"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 44.8, 0)
-debug_shape_custom_color = Color(1, 0, 0, 1)
-debug_shape_thickness = 5
-
-[node name="castWeapon" parent="." index="6"]
+[node name="castWeapon" parent="." index="5" unique_id=1758431114]
 spread = 600
 
-[node name="Generator" parent="." index="7"]
+[node name="Generator" parent="." index="6" unique_id=213520782]
 sprites = ExtResource("1")
 idle = "AB"
 chase = "ABCD"
@@ -45,7 +40,12 @@ gib = "MNOPQRSTU"
 attackSounds = ["DSSHOTGN"]
 searchSounds = Array[StringName]([&"DSPOSACT"])
 
-[node name="VisibleOnScreenNotifier3D" parent="." index="8"]
+[node name="VisibleOnScreenNotifier3D" parent="." index="7" unique_id=1106049519]
 aabb = AABB(-20, 0, -20, 40, 56, 40)
 
-[editable path="AnimatedSprite3D"]
+[node name="cast" parent="." index="9" unique_id=714861743]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 44.8, 0)
+debug_shape_custom_color = Color(1, 0, 0, 1)
+debug_shape_thickness = 5
+
+[editable path="visual/AnimatedSprite3D"]

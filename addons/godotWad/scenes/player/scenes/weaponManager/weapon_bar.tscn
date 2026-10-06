@@ -1,7 +1,7 @@
-[gd_scene load_steps=7 format=3 uid="uid://cmpog4jmqm6ak"]
+[gd_scene format=3 uid="uid://cmpog4jmqm6ak"]
 
-[ext_resource type="Script" path="res://addons/godotWad/scenes/player/scenes/weaponManager/weaponBar.gd" id="1_nkaa3"]
-[ext_resource type="Script" path="res://addons/controller_icons/objects/TextureRect.gd" id="2_iujcy"]
+[ext_resource type="Script" uid="uid://lob7d18kwbh0" path="res://addons/godotWad/scenes/player/scenes/weaponManager/weaponBar.gd" id="1_nkaa3"]
+[ext_resource type="Script" uid="uid://kcmjgp58cc5b" path="res://addons/controller_icons/objects/TextureRect.gd" id="2_iujcy"]
 
 [sub_resource type="Animation" id="Animation_ksf4e"]
 length = 0.001
@@ -51,22 +51,22 @@ tracks/0/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_f8mgp"]
 _data = {
-"RESET": SubResource("Animation_ksf4e"),
-"fadeIn": SubResource("Animation_jugct"),
-"fadeOut": SubResource("Animation_mww8q")
+&"RESET": SubResource("Animation_ksf4e"),
+&"fadeIn": SubResource("Animation_jugct"),
+&"fadeOut": SubResource("Animation_mww8q")
 }
 
-[node name="weaponBar" type="HBoxContainer"]
+[node name="weaponBar" type="HBoxContainer" unique_id=666391477]
 anchors_preset = 10
 anchor_right = 1.0
 grow_horizontal = 2
 alignment = 1
 script = ExtResource("1_nkaa3")
 
-[node name="1" type="VBoxContainer" parent="."]
+[node name="1" type="VBoxContainer" parent="." unique_id=757927659]
 layout_mode = 2
 
-[node name="ControllerTextureRect" type="TextureRect" parent="1"]
+[node name="ControllerTextureRect" type="TextureRect" parent="1" unique_id=973055115]
 custom_minimum_size = Vector2(40, 40)
 layout_mode = 2
 expand_mode = 1
@@ -74,10 +74,10 @@ stretch_mode = 5
 script = ExtResource("2_iujcy")
 path = "weaponSwitchCategory1"
 
-[node name="2" type="VBoxContainer" parent="."]
+[node name="2" type="VBoxContainer" parent="." unique_id=1459277416]
 layout_mode = 2
 
-[node name="ControllerTextureRect" type="TextureRect" parent="2"]
+[node name="ControllerTextureRect" type="TextureRect" parent="2" unique_id=250758200]
 custom_minimum_size = Vector2(40, 40)
 layout_mode = 2
 expand_mode = 1
@@ -85,10 +85,10 @@ stretch_mode = 5
 script = ExtResource("2_iujcy")
 path = "weaponSwitchCategory2"
 
-[node name="3" type="VBoxContainer" parent="."]
+[node name="3" type="VBoxContainer" parent="." unique_id=1939944346]
 layout_mode = 2
 
-[node name="ControllerTextureRect" type="TextureRect" parent="3"]
+[node name="ControllerTextureRect" type="TextureRect" parent="3" unique_id=1141054637]
 modulate = Color(1, 0, 0, 1)
 custom_minimum_size = Vector2(40, 40)
 layout_mode = 2
@@ -97,10 +97,10 @@ stretch_mode = 5
 script = ExtResource("2_iujcy")
 path = "weaponSwitchCategory3"
 
-[node name="4" type="VBoxContainer" parent="."]
+[node name="4" type="VBoxContainer" parent="." unique_id=760650891]
 layout_mode = 2
 
-[node name="ControllerTextureRect" type="TextureRect" parent="4"]
+[node name="ControllerTextureRect" type="TextureRect" parent="4" unique_id=1923930811]
 modulate = Color(1, 0, 0, 1)
 custom_minimum_size = Vector2(40, 40)
 layout_mode = 2
@@ -109,10 +109,10 @@ stretch_mode = 5
 script = ExtResource("2_iujcy")
 path = "weaponSwitchCategory4"
 
-[node name="5" type="VBoxContainer" parent="."]
+[node name="5" type="VBoxContainer" parent="." unique_id=2074113063]
 layout_mode = 2
 
-[node name="ControllerTextureRect" type="TextureRect" parent="5"]
+[node name="ControllerTextureRect" type="TextureRect" parent="5" unique_id=661071760]
 modulate = Color(1, 0, 0, 1)
 custom_minimum_size = Vector2(40, 40)
 layout_mode = 2
@@ -121,10 +121,10 @@ stretch_mode = 5
 script = ExtResource("2_iujcy")
 path = "weaponSwitchCategory5"
 
-[node name="6" type="VBoxContainer" parent="."]
+[node name="6" type="VBoxContainer" parent="." unique_id=465147731]
 layout_mode = 2
 
-[node name="ControllerTextureRect" type="TextureRect" parent="6"]
+[node name="ControllerTextureRect" type="TextureRect" parent="6" unique_id=1248820902]
 custom_minimum_size = Vector2(40, 40)
 layout_mode = 2
 expand_mode = 1
@@ -132,10 +132,10 @@ stretch_mode = 5
 script = ExtResource("2_iujcy")
 path = "weaponSwitchCategory6"
 
-[node name="7" type="VBoxContainer" parent="."]
+[node name="7" type="VBoxContainer" parent="." unique_id=1906980854]
 layout_mode = 2
 
-[node name="ControllerTextureRect" type="TextureRect" parent="7"]
+[node name="ControllerTextureRect" type="TextureRect" parent="7" unique_id=1216665869]
 modulate = Color(1, 0, 0, 1)
 custom_minimum_size = Vector2(40, 40)
 layout_mode = 2
@@ -144,7 +144,5 @@ stretch_mode = 5
 script = ExtResource("2_iujcy")
 path = "weaponSwitchCategory7"
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
-libraries = {
-"": SubResource("AnimationLibrary_f8mgp")
-}
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=39958074]
+libraries/ = SubResource("AnimationLibrary_f8mgp")

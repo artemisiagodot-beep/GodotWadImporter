@@ -1,12 +1,12 @@
-[gd_scene load_steps=14 format=3 uid="uid://bjp3rmwhull4g"]
+[gd_scene format=3 uid="uid://bjp3rmwhull4g"]
 
-[ext_resource type="Script" path="res://addons/gameAssetImporter/scenes/makeUI/preview.gd" id="1_0jgmu"]
+[ext_resource type="Script" uid="uid://cjsuhwxb4pofx" path="res://addons/gameAssetImporter/scenes/makeUI/preview.gd" id="1_0jgmu"]
 [ext_resource type="Environment" uid="uid://cd5ps65wxndw1" path="res://addons/gameAssetImporter/scenes/makeUI/previewEnvironment.tres" id="2_8qlyp"]
 [ext_resource type="PackedScene" uid="uid://c86ca8w5tvtxl" path="res://addons/gameAssetImporter/scenes/orbCam/orbCam.tscn" id="3_txwmj"]
 [ext_resource type="Texture2D" uid="uid://b6veuofc115wo" path="res://addons/gameAssetImporter/scenes/makeUI/texture_07.png" id="4_b5hof"]
 [ext_resource type="PackedScene" uid="uid://dylxxssl5t4na" path="res://addons/gameAssetImporter/scenes/makeUI/path.tscn" id="5_v10he"]
-[ext_resource type="Script" path="res://addons/gameAssetImporter/scenes/makeUI/midiTrackPos.gd" id="6_c1cth"]
-[ext_resource type="Script" path="res://addons/gameAssetImporter/scenes/makeUI/pauseButton.gd" id="7_ccj72"]
+[ext_resource type="Script" uid="uid://drfselk7eylom" path="res://addons/gameAssetImporter/scenes/makeUI/midiTrackPos.gd" id="6_c1cth"]
+[ext_resource type="Script" uid="uid://bemmwhlt2dt7j" path="res://addons/gameAssetImporter/scenes/makeUI/pauseButton.gd" id="7_ccj72"]
 
 [sub_resource type="World3D" id="World3D_j03yw"]
 environment = ExtResource("2_8qlyp")
@@ -28,24 +28,24 @@ albedo_color = Color(1, 0, 0, 0.364706)
 
 [sub_resource type="ImageTexture" id="ImageTexture_mo6bb"]
 
-[node name="h" type="HBoxContainer"]
+[node name="h" type="HBoxContainer" unique_id=1196047880]
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 
-[node name="v1" type="VBoxContainer" parent="."]
+[node name="v1" type="VBoxContainer" parent="." unique_id=2027150713]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
 
-[node name="Panel" type="Panel" parent="v1"]
+[node name="Panel" type="Panel" parent="v1" unique_id=1792319206]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
 
-[node name="gameList" type="ItemList" parent="v1/Panel"]
+[node name="gameList" type="ItemList" parent="v1/Panel" unique_id=2135327081]
 layout_mode = 0
 anchor_right = 1.0
 anchor_bottom = 1.0
@@ -56,104 +56,104 @@ item_2/text = "Hexen"
 item_3/text = "Hexen Mod"
 item_4/text = "SRBC"
 
-[node name="paths" type="Panel" parent="v1"]
+[node name="paths" type="Panel" parent="v1" unique_id=453194550]
 layout_mode = 2
 size_flags_vertical = 3
 
-[node name="v" type="VBoxContainer" parent="v1/paths"]
+[node name="v" type="VBoxContainer" parent="v1/paths" unique_id=2050468257]
 layout_mode = 0
 anchor_left = 0.0384615
 anchor_top = 0.0402685
 anchor_right = 0.967456
 anchor_bottom = 0.95302
 
-[node name="v" type="VBoxContainer" parent="v1/paths/v"]
+[node name="v" type="VBoxContainer" parent="v1/paths/v" unique_id=532741776]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
 
-[node name="VBoxContainer" type="VBoxContainer" parent="v1/paths/v"]
+[node name="VBoxContainer" type="VBoxContainer" parent="v1/paths/v" unique_id=1249494012]
 layout_mode = 2
 
-[node name="LoaderOptions" type="Button" parent="v1/paths/v/VBoxContainer"]
+[node name="LoaderOptions" type="Button" parent="v1/paths/v/VBoxContainer" unique_id=537861490]
 unique_name_in_owner = true
 layout_mode = 2
 text = "Loader options"
 
-[node name="h" type="HBoxContainer" parent="v1/paths/v"]
+[node name="h" type="HBoxContainer" parent="v1/paths/v" unique_id=1505481798]
 layout_mode = 2
 alignment = 1
 
-[node name="Label" type="Label" parent="v1/paths/v/h"]
+[node name="Label" type="Label" parent="v1/paths/v/h" unique_id=1705252105]
 layout_mode = 2
 text = "Game Name:"
 
-[node name="gameNameEdit" type="LineEdit" parent="v1/paths/v/h"]
+[node name="gameNameEdit" type="LineEdit" parent="v1/paths/v/h" unique_id=213306405]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
 text = "doom mod"
 
-[node name="HBoxContainer" type="HBoxContainer" parent="v1/paths/v"]
+[node name="HBoxContainer" type="HBoxContainer" parent="v1/paths/v" unique_id=1053674670]
 layout_mode = 2
 alignment = 1
 
-[node name="loadButton" type="Button" parent="v1/paths/v/HBoxContainer"]
+[node name="loadButton" type="Button" parent="v1/paths/v/HBoxContainer" unique_id=901053641]
 layout_mode = 2
 focus_neighbor_bottom = NodePath("../../../../Panel/gameList")
 text = "Load"
 
-[node name="playButton" type="Button" parent="v1/paths/v/HBoxContainer"]
+[node name="playButton" type="Button" parent="v1/paths/v/HBoxContainer" unique_id=2034592606]
 unique_name_in_owner = true
 layout_mode = 2
 text = "Play"
 
-[node name="debugButton" type="Button" parent="v1/paths/v/HBoxContainer"]
+[node name="debugButton" type="Button" parent="v1/paths/v/HBoxContainer" unique_id=1142170158]
 visible = false
 layout_mode = 2
 text = "Debug"
 
-[node name="creditsButton" type="Button" parent="v1/paths/v/HBoxContainer"]
+[node name="creditsButton" type="Button" parent="v1/paths/v/HBoxContainer" unique_id=288973170]
 unique_name_in_owner = true
 layout_mode = 2
 size_flags_horizontal = 8
 size_flags_stretch_ratio = 11.13
 text = "Credits"
 
-[node name="v2" type="VBoxContainer" parent="."]
+[node name="v2" type="VBoxContainer" parent="." unique_id=1443089191]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
 
-[node name="cats" type="VBoxContainer" parent="v2"]
+[node name="cats" type="VBoxContainer" parent="v2" unique_id=1761382120]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
 
-[node name="ui" type="HBoxContainer" parent="v2"]
+[node name="ui" type="HBoxContainer" parent="v2" unique_id=2020131038]
 layout_mode = 2
 size_flags_horizontal = 3
 
-[node name="instanceButton" type="Button" parent="v2/ui"]
+[node name="instanceButton" type="Button" parent="v2/ui" unique_id=1553736028]
 visible = false
 layout_mode = 2
 text = "instance"
 
-[node name="importButton" type="Button" parent="v2/ui"]
+[node name="importButton" type="Button" parent="v2/ui" unique_id=702351034]
 visible = false
 layout_mode = 2
 text = "import"
 
-[node name="v3" type="VBoxContainer" parent="."]
+[node name="v3" type="VBoxContainer" parent="." unique_id=370570662]
 layout_mode = 2
 size_flags_horizontal = 3
 
-[node name="preview" type="Panel" parent="v3"]
+[node name="preview" type="Panel" parent="v3" unique_id=161235313]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
 
-[node name="SubViewportContainer" type="SubViewportContainer" parent="v3/preview"]
+[node name="SubViewportContainer" type="SubViewportContainer" parent="v3/preview" unique_id=1559591209]
 layout_mode = 0
 anchor_right = 1.0
 anchor_bottom = 1.0
@@ -161,13 +161,13 @@ offset_right = -7.0
 stretch = true
 script = ExtResource("1_0jgmu")
 
-[node name="SubViewport" type="SubViewport" parent="v3/preview/SubViewportContainer"]
+[node name="SubViewport" type="SubViewport" parent="v3/preview/SubViewportContainer" unique_id=1271649692]
 world_3d = SubResource("World3D_j03yw")
 handle_input_locally = false
 size = Vector2i(375, 322)
 render_target_update_mode = 4
 
-[node name="CameraTopDown" parent="v3/preview/SubViewportContainer/SubViewport" instance=ExtResource("3_txwmj")]
+[node name="CameraTopDown" parent="v3/preview/SubViewportContainer/SubViewport" unique_id=260533429 instance=ExtResource("3_txwmj")]
 visible = false
 clickOnly = true
 allowPan = true
@@ -175,7 +175,7 @@ yawRange = Vector2(-90, 90)
 initialRot = Vector2(0, -90)
 dist = 42
 
-[node name="Camera3D" parent="v3/preview/SubViewportContainer/SubViewport" instance=ExtResource("3_txwmj")]
+[node name="Camera3D" parent="v3/preview/SubViewportContainer/SubViewport" unique_id=447513030 instance=ExtResource("3_txwmj")]
 transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, 0, 0)
 clickOnly = true
 allowPan = true
@@ -184,36 +184,36 @@ yawRange = Vector2(-90, 90)
 initialRot = Vector2(0, -22)
 dist = 5
 
-[node name="StaticBody3D" type="StaticBody3D" parent="v3/preview/SubViewportContainer/SubViewport"]
+[node name="StaticBody3D" type="StaticBody3D" parent="v3/preview/SubViewportContainer/SubViewport" unique_id=435839895]
 collision_layer = 3
 collision_mask = 3
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="v3/preview/SubViewportContainer/SubViewport/StaticBody3D"]
+[node name="MeshInstance3D" type="MeshInstance3D" parent="v3/preview/SubViewportContainer/SubViewport/StaticBody3D" unique_id=781133315]
 transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 0, 0, 0)
 mesh = SubResource("4")
 
-[node name="StaticBody3D" type="StaticBody3D" parent="v3/preview/SubViewportContainer/SubViewport/StaticBody3D/MeshInstance3D"]
+[node name="StaticBody3D" type="StaticBody3D" parent="v3/preview/SubViewportContainer/SubViewport/StaticBody3D/MeshInstance3D" unique_id=159289562]
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="v3/preview/SubViewportContainer/SubViewport/StaticBody3D/MeshInstance3D/StaticBody3D"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="v3/preview/SubViewportContainer/SubViewport/StaticBody3D/MeshInstance3D/StaticBody3D" unique_id=1604313725]
 shape = SubResource("5")
 
-[node name="CSGSphere3D" type="CSGSphere3D" parent="v3/preview/SubViewportContainer/SubViewport"]
+[node name="CSGSphere3D" type="CSGSphere3D" parent="v3/preview/SubViewportContainer/SubViewport" unique_id=1467112676]
 radius = 0.05
 radial_segments = 24
 rings = 12
 material = SubResource("9")
 
-[node name="texturePreview" type="TextureRect" parent="v3/preview"]
+[node name="texturePreview" type="TextureRect" parent="v3/preview" unique_id=883612224]
 visible = false
 layout_mode = 0
 anchor_right = 1.0
 anchor_bottom = 1.0
 texture = SubResource("ImageTexture_mo6bb")
 
-[node name="audioPreview" type="AudioStreamPlayer" parent="v3/preview"]
+[node name="audioPreview" type="AudioStreamPlayer" parent="v3/preview" unique_id=743452082]
 unique_name_in_owner = true
 
-[node name="sondFontPath" parent="v3/preview" instance=ExtResource("5_v10he")]
+[node name="sondFontPath" parent="v3/preview" unique_id=98664969 instance=ExtResource("5_v10he")]
 visible = false
 layout_mode = 1
 anchors_preset = 14
@@ -224,39 +224,36 @@ offset_bottom = 15.5
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="Label" parent="v3/preview/sondFontPath/h" index="0"]
+[node name="Label" parent="v3/preview/sondFontPath/h" parent_id_path=PackedInt32Array(98664969, 1055015918) index="0" unique_id=2100446854]
 text = "SoundFont path:"
 
-[node name="pathTxt" parent="v3/preview/sondFontPath/h" index="1"]
+[node name="pathTxt" parent="v3/preview/sondFontPath/h" parent_id_path=PackedInt32Array(98664969, 1055015918) index="1" unique_id=839750082]
 text = "res://soundfonts/gzdoom.sf2"
 
-[node name="Button3" parent="v3/preview/sondFontPath/h" index="2"]
+[node name="Button3" parent="v3/preview/sondFontPath/h" parent_id_path=PackedInt32Array(98664969, 1055015918) index="2" unique_id=414433438]
 visible = false
 
-[node name="Button2" parent="v3/preview/sondFontPath/h" index="4"]
-visible = true
-
-[node name="FileDialog" parent="v3/preview/sondFontPath" index="2"]
+[node name="FileDialog" parent="v3/preview/sondFontPath" index="2" unique_id=651275081]
 auto_translate_mode = 1
 size = Vector2i(247, 175)
 filters = PackedStringArray("*.sf2", "*.zip")
 
-[node name="VBoxContainer" type="HBoxContainer" parent="v3/preview/sondFontPath"]
+[node name="VBoxContainer" type="HBoxContainer" parent="v3/preview/sondFontPath" unique_id=137079887]
 layout_mode = 2
 alignment = 1
 
-[node name="midiTrackPos" type="Label" parent="v3/preview/sondFontPath/VBoxContainer"]
+[node name="midiTrackPos" type="Label" parent="v3/preview/sondFontPath/VBoxContainer" unique_id=1437401844]
 layout_mode = 2
 script = ExtResource("6_c1cth")
 
-[node name="pauseButton" type="Button" parent="v3/preview/sondFontPath/VBoxContainer"]
+[node name="pauseButton" type="Button" parent="v3/preview/sondFontPath/VBoxContainer" unique_id=1879545180]
 layout_mode = 2
 size_flags_horizontal = 4
 toggle_mode = true
 text = "⏵︎"
 script = ExtResource("7_ccj72")
 
-[node name="fontPreview" type="Label" parent="v3/preview"]
+[node name="fontPreview" type="Label" parent="v3/preview" unique_id=625934997]
 visible = false
 layout_mode = 0
 offset_right = 40.0
@@ -266,26 +263,26 @@ abcdefghijklmnopqrstuvwxyz
 1234567890
 +=?!:()"
 
-[node name="SubViewportContainer2D" type="SubViewportContainer" parent="v3/preview"]
+[node name="SubViewportContainer2D" type="SubViewportContainer" parent="v3/preview" unique_id=213928889]
 visible = false
 layout_mode = 0
 offset_right = 40.0
 offset_bottom = 40.0
 
-[node name="SubViewport" type="SubViewport" parent="v3/preview/SubViewportContainer2D"]
+[node name="SubViewport" type="SubViewport" parent="v3/preview/SubViewportContainer2D" unique_id=598286548]
 handle_input_locally = false
 size = Vector2i(372, 298)
 render_target_update_mode = 0
 
-[node name="Camera2D" type="Camera2D" parent="v3/preview/SubViewportContainer2D/SubViewport"]
+[node name="Camera2D" type="Camera2D" parent="v3/preview/SubViewportContainer2D/SubViewport" unique_id=449746746]
 zoom = Vector2(5, 5)
 
-[node name="options" type="ScrollContainer" parent="v3"]
+[node name="options" type="ScrollContainer" parent="v3" unique_id=647142339]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
 
-[node name="Panel" type="Panel" parent="v3/options"]
+[node name="Panel" type="Panel" parent="v3/options" unique_id=372611438]
 visible = false
 layout_mode = 2
 size_flags_horizontal = 3

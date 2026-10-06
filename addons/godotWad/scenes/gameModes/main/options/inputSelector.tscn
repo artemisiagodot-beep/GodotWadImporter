@@ -1,17 +1,14 @@
-[gd_scene load_steps=4 format=3 uid="uid://c0u0cjdalwbn8"]
+[gd_scene format=3 uid="uid://c0u0cjdalwbn8"]
 
-[ext_resource type="Script" path="res://addons/godotWad/scenes/gameModes/main/options/inputSelector.gd" id="1"]
-[ext_resource type="Script" path="res://addons/controller_icons/objects/ControllerIconTexture.gd" id="2_qjrbu"]
+[ext_resource type="Script" uid="uid://d18wxq4x2lfo" path="res://addons/godotWad/scenes/gameModes/main/options/inputSelector.gd" id="1"]
+[ext_resource type="Script" uid="uid://cjdh5ycpej7io" path="res://addons/controller_icons/objects/ControllerIconTexture.gd" id="2_qjrbu"]
 
 [sub_resource type="Texture2D" id="Texture2D_0jm1e"]
 resource_local_to_scene = false
 resource_name = ""
 script = ExtResource("2_qjrbu")
-path = ""
-show_mode = 0
-force_type = 0
 
-[node name="inputSelector" type="LineEdit"]
+[node name="inputSelector" type="LineEdit" unique_id=52252668]
 offset_right = 67.0625
 offset_bottom = 44.0
 alignment = 1
@@ -23,7 +20,7 @@ caret_blink = true
 caret_blink_interval = 0.5
 script = ExtResource("1")
 
-[node name="ControllerTextureRect" type="TextureRect" parent="."]
+[node name="ControllerTextureRect" type="TextureRect" parent="." unique_id=2020746798]
 custom_minimum_size = Vector2(40, 40)
 layout_mode = 1
 anchors_preset = 8
